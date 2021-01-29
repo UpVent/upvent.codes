@@ -11,10 +11,8 @@
     </head>
     <body class="antialiased">
         <h1>
-            Nube Inteligente.
-            <br />
-            Para Negocios Inteligentes
+            Servicios
         </h1>
-        <p>Desarrollamos soluciones web inteligentes para cualquier tipo de negocio.</p>
+        <p>Conozca la amplia variedad de servicios que UpVent puede ofrecerle a usted y a su empresa.</p>
     </body>
 </html>
