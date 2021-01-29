@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>
-    Servicios
+    {{$title}}
 </h1>
 <p>Conozca la amplia variedad de servicios que UpVent puede ofrecerle a usted y a su empresa.</p>
 @endsection

@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>
-    Nube Inteligente.
+    {{$title}}
     <br />
     Para Negocios Inteligentes
 </h1>
