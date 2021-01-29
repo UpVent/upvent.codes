@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index() {
-        $title = "Nube Inteligente. Para Negocios Inteligentes";
+        $title = "Nube Inteligente.";
 
         return view('pages.index') -> with('title', $title);
     }
