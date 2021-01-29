@@ -7,16 +7,25 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index() {
-        return view('pages.index');
+        $title = "Nube Inteligente. Para Negocios Inteligentes";
+
+        return view('pages.index') -> with('title', $title);
     }
 
 
     public function about() {
-        return view('pages.about');
+        $title = "Nosotros.";
+
+        return view('pages.about') -> with('title', $title);
     }
 
     public function services() {
-        return view('pages.services');
+
+        $data = array(
+          'title' => 'Servicios.'
+        );
+
+        return view('pages.services') -> with($data);
     }
 
 }
