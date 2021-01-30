@@ -24,7 +24,7 @@
                     <div class="flex items-center justify-between h-16">
                         <div class="flex items-center">
                             <div class="flex-shrink-0">
-                                <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
+                                <img class="h-8 w-8" src="{{ asset('img/logo-white.png') }}" alt="Workflow">
                             </div>
                             <div class="hidden md:block">
                                 <div class="ml-10 flex items-baseline space-x-4">
