@@ -12,7 +12,6 @@ class PagesController extends Controller
         return view('pages.index') -> with('title', $title);
     }
 
-
     public function about() {
         $title = "Nosotros.";
 
@@ -22,8 +21,8 @@ class PagesController extends Controller
     public function services() {
 
         $data = array(
-          'title' => 'Servicios.',
-          'services' => ['Programación', 'Infraestructura', 'Consultoría']
+            'title' => 'Servicios.',
+            'services' => ['Programación', 'Infraestructura', 'Consultoría']
         );
 
         return view('pages.services') -> with($data);
