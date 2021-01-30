@@ -1,12 +1,16 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    purge: ['./storage/framework/views/*.php', './resources/views/**/*.blade.php'],
+    purge: ['./storage/framework/views/*.php',
+            './resources/views/**/*.blade.php'],
 
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Montserrat','Nunito', ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                'upvent-blue': '#007BFC',
             },
         },
     },
