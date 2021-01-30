@@ -7,7 +7,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Montserrat','Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                'montserrat': ['Montserrat'],
             },
             colors: {
                 'upvent-blue': '#007BFC',
