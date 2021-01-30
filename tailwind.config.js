@@ -11,7 +11,7 @@ module.exports = {
                 'montserrat': ['Montserrat'],
             },
             colors: {
-                'upvent-blue': '#007BFC',
+                upvent: '#007BFC',
             },
         },
     },
