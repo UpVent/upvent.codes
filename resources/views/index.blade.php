@@ -41,7 +41,7 @@
                 <div data-nav-content="" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block">
                     <div class="text-sm text-white lg:flex-grow">
 
-                        <a class="block text-black rounded-lg bg-white shadow-lg p-2 mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline" href="#responsive-header">
+                        <a class="block text-black rounded-lg bg-white shadow-lg p-2 mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-blue mr-4 rounded focus:outline-none focus:shadow-outline" href="#responsive-header">
                             Inicio
                         </a>
 
@@ -64,12 +64,8 @@
                         <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
                             Marketcloud
                         </a>
-                    </div>
 
-                    <!-- Login Menu -->
-                    <div class="object-center text-sm text-white lg:flex-shrink">
                         @if (Route::has('login'))
-                            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                 @auth
                                 <a href="{{ url('/dashboard') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
                                     Panel de Administración <i class="bi bi-speedometer2"></i>
@@ -84,9 +80,7 @@
                                     </a>
                                 @endif
                                 @endauth
-                            </div>
                         @endif
-                    </div>
                 </div>
             </nav>
         </div>
