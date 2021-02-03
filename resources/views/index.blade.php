@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="/css/app.css" type="text/css" media="screen" />
 
     </head>
-    <body class="antialiased">
+    <body class="antialiased font-montserrat">
         <!-- This example requires Tailwind CSS v2.0+ -->
         <div>
             <nav class="flex items-center justify-between flex-wrap bg-upvent shadow-inner p-6">
