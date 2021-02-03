@@ -74,10 +74,12 @@
                                 <a href="{{ url('/dashboard') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">Panel de Administración</a>
                         @else
                                 <a href="{{ route('login') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
-                                    Login
+                                    Login <i class="bi bi-person-circle"></i>
                                 </a>
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">Registro</a>
+                                    <a href="{{ route('register') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                                        Registro <i class="bi bi-pencil-square"></i>
+                                    </a>
                                 @endif
                                 @endauth
                             </div>
