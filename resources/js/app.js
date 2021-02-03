@@ -1,4 +1,4 @@
 require('./bootstrap');
-require('./navbar');
+require('./navbar')
 
 require('alpinejs');
