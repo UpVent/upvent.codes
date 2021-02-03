@@ -82,8 +82,11 @@
                                 @endauth
                         @endif
                     </div>
-                    <div class="lg:w-64 pl-8 flex-shrink-0 flex items-center justify-end space-x-6">
-                        <a href=""></a>
+                    <div class="text-white lg:w-64 pl-8 flex-shrink-0 flex items-center justify-end space-x-6">
+                        <a href="https://github.com/UpVent"><i class="bi bi-github"></i></a>
+                        <a href="https://www.facebook.com/UpVentMX"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/upventmx"><i class="bi bi-instagram"></i></a>
+                        <a href="mailto:upventmx@gmail.com?subject=Contacto%20desde%20p%C3%A1gina%20web"><i class="bi bi-envelope-fill"></i></a>
                     </div>
             </nav>
         </div>
