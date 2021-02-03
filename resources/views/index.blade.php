@@ -66,20 +66,20 @@
                         </a>
 
                         @if (Route::has('login'))
-                                @auth
-                                <a href="{{ url('/dashboard') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
-                                    Panel de Administración <i class="bi bi-speedometer2"></i>
-                                </a>
+                            @auth
+                            <a href="{{ url('/dashboard') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                                Panel de Administración <i class="bi bi-speedometer2"></i>
+                            </a>
                         @else
-                                <a href="{{ route('login') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
-                                    Login <i class="bi bi-person-circle"></i>
+                            <a href="{{ route('login') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                                Login <i class="bi bi-person-circle"></i>
+                            </a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                                    Registro <i class="bi bi-pencil-square"></i>
                                 </a>
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
-                                        Registro <i class="bi bi-pencil-square"></i>
-                                    </a>
-                                @endif
-                                @endauth
+                            @endif
+                            @endauth
                         @endif
                     </div>
                     <div class="text-white lg:w-64 pl-8 flex-shrink-0 flex items-center justify-end space-x-6">
@@ -89,7 +89,34 @@
                         <a href="mailto:upventmx@gmail.com?subject=Contacto%20desde%20p%C3%A1gina%20web"><i class="bi bi-envelope-fill"></i></a>
                     </div>
             </nav>
+                </div>
+
+                <!-- Jumbotron -->
+                <div class="flex bg-white" style="height:600px;">
+                    <div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
+                        <div>
+                            <h1 class="text-3xl font-semibold text-gray-800 md:text-4xl">Nube Inteligente.
+                                <br />
+                                Para Negocios
+                                <span class="text-indigo-600">
+                                    Inteligentes
+                                </span>
+                            </h1>
+                            <p class="mt-2 text-sm text-gray-500 md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi cum cupiditate ducimus, fugit harum id necessitatibus odio quam quasi, quibusdam rem tempora voluptates. Cumque debitis dignissimos id quam vel!</p>
+                            <div class="flex justify-center lg:justify-start mt-6">
+                                <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="#">Get Started</a>
+                                <a class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block lg:w-1/2" style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
+                        <div class="h-full object-cover" style="background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)">
+                            <div class="h-full bg-black opacity-25"></div>
+                        </div>
+                    </div>
+                </div>
         </div>
+
 
 
         <!-- Scripts -->
