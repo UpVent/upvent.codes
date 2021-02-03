@@ -81,7 +81,10 @@
                                 @endif
                                 @endauth
                         @endif
-                </div>
+                    </div>
+                    <div class="lg:w-64 pl-8 flex-shrink-0 flex items-center justify-end space-x-6">
+                        <a href=""></a>
+                    </div>
             </nav>
         </div>
 
