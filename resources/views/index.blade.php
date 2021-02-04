@@ -110,7 +110,7 @@
                             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div class="rounded-md shadow">
                                     <a href="#" class="shadow-lg w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-upvent hover:bg-blue-800 md:py-4 md:text-lg md:px-10">
-                                        Conocer más  <i class="bi bi-forward-fill px-1"></i>
+                                        Conocer más  <i class="bi bi-forward px-1"></i>
                                     </a>
                                 </div>
                                 <div class="mt-3 sm:mt-0 sm:ml-3">
