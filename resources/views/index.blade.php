@@ -94,7 +94,7 @@
         </div>
 
         <!-- Beta banner -->
-
+        @include('includes.notice-banner')
 
 
         <!-- Jumbotron -->
