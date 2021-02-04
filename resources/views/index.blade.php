@@ -89,36 +89,45 @@
                         <a href="https://www.instagram.com/upventmx"><i class="bi bi-instagram"></i></a>
                         <a href="mailto:upventmx@gmail.com?subject=Contacto%20desde%20p%C3%A1gina%20web"><i class="bi bi-envelope-fill"></i></a>
                     </div>
-            </nav>
                 </div>
+            </nav>
+        </div>
 
-                <!-- Jumbotron -->
-                <div class="flex bg-white" style="height:600px;">
-                    <div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
-                        <div>
-                            <h1 class="text-3xl font-semibold text-gray-800 md:text-4xl">Nube Inteligente.
-                                <br />
-                                Para Negocios
-                                <span class="text-upvent">
-                                    Inteligentes.
-                                </span>
+
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <div class="relative bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                    <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                        <div class="sm:text-center lg:text-center">
+                            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                                <span class="block xl:inline">Nube Inteligente, para negocios</span>
+                                <span class="block text-upvent xl:inline">Inteligentes.</span>
                             </h1>
-                            <h2 class="mt-2 text-sm text-gray-500 md:text-base">
-                                Desarrollamos soluciones web inteligentes para los negocios Mexicanos.
-                            </h2>
-                            <div class="flex justify-center lg:justify-start mt-6">
-                                <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="#">Get Started</a>
-                                <a class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="#">Learn More</a>
+                            <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                            </p>
+                            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                <div class="rounded-md shadow">
+                                    <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                                        Get started
+                                    </a>
+                                </div>
+                                <div class="mt-3 sm:mt-0 sm:ml-3">
+                                    <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                                        Live demo
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="hidden lg:block lg:w-1/2" style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
-                        <div class="h-full object-cover hero-banner">
-                            <div class="h-full bg-black opacity-25"></div>
-                        </div>
-                    </div>
+                    </main>
                 </div>
+            </div>
+            <div class="sm:hidden md:inline-flex lg:inline-flex p-4 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                <img class="rounded-lg object-center object-contain h-5/6 w-4/6" src="{{asset('img/coworkers.svg')}}" alt="">
+            </div>
         </div>
+
 
 
 
