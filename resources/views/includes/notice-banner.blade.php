@@ -10,7 +10,7 @@
                                 ¡Atención!
                             </span>
                             <span class="hidden md:inline">
-                                Estás actualmente en una fase beta del proyecto. Las cosas podrían ser inestables.
+                                Estás actualmente en una fase pre-alpha del proyecto. Las cosas podrían ser inestables.
                             </span>
                         </p>
                     </div>
