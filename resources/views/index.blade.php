@@ -19,8 +19,8 @@
     </head>
     <body class="antialiased font-montserrat">
         <!-- This example requires Tailwind CSS v2.0+ -->
-        <div>
-            <nav class="flex items-center justify-between flex-wrap bg-upvent shadow-inner p-6">
+        <div class="shadow-xl">
+            <nav class=" flex items-center justify-between flex-wrap bg-upvent p-6">
                 <!-- Navbar Logo -->
                 <div class="flex items-center flex-no-shrink mr-6">
                     <img class="object-center object-contain h-10 w-15" src="{{asset('img/logo-white.png')}}" alt="UpVent White Logo" />
@@ -98,11 +98,13 @@
                             <h1 class="text-3xl font-semibold text-gray-800 md:text-4xl">Nube Inteligente.
                                 <br />
                                 Para Negocios
-                                <span class="text-indigo-600">
-                                    Inteligentes
+                                <span class="text-upvent">
+                                    Inteligentes.
                                 </span>
                             </h1>
-                            <p class="mt-2 text-sm text-gray-500 md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi cum cupiditate ducimus, fugit harum id necessitatibus odio quam quasi, quibusdam rem tempora voluptates. Cumque debitis dignissimos id quam vel!</p>
+                            <h2 class="mt-2 text-sm text-gray-500 md:text-base">
+                                Desarrollamos soluciones web inteligentes para los negocios Mexicanos.
+                            </h2>
                             <div class="flex justify-center lg:justify-start mt-6">
                                 <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="#">Get Started</a>
                                 <a class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="#">Learn More</a>
