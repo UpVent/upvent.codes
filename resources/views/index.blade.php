@@ -105,17 +105,17 @@
                                 <span class="block text-upvent xl:inline">Inteligentes.</span>
                             </h1>
                             <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                                Líder Mexicano en desarrollo de soluciones empresariales de código libre.
                             </p>
                             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div class="rounded-md shadow">
                                     <a href="#" class="shadow-lg w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-upvent hover:bg-blue-800 md:py-4 md:text-lg md:px-10">
-                                        Get started
+                                        Conocer más  <i class="bi bi-forward-fill px-1"></i>
                                     </a>
                                 </div>
                                 <div class="mt-3 sm:mt-0 sm:ml-3">
                                     <a href="#" class="shadow-lg w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
-                                        Live demo
+                                        Portafolio  <i class="bi bi-journal-check px-1"></i>
                                     </a>
                                 </div>
                             </div>
