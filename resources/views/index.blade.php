@@ -15,6 +15,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="/css/app.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}" type="text/css" media="screen" />
 
     </head>
     <body class="antialiased font-montserrat">
@@ -112,7 +113,7 @@
                         </div>
                     </div>
                     <div class="hidden lg:block lg:w-1/2" style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
-                        <div class="h-full object-cover" style="background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)">
+                        <div class="h-full object-cover hero-banner">
                             <div class="h-full bg-black opacity-25"></div>
                         </div>
                     </div>
