@@ -135,6 +135,8 @@
 
 
 
+        <!-- Footer -->
+        @include('includes.footer')
 
         <!-- Scripts -->
         <script src="/js/app.js" type="text/javascript"></script>
