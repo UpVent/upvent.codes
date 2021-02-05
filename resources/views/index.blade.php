@@ -125,7 +125,28 @@
 
         <hr />
 
+        <!-- Features section -->
+        <div class="content-center mt-8">
+            <div class="text-4xl text-center text-black">
+                <h1>
+                    Soluciones en la nube.
+                    <br />
+                    Para todo tipo de negocios.
+                </h1>
+                <p class="mt-8 text-sm text-gray-500 text-center">
+                    Entusiastas, Desarrolladores y Empresas.
+                    <br />
+                    Todos tienen espacio en la nube con UpVent.
+                </p>
 
+                <!-- Features -->
+                <div class="grid grid-cols-3 gap-4">
+                    <div>1</div>
+                    <!-- ... -->
+                    <div>9</div>
+                </div>
+            </div>
+        </div>
 
 
         <!-- Footer -->
