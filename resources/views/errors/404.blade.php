@@ -26,7 +26,7 @@
                         </p>
                     </div>
                     <div class="mb-20 md:mb-0">
-                        <button class="text-lg font-light outline-none focus:outline-none transform transition-all hover:scale-110 text-blue-500 hover:text-blue-600"><i class="bi bi-arrow-left m-3"></i><a href="">Regresar</a></button>
+                        <button class="text-lg font-light outline-none focus:outline-none transform transition-all hover:scale-110 text-blue-500 hover:text-blue-600"><i class="bi bi-arrow-left m-3"></i><a href="{{url('/')}}">Regresar</a></button>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 text-center">
