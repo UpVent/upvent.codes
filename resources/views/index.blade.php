@@ -140,19 +140,64 @@
                 </p>
 
                 <!-- Features -->
-                <div class="grid grid-cols-3 gap-4">
-                    <div>1</div>
-                    <!-- ... -->
-                    <div>9</div>
-                </div>
-            </div>
-        </div>
+                <div>
+                    <div class="max-w-6xl mx-auto px-5 py-24 ">
+                        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+                            <div class="p-8 md:w-1/3 md:mb-0 mb-6 flex flex-col">
+                                <div class="gray-light">
+                                    <div class="rounded-lg shadow-lg p-4 transform translate-x-6 -translate-y-6">
+                                        <div class="w-10 h-10 inline-flex text-upvent mb-5 flex-shrink-0 p-2">
+                                            <i class="bi bi-laptop"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <h2 class="text-xl title-font font-bold mb-3">Universales</h2>
+                                            <p class="leading-relaxed text-sm text-center text-gray-500">
+                                                Desarrollo profesional y universal. Cualquier plataforma, cualquier dispositivo. Donde sea.​
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:w-1/3 md:mb-0 mb-6 flex flex-col">
+                                <div class="gray-light">
+                                    <div class="rounded-lg shadow-lg p-4 transform translate-x-6 -translate-y-6"  >
+                                        <div class="w-10 h-10 inline-flex text-upvent mb-5 flex-shrink-0 p-2">
+                                            <i class="bi bi-bar-chart-line-fill"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <h2 class="text-xl title-font font-bold mb-3">Escalables</h2>
+                                            <p class="leading-relaxed text-sm text-center text-gray-500">
+                                                Software escalable desde el primer día. Desde un pequeño sitio web hasta una plataforma corporativa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:w-1/3 md:mb-0 mb-6 flex flex-col">
+                                <div class="gray-light">
+                                    <div class="rounded-lg shadow-lg p-4 transform translate-x-6 -translate-y-6"  >
+                                        <div class="w-10 h-10 inline-flex text-upvent mb-5 flex-shrink-0 p-2">
+                                            <i class="bi bi-unlock"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <h2 class="text-xl title-font font-bold mb-3">Libres</h2>
+                                            <p class="leading-relaxed text-sm text-center text-gray-500">
+                                                Todas las soluciones empresariales de UpVent serán cien por ciento software libre.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-        <!-- Footer -->
-        @include('includes.footer')
+                    <!-- Footer -->
+                    @include('includes.footer')
 
-        <!-- Scripts -->
-        <script src="/js/app.js" type="text/javascript"></script>
+                    <!-- Scripts -->
+                    <script src="/js/app.js" type="text/javascript"></script>
     </body>
 </html>
