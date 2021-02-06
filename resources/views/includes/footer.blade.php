@@ -5,7 +5,7 @@
             <!-- Logo -->
             <div class="container m-2">
                 <img class="object-contain m-2" alt="" src="{{asset('img/logo-white.png')}}"/>
-                <p class="font-bold text-white m-1">
+                <p class="text-white m-1 text-sm">
                     Todos los derechos reservados © - UpVent @php echo date("Y"); @endphp. Todos los logos son marcas registradas de sus respectivos dueños.
                 </p>
             </div>
