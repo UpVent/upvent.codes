@@ -152,7 +152,7 @@
                                         <div class="flex-grow">
                                             <h2 class="text-xl title-font font-bold mb-3">Universales</h2>
                                             <p class="leading-relaxed text-sm text-center text-gray-500">
-                                                Desarrollo profesional y universal. Cualquier plataforma, cualquier dispositivo. Donde sea.​
+                                                Desarrollo profesional y universal. Cualquier plataforma, cualquier dispositivo. Donde sea.
                                             </p>
                                         </div>
                                     </div>
@@ -194,8 +194,33 @@
                     </div>
 
 
+                    <!-- Marketcloud shortcut -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-5 m-5">
+                            <img class="object-contain" src="{{asset('img/statistic.svg')}}" alt="" />
+                        </div>
+                        <div class="p-4 m-4">
+                            <div class="sm:text-center md:text-center lg:text-center">
+                                <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl md:text-6xl">
+                                    <span class="block xl:inline">¡Lleve su negocio</span>
+                                    <span class="block text-upvent xl:inline">a las nubes!</span>
+                                </h1>
+                                <p class="block xl:inline mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                    ¿Sabía que solo el 35% de las empresas Mexicanas están en la nube?
+                                    <br />
+                                    Conformada por un grupo de programadores, entusiastas y expertos en diversas
+                                    áreas de tecnología, nos encargamos de llevar a las pequeñas, medianas y
+                                    grandes empresas un paso más allá en el mundo de la tecnología. Con una amplia
+                                    gama de productos y servicios de código libre cien porciento comprometido con
+                                    la libertad y la ética profesional.
+                                </p>
+                            </div>
+                            <a href="" class="bg-upvent rounded-lg text-sm font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
+                                Ir al MarketCloud <i class="ml-1 bi bi-bag-fill"></i>
+                            </a>
+                        </div>
 
-
+                    </div>
 
 
                     <!-- Footer -->
