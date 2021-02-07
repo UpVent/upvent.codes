@@ -13,10 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Public accessible routes */
 Route::get('/', function () {
     return view('index');
 });
 
+
+
+/* Log-in required routes
+ * Admin routes might change on deploy CI/CD to prevent bruteforce
+ * or other attacks
+ *
+ * if you are using this for your own purposes make sure to subsitute the
+ * dashboard name with your preffered route name */
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
