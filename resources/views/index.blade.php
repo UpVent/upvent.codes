@@ -220,8 +220,95 @@
                                 Ir al MarketCloud <i class="ml-1 bi bi-bag-fill"></i>
                             </a>
                         </div>
-
                     </div>
+
+                    <div class="container mx-auto">
+                        <hr />
+                    </div>
+
+                    <!-- Second features section -->
+                    <div class="py-12 bg-white">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div class="lg:text-center">
+                                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                                    Concéntrese en lo importante para usted.
+                                </p>
+                                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                                    No tendrá que preocuparse por la infraestructura, la disponibilidad o desarrollo. Podrá dedicar el cien por ciento del tiempo a su negocio y a sus clientes.
+                                </p>
+                            </div>
+
+                            <div class="mt-10">
+                                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white shadow">
+                                                <i class="text-base bi bi-tools"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                                Soluciones Personalizadas
+                                            </dt>
+                                            <dd class="mt-2 text-base text-gray-500">
+                                                Elija lo que usted desea en sus soluciones. Desde blogs hasta plataformas empresariales, todo es posible con nosotros.
+                                            </dd>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white shadow">
+                                                <!-- Heroicon name: outline/scale -->
+                                                <i class="text-base bi bi-clipboard-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                                ¡Todo lo necesario!
+                                            </dt>
+                                            <dd class="mt-2 text-base text-gray-500">
+                                                Contamos con un equipo de desarrolladores altamente experimentado, nuestros expertos le ayudarán a expandir su negocio de forma exponencial.
+                                            </dd>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white shadow">
+                                                <i class="text-base bi bi-cash-stack"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                                Precios Accesibles
+                                            </dt>
+                                            <dd class="mt-2 text-base text-gray-500">
+                                                Escale su negocio cuando lo desee, en UpVent los precios se adaptan a usted y no al revés. Disfrute del poder de la nube a su propio ritmo.
+                                            </dd>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white shadow">
+                                                <i class="text-base bi bi-person-square"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                                Tratos personales / empresariales
+                                            </dt>
+                                            <dd class="mt-2 text-base text-gray-500">
+                                                El trato de UpVent es universal. Si usted desea crear una idea para usted mismo o para su empresa puede acudir con nosotros. Siempre a su servicio.
+                                            </dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                     <!-- Footer -->
