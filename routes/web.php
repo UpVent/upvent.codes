@@ -20,9 +20,66 @@ Route::get('/', function () {
     return view('index');
 });
 
-/* about us page route */
+/* Blog page route */
+
+
+/* About page route */
 Route::get('/about', function() {
     return view('pages.about');
+});
+
+
+/* Services page route */
+Route::get('/services', function() {
+    return view('pages.services');
+});
+
+
+/* Contact page route */
+Route::get('/contact', function() {
+    return view('pages.contact');
+});
+
+
+/* Marketcloud page route */
+Route::get('/marketcloud', function() {
+    return view('pages.marketcloud');
+});
+
+
+/* Privacy Policy page route */
+Route::get('/privacy-policy', function() {
+    return view('pages.privacy-policy');
+});
+
+
+/* Free software route */
+Route::get('/open-source', function() {
+    return view('pages.open-source');
+});
+
+
+/* Licenses page route */
+Route::get('/licenses', function() {
+    return view('pages.licenses');
+});
+
+
+/* Events page route */
+Route::get('/events', function() {
+    return view('pages.events');
+});
+
+
+/* Team page route */
+Route::get('/team', function() {
+    return view('pages.team');
+});
+
+
+/* Allies page route */
+Route::get('/allies', function() {
+    return view('pages.allies');
 });
 
 
