@@ -14,10 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* Public accessible routes */
+
+/* Main page route */
 Route::get('/', function () {
     return view('index');
 });
 
+/* about us page route */
+Route::get('/about', function() {
+    return view('pages.about');
+});
 
 
 /* Log-in required routes
