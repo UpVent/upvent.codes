@@ -51,13 +51,13 @@
 
             <!-- Links -->
             <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
-                <i class="bi bi-record-fill"></i>  Términos y Condiciones
+                <i class="bi bi-record-fill"></i>  Código Libre
             </a>
             <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>  Política de Privacidad
             </a>
             <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
-                <i class="bi bi-record-fill"></i> Repositorio de código libre
+                <i class="bi bi-record-fill"></i> Repositorio de código libre en GitHub
             </a>
             <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i> Licencias
