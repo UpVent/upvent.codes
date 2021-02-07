@@ -102,7 +102,7 @@
             border-t border-white-500 text-white text-sm
             flex-col md:flex-row max-w-6xl">
             <div class="mt-2">
-                © Copyright 2020-@php echo date("Y"); @endphp. All Rights Reserved.
+                © Copyright 2020-@php echo date("Y"); @endphp. Todos los derechos reservados.
             </div>
 
             <!-- Required Unicons (if you want) -->

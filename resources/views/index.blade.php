@@ -195,7 +195,7 @@
 
 
                     <!-- Marketcloud shortcut -->
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-2 gap-4 sm:hidden md:inline-flex lg:inline-flex">
                         <div class="p-5 m-5">
                             <img class="object-contain" src="{{asset('img/statistic.svg')}}" alt="" />
                         </div>
@@ -207,7 +207,8 @@
                                 </h1>
                                 <p class="block xl:inline mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                                     ¿Sabía que solo el 35% de las empresas Mexicanas están en la nube?
-                                    <br />
+                                </p>
+                                <p class="block xl:inline mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                                     Conformada por un grupo de programadores, entusiastas y expertos en diversas
                                     áreas de tecnología, nos encargamos de llevar a las pequeñas, medianas y
                                     grandes empresas un paso más allá en el mundo de la tecnología. Con una amplia
