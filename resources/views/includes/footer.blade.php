@@ -19,25 +19,25 @@
             </div>
 
             <!-- Links -->
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>    Inicio
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/blog') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>    Blog
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/about') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>    Nosotros
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/services') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>    Servicios
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/contact') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>    Contacto
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/marketcloud') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>    Marketcloud
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/open-source') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>    Código Abierto
             </a>
         </div>
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Links -->
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/open-source') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>  Código Libre
             </a>
             <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
