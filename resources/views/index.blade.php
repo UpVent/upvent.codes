@@ -259,7 +259,6 @@
                                     <div class="flex">
                                         <div class="flex-shrink-0">
                                             <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white shadow">
-                                                <!-- Heroicon name: outline/scale -->
                                                 <i class="text-base bi bi-clipboard-check"></i>
                                             </div>
                                         </div>
@@ -310,6 +309,96 @@
                     </div>
 
 
+                    <!-- Client banner -->
+
+                    <div class="m-8 container mx-auto">
+                        <p class="mt-4 max-w-2xl text-3xl text-gray-500 lg:mx-auto">Nuestros clientes hablan por nosotros</p>
+                        <p class="mt-4 max-w-2xl text-sm text-gray-500 lg:mx-auto">Conozca las opiniones de los clientes más exitosos que tenemos. Ellos confían a UpVent su computación en la nube.</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 sm:gap-2 md:grid-cols-4 md:gap-4 lg:grid-cols-4 lg:gap-2">
+                        <div class="m-2 p-2">
+                            <!-- component -->
+                            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+                                <img class="w-full h-56 object-cover object-center" src="{{asset('img/aacosta.jpg')}}" alt="avatar">
+                                <div class="flex items-center px-6 py-3 bg-upvent">
+                                    <i class="text-md bi bi-newspaper text-white"></i>
+                                    <h1 class="mx-3 text-white font-semibold text-lg">Informando</h1>
+                                </div>
+                                <div class="py-4 px-6">
+                                    <h1 class="text-2xl font-semibold text-gray-800">Armando A.</h1>
+                                    <p class="py-2 text-lg text-gray-700">
+                                        Amo que sea una empresa mexicana, además de que son jóvenes y super claros en los temas que no todos dominamos. Agradezco de sobremanera su apoyo y pues mi hosting será con ustedes por un buen rato. Saludos
+                                        PD. En 24 horas estuvo listo mi sitio 🤯
+                                    </p>
+                                    <div class="flex items-center mt-4 text-gray-700">
+                                        <i class="text-sm bi bi-briefcase-fill"></i>
+                                        <h1 class="px-2 text-sm">Periodista Independiente</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-2 p-2">
+                            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+                                <img class="w-full h-56 object-cover object-center" src="{{asset('img/asmith.jpg')}}" alt="avatar">
+                                <div class="flex items-center px-6 py-3 bg-upvent">
+                                    <i class="text-md bi bi-lightbulb text-white"></i>
+                                    <h1 class="mx-3 text-white font-semibold text-lg">Innovando</h1>
+                                </div>
+                                <div class="py-4 px-6">
+                                    <h1 class="text-2xl font-semibold text-gray-800">Anthony S.</h1>
+                                    <p class="py-2 text-lg text-gray-700">
+                                        "Inicié mi negocio de tecnología con muy poco tiempo entre manos y con poco dinero, ahora gracias a UpVent mi negocio a día de hoy se encuentra en línea las 24 horas del día, los 7 días de la semana.Recomiendo ampliamente sus servicios"
+                                    </p>
+                                    <div class="flex items-center mt-4 text-gray-700">
+                                        <i class="text-sm bi bi-briefcase-fill"></i>
+                                        <h1 class="px-2 text-sm">CEO - CyberIndustree</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-2 p-2">
+                            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+                                <img class="w-full h-56 object-cover object-center" src="{{asset('img/rturanzas.jpg')}}" alt="avatar">
+                                <div class="flex items-center px-6 py-3 bg-upvent">
+                                    <i class="text-md bi bi-brush hover text-white"></i>
+                                    <h1 class="mx-3 text-white font-semibold text-lg">Creando</h1>
+                                </div>
+                                <div class="py-4 px-6">
+                                    <h1 class="text-2xl font-semibold text-gray-800">Regina T.</h1>
+                                    <p class="py-2 text-lg text-gray-700">
+                                        "Soy una chica que quiere compartir su arte y también poder venderlo y mostrarlo al mundo. La atención que te dan es fenomenal y las personas que la componen también lo son. Estoy muy feliz con el resultado, totalmente recomendada."
+                                    </p>
+                                    <div class="flex items-center mt-4 text-gray-700">
+                                        <i class="text-sm bi bi-briefcase-fill"></i>
+                                        <h1 class="px-2 text-sm">Artista Digital</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-2 p-2">
+                            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+                                <img class="w-full h-56 object-cover object-center" src="{{asset('img/opurata.jpeg')}}" alt="avatar">
+                                <div class="flex items-center px-6 py-3 bg-upvent">
+                                    <i class="text-md bi bi-star text-white"></i>
+                                    <h1 class="mx-3 text-white font-semibold text-lg">Mejorando</h1>
+                                </div>
+                                <div class="py-4 px-6">
+                                    <h1 class="text-2xl font-semibold text-gray-800">Jair S.</h1>
+                                    <p class="py-2 text-lg text-gray-700">
+                                        "Súper-recomendable! Muy buen dominio de las herramientas necesarias y te ofrece alternativas para lograr lo que le solicitas. Excelente!"
+                                    </p>
+                                    <div class="flex items-center mt-4 text-gray-700">
+                                        <i class="text-sm bi bi-briefcase-fill"></i>
+                                        <h1 class="px-2 text-sm">CEO - Mide Mejora y Gana</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Footer -->
                     @include('includes.footer')
