@@ -8,4 +8,3 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="/css/app.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="{{ asset('css/index.css') }}" type="text/css" media="screen" />
