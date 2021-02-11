@@ -11,7 +11,6 @@
 
     </head>
     <body class="antialiased font-montserrat">
-        <!-- This example requires Tailwind CSS v2.0+ -->
         <div class="shadow-xl">
             <nav class=" flex items-center justify-between flex-wrap bg-upvent p-6">
                 <!-- Navbar Logo -->
@@ -398,6 +397,92 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+
+                    <!-- Sección de Beneficios -->
+
+                    <div class="lg:text-center">
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                            Beneficios.
+                        </p>
+                        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                            Existe un gran número de razones para elegir a UpVent como solución. Le presentamos orgullosamente las mejores.
+                        </p>
+                    </div>
+
+                    <div class="container mx-auto mt-8 grid grid-cols-4 gap-2">
+                        <div>
+                            <div class="shadow-lg rounded-2xl w-64 p-4 bg-white relative overflow-hidden">
+                                <img alt="moto" src="/images/object/1.png" class="absolute -right-20 -bottom-8 h-40 w-40 mb-4"/>
+                                <div class="w-4/6">
+                                    <p class="text-gray-800 text-lg font-medium mb-2">
+                                        Low Cost
+                                    </p>
+                                    <p class="text-gray-400 text-xs">
+                                        Detail is not an obsession, it is the very essence of perfection.
+                                    </p>
+                                    <p class="text-indigo-500 text-xl font-medium">
+                                        $399
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <div class="shadow-lg rounded-2xl w-64 p-4 bg-white relative overflow-hidden">
+                                <img alt="moto" src="/images/object/1.png" class="absolute -right-20 -bottom-8 h-40 w-40 mb-4"/>
+                                <div class="w-4/6">
+                                    <p class="text-gray-800 text-lg font-medium mb-2">
+                                        Libre y Open Source
+                                    </p>
+                                    <p class="text-gray-400 text-xs">
+                                        Detail is not an obsession, it is the very essence of perfection.
+                                    </p>
+                                    <p class="text-indigo-500 text-xl font-medium">
+                                        $399
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <div class="shadow-lg rounded-2xl w-64 p-4 bg-white relative overflow-hidden">
+                                <img alt="moto" src="/images/object/1.png" class="absolute -right-20 -bottom-8 h-40 w-40 mb-4"/>
+                                <div class="w-4/6">
+                                    <p class="text-gray-800 text-lg font-medium mb-2">
+                                        Educativo
+                                    </p>
+                                    <p class="text-gray-400 text-xs">
+                                        Detail is not an obsession, it is the very essence of perfection.
+                                    </p>
+                                    <p class="text-indigo-500 text-xl font-medium">
+                                        $399
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <div class="shadow-lg rounded-2xl w-64 p-4 bg-white relative overflow-hidden">
+                                <img alt="moto" src="/images/object/1.png" class="absolute -right-20 -bottom-8 h-40 w-40 mb-4"/>
+                                <div class="w-4/6">
+                                    <p class="text-gray-800 text-lg font-medium mb-2">
+                                        Innovador
+                                    </p>
+                                    <p class="text-gray-400 text-xs">
+                                        Detail is not an obsession, it is the very essence of perfection.
+                                    </p>
+                                    <p class="text-indigo-500 text-xl font-medium">
+                                        $399
+                                    </p>
+                                </div>
+                            </div></div>
+
+
                     </div>
 
                     <!-- Footer -->
