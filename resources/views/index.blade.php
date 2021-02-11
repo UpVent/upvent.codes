@@ -216,7 +216,7 @@
                                     la libertad y la ética profesional.
                                 </p>
                             </div>
-                            <a href="" class="bg-upvent rounded-lg text-sm font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
+                            <a href="{{ url('/marketcloud') }}" class="bg-upvent rounded-lg text-sm font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
                                 Ir al MarketCloud <i class="ml-1 bi bi-bag-fill"></i>
                             </a>
                         </div>
