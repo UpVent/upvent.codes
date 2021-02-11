@@ -50,8 +50,8 @@
             </div>
 
             <!-- Links -->
-            <a href="{{ url('/open-source') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
-                <i class="bi bi-record-fill"></i>  Código Libre
+            <a href="{{ url('/login') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+                <i class="bi bi-record-fill"></i> Mi Cuenta
             </a>
             <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>  Política de Privacidad
@@ -81,7 +81,7 @@
             </div>
 
             <!-- Links -->
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="https://github.com/UpVent" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 GitHub
             </a>
             <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
