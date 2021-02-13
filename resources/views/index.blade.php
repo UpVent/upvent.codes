@@ -399,6 +399,8 @@
                         </div>
                     </div>
 
+                    <hr />
+
 
                     <!-- Sección de Beneficios -->
 
@@ -406,9 +408,6 @@
                         <div class="relative">
                             <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                                 <div class="lg:col-start-2 lg:max-w-2xl ml-auto">
-                                    <p class="text-base leading-6 text-indigo-500 font-semibold uppercase">
-                                        Interactive
-                                    </p>
                                     <h4 class="mt-2 text-2xl leading-8 font-extrabold text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
                                         Interactivity between team members is the key of the success.
                                     </h4>
@@ -473,12 +472,12 @@
                                 <div class="mt-10 lg:-mx-4 relative relative-20 lg:mt-0 lg:col-start-1">
                                     <div class="relative space-y-4">
                                         <div class="flex items-end justify-center lg:justify-start space-x-4">
-                                            <img class="rounded-lg shadow-lg w-32 md:w-56" width="200" src="/images/object/8.jpg" alt="1"/>
-                                            <img class="rounded-lg shadow-lg w-40 md:w-64" width="260" src="/images/landscape/4.jpg" alt="2"/>
+                                            <img class="rounded-lg shadow-lg w-32 md:w-56" width="200" src="{{ asset('img/benefits/coins.jpg') }}" alt="1"/>
+                                            <img class="rounded-lg shadow-lg w-40 md:w-64" width="260" src="{{ asset('img/benefits/libre.jpg') }}" alt="2"/>
                                         </div>
                                         <div class="flex items-start justify-center lg:justify-start space-x-4 ml-12">
-                                            <img class="rounded-lg shadow-lg w-24 md:w-40" width="170" src="/images/landscape/3.jpg" alt="3"/>
-                                            <img class="rounded-lg shadow-lg w-32 md:w-56" width="200" src="/images/object/9.jpg" alt="4"/>
+                                            <img class="rounded-lg shadow-lg w-24 md:w-40" width="170" src="{{ asset('img/benefits/innovation.jpg') }}" alt="3"/>
+                                            <img class="rounded-lg shadow-lg w-32 md:w-56" width="200" src="{{ asset('img/benefits/library.jpg') }}" alt="4"/>
                                         </div>
                                     </div>
                                 </div>
