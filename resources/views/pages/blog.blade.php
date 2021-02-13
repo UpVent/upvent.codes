@@ -85,9 +85,6 @@
             </nav>
         </div>
 
-        <!-- Beta banner -->
-        @include('includes.notice-banner')
-
         <!-- Jumbotron -->
         <div class="relative bg-white overflow-hidden">
             <div class="max-w-7xl mx-auto">
@@ -95,21 +92,16 @@
                     <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div class="sm:text-center lg:text-center">
                             <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                                <span class="block xl:inline">Llevando empresas a la nube desde nuestros</span>
-                                <span class="block text-upvent xl:inline">inicios.</span>
+                                <span class="block xl:inline">Estamos en construcción</span>
+                                <span class="block text-upvent xl:inline">¡Espéranos!</span>
                             </h1>
                             <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                Líder Mexicano en desarrollo de soluciones empresariales de código libre.
+                                ...Aún puedes visitar el blog anterior pulsando el botón de abajo :D
                             </p>
                             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div class="rounded-md shadow">
-                                    <a href="#" class="shadow-lg w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-upvent hover:bg-blue-800 md:py-4 md:text-lg md:px-10">
-                                        Conocer más  <i class="bi bi-forward px-1"></i>
-                                    </a>
-                                </div>
-                                <div class="mt-3 sm:mt-0 sm:ml-3">
-                                    <a href="#" class="shadow-lg w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
-                                        Portafolio  <i class="bi bi-briefcase px-1"></i></i>
+                                    <a href="https://upvent.codes/blog" class="shadow-lg w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-upvent hover:bg-blue-800 md:py-4 md:text-lg md:px-10">
+                                        Ir al blog anterior de UpVent  <i class="bi bi-forward px-1"></i>
                                     </a>
                                 </div>
                             </div>
@@ -118,7 +110,7 @@
                 </div>
             </div>
             <div class="sm:hidden md:inline-flex lg:inline-flex p-4 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img class="rounded-lg object-center object-contain h-5/6 w-4/6" src="{{asset('img/coworkers.svg')}}" alt="">
+                <img class="rounded-lg object-center object-contain h-5/6 w-4/6" src="{{asset('img/construction.svg')}}" alt="">
             </div>
         </div>
 
