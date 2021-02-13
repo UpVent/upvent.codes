@@ -21,7 +21,9 @@ Route::get('/', function () {
 });
 
 /* Blog page route */
-
+Route::get('/blog', function() {
+    return view('pages.blog');
+});
 
 /* About page route */
 Route::get('/about', function() {
