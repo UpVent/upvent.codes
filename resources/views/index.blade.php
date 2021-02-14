@@ -399,7 +399,6 @@
 
                     <hr />
 
-
                     <!-- Sección de Beneficios -->
 
                     <div class="max-w-screen-xl p-4 bg-white dark:bg-gray-800 mx-auto px-4 sm:px-6 lg:px-8 relative py-26 lg:mt-20">
