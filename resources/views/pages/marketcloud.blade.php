@@ -38,7 +38,7 @@
                             Inicio
                         </a>
 
-                        <a href="#responsive-header" class="block text-black rounded-lg bg-white shadow-lg p-2 mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-blue mr-4 rounded focus:outline-none focus:shadow-outline">
+                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
                             Blog
                         </a>
 
@@ -54,7 +54,7 @@
                             Contacto
                         </a>
 
-                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                        <a href="#responsive-header" class="block text-black rounded-lg bg-white shadow-lg p-2 mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-blue mr-4 rounded focus:outline-none focus:shadow-outline">
                             Marketcloud
                         </a>
 
@@ -96,12 +96,12 @@
                                 <span class="block text-upvent xl:inline">¡Espéranos!</span>
                             </h1>
                             <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                ...Aún puedes visitar el blog anterior pulsando el botón de abajo :D
+                                ...Aún puedes visitar el MarketCloud anterior pulsando el botón de abajo :D
                             </p>
                             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div class="rounded-md shadow">
                                     <a href="https://upvent.codes/blog" class="shadow-lg w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-upvent hover:bg-blue-800 md:py-4 md:text-lg md:px-10">
-                                        Ir al blog anterior de UpVent  <i class="bi bi-forward px-1"></i>
+                                        Ir al MarketCloud anterior de UpVent  <i class="bi bi-forward px-1"></i>
                                     </a>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <div class="sm:hidden md:inline-flex lg:inline-flex p-4 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img class="rounded-lg object-center object-contain h-5/6 w-4/6" src="{{asset('img/construction.svg')}}" alt="">
+                <img class="rounded-lg object-center object-contain h-5/6 w-4/6" src="{{asset('img/construction-2.svg')}}" alt="">
             </div>
         </div>
 
