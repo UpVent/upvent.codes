@@ -85,9 +85,7 @@
         </div>
 
         <!-- Beta banner -->
-        @if (env('APP_ENV') != 'Production')
-            @include('includes.notice-banner')
-        @endif
+        @include('includes.notice-banner')
 
         <!-- Jumbotron -->
         <div class="relative bg-white overflow-hidden">
