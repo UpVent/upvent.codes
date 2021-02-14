@@ -4,7 +4,7 @@
         <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
             <!-- Logo -->
             <div class="container m-2">
-                <img class="object-contain m-2" alt="" src="{{asset('img/logo-white.png')}}"/>
+                <img class="object-contain m-2" alt="UpVent Logo" src="{{asset('img/logo-white.png')}}"/>
                 <p class="text-white m-1 text-sm">
                     Todos los derechos reservados © - UpVent @php echo date("Y"); @endphp. Todos los logos son marcas registradas de sus respectivos dueños.
                 </p>
@@ -53,22 +53,22 @@
             <a href="{{ url('/login') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i> Mi Cuenta
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/privacy-policy') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>  Política de Privacidad
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="https://github.com/UpVent" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i> Repositorio de código libre en GitHub
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/licenses') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i> Licencias
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/team') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i> Equipo
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/events') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i> Eventos
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+            <a href="{{ url('/allies') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 <i class="bi bi-record-fill"></i>  Aliados
             </a>
         </div>
@@ -84,14 +84,14 @@
             <a href="https://github.com/UpVent" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
                 GitHub
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
-                Discord
+            <a href="{{ url('/') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+                Discourse (Coming Soon)
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
-                Twitter
+            <a href="{{ url('/') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+                Twitter (Coming Soon)
             </a>
-            <a href="#" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
-                YouTube
+            <a href="{{ url('/') }}" class="my-3 block text-white hover:text-gray-100 text-sm font-medium duration-700">
+                YouTube (Coming Soon)
             </a>
         </div>
     </div>
@@ -107,19 +107,16 @@
 
             <!-- Required Unicons (if you want) -->
             <div class="text-white md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-                <a href="#" class="w-6 mx-1">
+                <a href="https://facebook.com/UpVentMX" class="w-6 mx-1">
                     <i class="bi bi-facebook"></i>
                 </a>
-                <a href="#" class="w-6 mx-1">
-                    <i class="bi bi-twitter"></i>
-                </a>
-                <a href="#" class="w-6 mx-1">
+                <a href="https://github.com/UpVent" class="w-6 mx-1">
                     <i class="bi bi-github"></i>
                 </a>
-                <a href="#" class="w-6 mx-1">
+                <a href="mailto:upventmx@gmail.com" class="w-6 mx-1">
                     <i class="bi bi-envelope-fill"></i>
                 </a>
-                <a href="#" class="w-6 mx-1">
+                <a href="https://instagram.com/UpVentMX" class="w-6 mx-1">
                     <i class="bi bi-instagram"></i>
                 </a>
             </div>
