@@ -14,7 +14,9 @@
             <nav class=" flex items-center justify-between flex-wrap bg-upvent p-6">
                 <!-- Navbar Logo -->
                 <div class="flex items-center flex-no-shrink mr-6">
-                    <img class="object-center object-contain h-10 w-15" src="{{asset('img/logo-white.png')}}" alt="UpVent White Logo" />
+                    <a href="{{ url('/') }}">
+                        <img class="object-center object-contain h-10 w-15" src="{{asset('img/logo-white.png')}}" alt="UpVent White Logo" />
+                    </a>
                 </div>
                 <!-- Menu hidden -->
                 <div class="block lg:hidden">
