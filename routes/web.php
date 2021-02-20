@@ -47,12 +47,6 @@ Route::get('/marketcloud', function() {
 });
 
 
-/* Privacy Policy page route */
-// Route::get('/privacy-policy', function() {
-//     return view('pages.privacy-policy');
-// });
-
-
 /* Free software route */
 Route::get('/open-source', function() {
     return view('pages.open-source');
