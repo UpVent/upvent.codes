@@ -3793,8 +3793,6 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./navbar */ "./resources/js/navbar.js");
-
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
 /***/ }),
@@ -3827,19 +3825,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/navbar.js":
-/*!********************************!*\
-  !*** ./resources/js/navbar.js ***!
-  \********************************/
-/***/ (() => {
-
-document.querySelector('[data-toggle-hide]').addEventListener('click', function () {
-  console.log(this.dataset);
-  document.querySelector(this.dataset.toggleHide).classList.toggle('hidden');
-});
 
 /***/ }),
 
