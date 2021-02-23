@@ -4,129 +4,494 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{config('app.name', 'UpVent')}} - Soluciones en la nube para tu negocio. Low Cost, Siempre Listas.</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        @include('includes.head-static')
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito';
-            }
-        </style>
     </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+    <body class="antialiased font-montserrat">
+        <div class="shadow-xl">
+            <nav class=" flex items-center justify-between flex-wrap bg-upvent p-6">
+                <!-- Navbar Logo -->
+                <div class="flex items-center flex-no-shrink mr-6">
+                    <img class="object-center object-contain h-10 w-15" src="{{asset('img/logo-white.png')}}" alt="UpVent White Logo" />
+                </div>
+                <!-- Menu hidden -->
+                <div class="block lg:hidden">
+                    <button data-toggle-hide="[data-nav-content]" class="flex items-center px-3 py-2 border rounded text-white border-teal-light hover:text-white hover:border-white rounded focus:outline-none focus:shadow-outline">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>
+                                Menu
+                            </title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                        </svg>
+                    </button>
+                </div>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                <!-- Menu shown -->
+                <div data-nav-content="" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block">
+                    <div class="text-sm text-white lg:flex-grow">
+
+                        <a class="block text-black rounded-lg bg-white shadow-lg p-2 mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-blue mr-4 rounded focus:outline-none focus:shadow-outline" href="#">
+                            Inicio
+                        </a>
+
+                        <a href="{{ url('/blog') }}" class=" block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                            Blog
+                        </a>
+
+                        <a href="{{ url('/about') }}" class=" block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                            Nosotros
+                        </a>
+
+                        <a href="{{ url('/services') }}" class=" block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                            Servicios
+                        </a>
+
+                        <a href="{{ url('/contact') }}" class=" block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                            Contacto
+                        </a>
+
+                        <a href="{{ url('/marketcloud') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                            Marketcloud
+                        </a>
+
+                        @if (Route::has('login'))
+                            @auth
+                            <a href="{{ url('/dashboard') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                                Panel de Administración <i class="bi bi-speedometer2"></i>
+                            </a>
+                        @else
+                            <a href="{{ route('login') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                                Login <i class="bi bi-person-circle"></i>
+                            </a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4 rounded focus:outline-none focus:shadow-outline">
+                                    Registro <i class="bi bi-pencil-square"></i>
+                                </a>
+                            @endif
+                            @endauth
                         @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="text-white lg:w-64 pl-8 flex-shrink-0 flex items-center justify-end space-x-6">
+                        <a href="https://github.com/UpVent"><i class="bi bi-github"></i></a>
+                        <a href="https://www.facebook.com/UpVentMX"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/upventmx"><i class="bi bi-instagram"></i></a>
+                        <a href="mailto:upventmx@gmail.com?subject=Contacto%20desde%20p%C3%A1gina%20web"><i class="bi bi-envelope-fill"></i></a>
                     </div>
                 </div>
+            </nav>
+        </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
+        <!-- Beta banner -->
+        @include('includes.notice-banner')
 
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
+        <!-- Jumbotron -->
+        <div class="relative bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                    <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                        <div class="sm:text-center lg:text-center">
+                            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                                <span class="block xl:inline">Nube Inteligente, para negocios</span>
+                                <span class="block text-upvent xl:inline">Inteligentes.</span>
+                            </h1>
+                            <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                Líder Mexicano en desarrollo de soluciones empresariales de código libre.
+                            </p>
+                            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                <div class="rounded-md shadow">
+                                    <a href="#" class="shadow-lg w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-upvent hover:bg-blue-800 md:py-4 md:text-lg md:px-10">
+                                        Conocer más  <i class="bi bi-forward px-1"></i>
+                                    </a>
+                                </div>
+                                <div class="mt-3 sm:mt-0 sm:ml-3">
+                                    <a href="#" class="shadow-lg w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
+                                        Portafolio  <i class="bi bi-briefcase px-1"></i></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
+                    </main>
                 </div>
             </div>
+            <div class="sm:hidden md:inline-flex lg:inline-flex p-4 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                <img class="rounded-lg object-center object-contain h-5/6 w-4/6" src="{{asset('img/coworkers.svg')}}" alt="">
+            </div>
         </div>
+
+        <hr />
+
+        <!-- Features section -->
+        <div class="content-center mt-8">
+            <div class="text-4xl text-center text-black">
+                <h1>
+                    Soluciones en la nube.
+                    <br />
+                    Para todo tipo de negocios.
+                </h1>
+                <p class="mt-8 text-sm text-gray-500 text-center">
+                    Entusiastas, Desarrolladores y Empresas.
+                    <br />
+                    Todos tienen espacio en la nube con UpVent.
+                </p>
+
+                <!-- Features -->
+                <div>
+                    <div class="max-w-6xl mx-auto px-5 py-24 ">
+                        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+                            <div class="p-8 md:w-1/3 md:mb-0 mb-6 flex flex-col">
+                                <div class="gray-light">
+                                    <div class="rounded-lg shadow-lg p-4 transform translate-x-6 -translate-y-6">
+                                        <div class="w-10 h-10 inline-flex text-upvent mb-5 flex-shrink-0 p-2">
+                                            <i class="bi bi-laptop"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <h2 class="text-xl title-font font-bold mb-3">Universales</h2>
+                                            <p class="leading-relaxed text-sm text-center text-gray-500">
+                                                Desarrollo profesional y universal. Cualquier plataforma, cualquier dispositivo. Donde sea.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:w-1/3 md:mb-0 mb-6 flex flex-col">
+                                <div class="gray-light">
+                                    <div class="rounded-lg shadow-lg p-4 transform translate-x-6 -translate-y-6"  >
+                                        <div class="w-10 h-10 inline-flex text-upvent mb-5 flex-shrink-0 p-2">
+                                            <i class="bi bi-bar-chart-line-fill"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <h2 class="text-xl title-font font-bold mb-3">Escalables</h2>
+                                            <p class="leading-relaxed text-sm text-center text-gray-500">
+                                                Software escalable desde el primer día. Desde un pequeño sitio web hasta una plataforma corporativa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-8 md:w-1/3 md:mb-0 mb-6 flex flex-col">
+                                <div class="gray-light">
+                                    <div class="rounded-lg shadow-lg p-4 transform translate-x-6 -translate-y-6"  >
+                                        <div class="w-10 h-10 inline-flex text-upvent mb-5 flex-shrink-0 p-2">
+                                            <i class="bi bi-unlock"></i>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <h2 class="text-xl title-font font-bold mb-3">Libres</h2>
+                                            <p class="leading-relaxed text-sm text-center text-gray-500">
+                                                Todas las soluciones empresariales de UpVent serán cien por ciento software libre.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Marketcloud shortcut -->
+                    <div class="grid grid-cols-2 gap-4 sm:hidden md:inline-flex lg:inline-flex">
+                        <div class="p-5 m-5">
+                            <img class="object-contain" src="{{asset('img/statistic.svg')}}" alt="" />
+                        </div>
+                        <div class="p-4 m-4">
+                            <div class="sm:text-center md:text-center lg:text-center">
+                                <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl md:text-6xl">
+                                    <span class="block xl:inline">¡Lleve su negocio</span>
+                                    <span class="block text-upvent xl:inline">a las nubes!</span>
+                                </h1>
+                                <p class="block xl:inline mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                    ¿Sabía que solo el 35% de las empresas Mexicanas están en la nube?
+                                </p>
+                                <p class="block xl:inline mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                    Conformada por un grupo de programadores, entusiastas y expertos en diversas
+                                    áreas de tecnología, nos encargamos de llevar a las pequeñas, medianas y
+                                    grandes empresas un paso más allá en el mundo de la tecnología. Con una amplia
+                                    gama de productos y servicios de código libre cien porciento comprometido con
+                                    la libertad y la ética profesional.
+                                </p>
+                            </div>
+                            <a href="{{ url('/marketcloud') }}" class="bg-upvent rounded-lg text-sm font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
+                                Ir al MarketCloud <i class="ml-1 bi bi-bag-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container mx-auto">
+                        <hr />
+                    </div>
+
+                    <!-- Second features section -->
+                    <div class="py-12 bg-white">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div class="lg:text-center">
+                                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                                    Concéntrese en lo importante para usted.
+                                </p>
+                                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                                    No tendrá que preocuparse por la infraestructura, la disponibilidad o desarrollo. Podrá dedicar el cien por ciento del tiempo a su negocio y a sus clientes.
+                                </p>
+                            </div>
+
+                            <div class="mt-10">
+                                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white shadow">
+                                                <i class="text-base bi bi-tools"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                                Soluciones Personalizadas
+                                            </dt>
+                                            <dd class="mt-2 text-base text-gray-500">
+                                                Elija lo que usted desea en sus soluciones. Desde blogs hasta plataformas empresariales, todo es posible con nosotros.
+                                            </dd>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white shadow">
+                                                <i class="text-base bi bi-clipboard-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                                ¡Todo lo necesario!
+                                            </dt>
+                                            <dd class="mt-2 text-base text-gray-500">
+                                                Contamos con un equipo de desarrolladores altamente experimentado, nuestros expertos le ayudarán a expandir su negocio de forma exponencial.
+                                            </dd>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white shadow">
+                                                <i class="text-base bi bi-cash-stack"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                                Precios Accesibles
+                                            </dt>
+                                            <dd class="mt-2 text-base text-gray-500">
+                                                Escale su negocio cuando lo desee, en UpVent los precios se adaptan a usted y no al revés. Disfrute del poder de la nube a su propio ritmo.
+                                            </dd>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white shadow">
+                                                <i class="text-base bi bi-person-square"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                                Tratos personales / empresariales
+                                            </dt>
+                                            <dd class="mt-2 text-base text-gray-500">
+                                                El trato de UpVent es universal. Si usted desea crear una idea para usted mismo o para su empresa puede acudir con nosotros. Siempre a su servicio.
+                                            </dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Client banner -->
+
+                    <div class="m-8 container mx-auto">
+                        <p class="mt-4 max-w-2xl text-3xl text-gray-500 lg:mx-auto">Nuestros clientes hablan por nosotros</p>
+                        <p class="mt-4 max-w-2xl text-sm text-gray-500 lg:mx-auto">Conozca las opiniones de los clientes más exitosos que tenemos. Ellos confían a UpVent su computación en la nube.</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 sm:gap-2 md:grid-cols-4 md:gap-4 lg:grid-cols-4 lg:gap-2">
+                        <div class="m-2 p-2">
+                            <!-- component -->
+                            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+                                <img class="w-full h-56 object-cover object-center" src="{{asset('img/aacosta.jpg')}}" alt="avatar">
+                                <div class="flex items-center px-6 py-3 bg-upvent">
+                                    <i class="text-md bi bi-newspaper text-white"></i>
+                                    <h1 class="mx-3 text-white font-semibold text-lg">Informando</h1>
+                                </div>
+                                <div class="py-4 px-6">
+                                    <h1 class="text-2xl font-semibold text-gray-800">Armando A.</h1>
+                                    <p class="py-2 text-lg text-gray-700">
+                                        Amo que sea una empresa mexicana, además de que son jóvenes y super claros en los temas que no todos dominamos. Agradezco de sobremanera su apoyo y pues mi hosting será con ustedes por un buen rato. Saludos
+                                        PD. En 24 horas estuvo listo mi sitio 🤯
+                                    </p>
+                                    <div class="flex items-center mt-4 text-gray-700">
+                                        <i class="text-sm bi bi-briefcase-fill"></i>
+                                        <h1 class="px-2 text-sm">Periodista Independiente</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-2 p-2">
+                            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+                                <img class="w-full h-56 object-cover object-center" src="{{asset('img/asmith.jpg')}}" alt="avatar">
+                                <div class="flex items-center px-6 py-3 bg-upvent">
+                                    <i class="text-md bi bi-lightbulb text-white"></i>
+                                    <h1 class="mx-3 text-white font-semibold text-lg">Innovando</h1>
+                                </div>
+                                <div class="py-4 px-6">
+                                    <h1 class="text-2xl font-semibold text-gray-800">Anthony S.</h1>
+                                    <p class="py-2 text-lg text-gray-700">
+                                        "Inicié mi negocio de tecnología con muy poco tiempo entre manos y con poco dinero, ahora gracias a UpVent mi negocio a día de hoy se encuentra en línea las 24 horas del día, los 7 días de la semana.Recomiendo ampliamente sus servicios"
+                                    </p>
+                                    <div class="flex items-center mt-4 text-gray-700">
+                                        <i class="text-sm bi bi-briefcase-fill"></i>
+                                        <h1 class="px-2 text-sm">CEO - CyberIndustree</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-2 p-2">
+                            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+                                <img class="w-full h-56 object-cover object-center" src="{{asset('img/rturanzas.jpg')}}" alt="avatar">
+                                <div class="flex items-center px-6 py-3 bg-upvent">
+                                    <i class="text-md bi bi-brush hover text-white"></i>
+                                    <h1 class="mx-3 text-white font-semibold text-lg">Creando</h1>
+                                </div>
+                                <div class="py-4 px-6">
+                                    <h1 class="text-2xl font-semibold text-gray-800">Regina T.</h1>
+                                    <p class="py-2 text-lg text-gray-700">
+                                        "Soy una chica que quiere compartir su arte y también poder venderlo y mostrarlo al mundo. La atención que te dan es fenomenal y las personas que la componen también lo son. Estoy muy feliz con el resultado, totalmente recomendada."
+                                    </p>
+                                    <div class="flex items-center mt-4 text-gray-700">
+                                        <i class="text-sm bi bi-briefcase-fill"></i>
+                                        <h1 class="px-2 text-sm">Artista Digital</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-2 p-2">
+                            <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+                                <img class="w-full h-56 object-cover object-center" src="{{asset('img/opurata.jpeg')}}" alt="avatar">
+                                <div class="flex items-center px-6 py-3 bg-upvent">
+                                    <i class="text-md bi bi-star text-white"></i>
+                                    <h1 class="mx-3 text-white font-semibold text-lg">Mejorando</h1>
+                                </div>
+                                <div class="py-4 px-6">
+                                    <h1 class="text-2xl font-semibold text-gray-800">Jair S.</h1>
+                                    <p class="py-2 text-lg text-gray-700">
+                                        "Súper-recomendable! Muy buen dominio de las herramientas necesarias y te ofrece alternativas para lograr lo que le solicitas. Excelente!"
+                                    </p>
+                                    <div class="flex items-center mt-4 text-gray-700">
+                                        <i class="text-sm bi bi-briefcase-fill"></i>
+                                        <h1 class="px-2 text-sm">CEO - Mide Mejora y Gana</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <!-- Sección de Beneficios -->
+
+                    <div class="max-w-screen-xl p-4 bg-white dark:bg-gray-800 mx-auto px-4 sm:px-6 lg:px-8 relative py-26 lg:mt-20">
+                        <div class="relative">
+                            <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                                <div class="lg:col-start-2 lg:max-w-2xl ml-auto">
+                                    <h4 class="mt-2 text-2xl leading-8 font-extrabold text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
+                                        Beneficios con UpVent
+                                    </h4>
+                                    <p class="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
+                                        Hay un gran número de razones por las cuales UpVent es una empresa de calidad y grandes valores. Aquí les presentaremos las más importantes.
+                                    </p>
+                                    <ul class="mt-8 md:grid md:grid-cols-2 gap-6">
+                                        <li class="mt-6 lg:mt-0">
+                                            <div class="flex">
+                                                <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-green-800 dark:text-green-500 drark:bg-transparent">
+                                                    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                                <span class="ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200">
+                                                    Low Cost
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="mt-6 lg:mt-0">
+                                            <div class="flex">
+                                                <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-green-800 dark:text-green-500 drark:bg-transparent">
+                                                    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                                <span class="ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200">
+                                                    Libre y Open Source
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="mt-6 lg:mt-0">
+                                            <div class="flex">
+                                                <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-green-800 dark:text-green-500 drark:bg-transparent">
+                                                    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                                <span class="ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200">
+                                                    Educativo
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="mt-6 lg:mt-0">
+                                            <div class="flex">
+                                                <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-green-800 dark:text-green-500 drark:bg-transparent">
+                                                    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                                <span class="ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200">
+                                                    Innovador
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="m-8 p-4 container mx-auto">
+                                        <a class="p-4 bg-upvent hover:bg-blue-600 text-white font-bold border-black rounded-lg shadow-lg">Comenzar con UpVent <i class="ml-2 mr-2 mb-2 bi bi-trophy-fill"></i></a>
+                                    </div>
+                                </div>
+                                <div class="mt-10 lg:-mx-4 relative relative-20 lg:mt-0 lg:col-start-1">
+                                    <div class="relative space-y-4">
+                                        <div class="flex items-end justify-center lg:justify-start space-x-4">
+                                            <img class="rounded-lg shadow-lg w-32 md:w-56" width="200" src="{{ asset('img/benefits/coins.jpg') }}" alt="1"/>
+                                            <img class="rounded-lg shadow-lg w-40 md:w-64" width="260" src="{{ asset('img/benefits/libre.jpg') }}" alt="2"/>
+                                        </div>
+                                        <div class="flex items-start justify-center lg:justify-start space-x-4 ml-12">
+                                            <img class="rounded-lg shadow-lg w-24 md:w-40" width="170" src="{{ asset('img/benefits/innovation.jpg') }}" alt="3"/>
+                                            <img class="rounded-lg shadow-lg w-32 md:w-56" width="200" src="{{ asset('img/benefits/library.jpg') }}" alt="4"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Footer -->
+                    @include('includes.footer')
+
+                    <!-- Scripts -->
+                    <script src="/js/app.js" type="text/javascript"></script>
     </body>
 </html>
