@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Frontpage;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,76 +14,39 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Main page route */
-Route::get('/', function () {
-    return view('index');
-});
-
-/* Blog page route */
-Route::get('/blog', function() {
-    return view('pages.blog');
-});
-
-/* About page route */
-Route::get('/about', function() {
-    return view('pages.about');
-});
-
-
-/* Services page route */
-Route::get('/services', function() {
-    return view('pages.services');
-});
-
-
-/* Contact page route */
-Route::get('/contact', function() {
-    return view('pages.contact');
-});
-
-
-/* Marketcloud page route */
-Route::get('/marketcloud', function() {
-    return view('pages.marketcloud');
-});
-
-
-/* Free software route */
-Route::get('/open-source', function() {
-    return view('pages.open-source');
-});
-
-
-/* Licenses page route */
-Route::get('/licenses', function() {
-    return view('pages.licenses');
-});
-
-
-/* Events page route */
-Route::get('/events', function() {
-    return view('pages.events');
-});
-
-
-/* Team page route */
-Route::get('/team', function() {
-    return view('pages.team');
-});
-
-
-/* Allies page route */
-Route::get('/allies', function() {
-    return view('pages.allies');
-});
-
-
 /* Log-in required routes
  * Admin routes might change on deploy CI/CD to prevent bruteforce
  * or other attacks
  *
  * if you are using this for your own purposes make sure to subsitute the
  * dashboard name with your preffered route name */
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+
+Route::group(['middleware' => [
+    'auth:sanctum',
+    'verified',
+    'accessrole'
+]], function () {
+
+    /* Route for the main dashboard */
+
+    Route::get('/dashboard', function() {
+        return view('dashboard');
+    })->name('dashboard');
+
+
+    /* Route for the pages editor */
+
+    Route::get('/pages', function() {
+        return view('admin.pages');
+    })->name('pages');
+
+    /* Route for the navigation menus */
+
+    Route::get('/navigation-menus', function() {
+        return view('admin.navigation-menus');
+    })->name('navigation-menus');
+
+});
+
+Route::get('/{urlslug}', Frontpage::class);
+Route::get('/', Frontpage::class);
