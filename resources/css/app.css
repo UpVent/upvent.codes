@@ -4,3 +4,18 @@
 
 /* Import bootstrap icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+/* Editor custom style */
+
+.body-content {
+    max-height: 300px !important;
+    overflow-y: scroll;
+}
+
+.trix-button-group--history-tools {
+    display: none !important;
+}
+
+.error {
+    color: #EF4444;
+}
