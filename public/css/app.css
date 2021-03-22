@@ -31616,6 +31616,21 @@ select{
 
 /* Import bootstrap icons */
 
+/* Editor custom style */
+
+.body-content {
+  max-height: 300px !important;
+  overflow-y: scroll;
+}
+
+.trix-button-group--history-tools {
+  display: none !important;
+}
+
+.error {
+  color: #EF4444;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
