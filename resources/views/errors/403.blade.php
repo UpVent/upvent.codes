@@ -24,6 +24,9 @@
                         <p class="text-gray-900 italic">
                             webmaster@upvent.codes
                         </p>
+                        <p class="text-sm text-gray-500">
+                            Código de error: 403 - No autorizado
+                        </p>
                     </div>
                     <div class="mb-20 md:mb-0">
                         <button class="text-lg font-light outline-none focus:outline-none transform transition-all hover:scale-110 text-blue-500 hover:text-blue-600"><i class="bi bi-arrow-left m-3"></i><a href="{{url('/')}}">Regresar al inicio</a></button>
