@@ -34,4 +34,4 @@ jobs:
     - name: Django Security Check
    # You may pin to the exact commit or the version.
    # uses: victoriadrake/django-security-check@762dd0ab80194dbded70117daa32bd7d139c6a04
-  uses: victoriadrake/django-security-check@v1.1.0
+      uses: victoriadrake/django-security-check@v1.1.0
