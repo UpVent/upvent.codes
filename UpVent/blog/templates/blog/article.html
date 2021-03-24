@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block body %}
+<section id="title">
+    <div class="container mb-4">
+      <div class="elements" id="elements">
+        <h1>{{post.title}}</h1>
+        <span class="mb-3 mute date">{{post.updated_at|date:"d \d\e F \d\e\l Y"}}</span>
+        <span class="new badge lighten-1" data-badge-caption="">{{post.slug}}</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="body">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <span class="pl-2 center-align autor"><b>Escrito por: </b><span class="nombre ">{{post.author}}</span></span>
+          <hr class="mb-0" id="hr-esconde">
+          <hr class="mb-3 mt-2 d-large">
+          <p class="flow-text center-align">
+            {{post.content}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
