@@ -18,7 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('core.urls'), name='index')
+    path('', include('core.urls'), name='index'),
+    path('blog/', include('blog.urls'), name='blog')
 ]
 
 admin.site.site_header = "UpVent Admin"
