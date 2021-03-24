@@ -15,7 +15,72 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
     </head>
     <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#007bfc;">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
 
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#">
+                    <div class="d-inline-flex ml-2">
+                        <img class="img-fluid" src="{% static 'core/img/logo-white.svg' %}" alt="" />
+                    </div>
+                </a>
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <!-- Link -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Contacto</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Icons -->
+                    <ul class="navbar-nav d-flex flex-row me-1">
+
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link text-white" href="#"><i class="fab bi-twitter"></i></a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link text-white" href="#"><i class="fab bi-facebook"></i></a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link text-white" href="#"><i class="fab bi-instagram"></i></a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link text-white" href="#"><i class="fab bi-github"></i></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
         {% block body %}
         {% endblock %}
 
