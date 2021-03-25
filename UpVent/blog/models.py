@@ -9,7 +9,7 @@ STATUS = (
 
 class Post(models.Model):
     title = models.CharField(verbose_name="Título", max_length=200, unique=True)
-    category = models.CharField(verbose_name="Categoría", max_length=20)
+    category = models.CharField(verbose_name="Categoría", max_length=20, default='None')
     slug = models.SlugField(verbose_name="Slug", max_length=200, unique=True)
     author = models.ForeignKey(User, verbose_name="Autor", on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(verbose_name="Actualizado el: ", auto_now= True)
