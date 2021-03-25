@@ -8,11 +8,11 @@
         <h1>{{post.title}}</h1>
         
         <div class="container">
-          Actualizado el: <span class="badge rounded-pill bg-info">{{post.updated_on|date:"d \d\e F \d\e\l Y"}}</span>
+          Actualizado el: <span class="badge rounded-pill bg-info shadow-1">{{post.updated_on|date:"d \d\e F \d\e\l Y"}}</span>
         </div>
         
         <div class="container m-1">
-          Categoría: <span class="badge rounded-pill bg-primary" data-badge-caption="">{{post.category}}</span>
+          Categoría: <span class="badge rounded-pill bg-primary shadow-1" data-badge-caption="">{{post.category}}</span>
         </div>
 
       </div>
@@ -23,7 +23,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <span class="pl-2 center-align badge rounded-pill bg-danger"><b>Escrito por: </b><span class="text-white">{{post.author}}</span></span>
+          <span class="pl-2 center-align badge rounded-pill bg-danger shadow-1"><b>Escrito por: </b><span class="text-white">{{post.author}}</span></span>
           <hr class="mb-3 mt-2">
           <p class="flow-text center-align">
             {{post.content}}
