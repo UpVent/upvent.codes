@@ -20,7 +20,7 @@
                                 <p class="pb-2 mute">{{post.created_on}}</p>
                                 <p>{{post.content|truncatewords:28}}</p>
                                 <div class="btn btn-primary">
-                                    <a href="#" class="text-white">Leer mas...</a>
+                                    <a href="{% url 'blog:post' post.slug %}" class="text-white">Leer mas...</a>
                                 </div>
                             </div>
                         </div>
