@@ -1,0 +1,4 @@
+.jumbotron {
+    background-image: url('/static/core/img/core.jpg');
+    height: 600px;
+}
