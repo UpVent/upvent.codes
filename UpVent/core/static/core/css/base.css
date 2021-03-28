@@ -6,6 +6,10 @@ body {
     background-color: #007BFC;
 }
 
+.text-upvent {
+  color: #007BFC;
+}
+
 
 /* Animations */
 .slide-in-left {
