@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
+    path('wp-admin/', admin.site.urls),
     path('', include('core.urls'), name='index'),
     path('blog/', include('blog.urls', namespace="blog"), name='blog')
 ]
