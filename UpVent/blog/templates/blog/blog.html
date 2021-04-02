@@ -3,19 +3,27 @@
 
 {% block body %}
 
-<div class="container">
+    <div class="container">
 
-    <section id="articles">
-        <div class="container">
-            <div class="mt-3 row">
-                {% for post in posts %}
-                {% if forloop.last %}
-                    {% else %}
-                    <div class="col">
+        <section id="articles">
+            <div class="container">
+                <div class="mt-3 row">
+                    {% for post in posts %}
+                        {% if forloop.last %}
+                        {% else %}
+                            <div class="col">
                         {% endif %}
-                        <div class="card m-2">
+                        <div class="card shadow-1-strong m-2">
+
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                            </div>
+
                             <div class="card-body">
-                                <h2 class="card-title">{{post.title}}</h2>
+                                <h3 class="card-title">{{post.title}}</h3>
                                 <hr>
                                 <p class="pb-2 mute">{{post.created_on}}</p>
                                 <p>{{post.content|truncatewords:28|safe}}</p>
@@ -24,10 +32,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                            </div>
                     {% endfor %}
+                </div>
+        </section>
             </div>
-    </section>
-</div>
 
 {% endblock %}
