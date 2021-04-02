@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'admin_honeypot',
+    'ckeditor',
+    'ckeditor_uploader',
     'core',
     'blog',
 ]
@@ -127,3 +129,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # Media files (Uploads, images, etc.)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# CKEditor configurations
+CKEDITOR_UPLOAD_PATH = 'posts/'
