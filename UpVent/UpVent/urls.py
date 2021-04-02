@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# Import settings if not imported
+from django.conf import settings
+# Import static if not imported
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
@@ -27,3 +32,8 @@ urlpatterns = [
 admin.site.site_header = "UpVent Admin"
 admin.site.index_title = "Admin"
 admin.site.site_title = "UpVent"
+
+# Special URL's for development
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
