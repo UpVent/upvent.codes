@@ -18,8 +18,6 @@ from django.urls import path, include
 
 # Import settings if not imported
 from django.conf import settings
-# Import static if not imported
-from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
