@@ -132,3 +132,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # CKEditor configurations
 CKEDITOR_UPLOAD_PATH = 'posts/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
