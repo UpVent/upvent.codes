@@ -138,3 +138,4 @@ CKEDITOR_CONFIGS = {
         'toolbar': None,
     }
 }
+CKEDITOR_FORCE_JPEG_COMPRESSION = True
