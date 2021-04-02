@@ -138,4 +138,8 @@ CKEDITOR_CONFIGS = {
         'toolbar': None,
     }
 }
+# Use pillow to compress uploaded images
 CKEDITOR_FORCE_JPEG_COMPRESSION = True
+
+# Allow only images to be uploaded
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
