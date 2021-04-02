@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Current blog post status
 STATUS = (
@@ -13,7 +14,7 @@ class Post(models.Model):
     slug = models.SlugField(verbose_name="Slug", max_length=200, unique=True)
     author = models.ForeignKey(User, verbose_name="Autor", on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(verbose_name="Actualizado el: ", auto_now= True)
-    content = models.TextField(verbose_name="Contenido")
+    content = RichTextUploadingField(verbose_name="Contenido")
     created_on = models.DateTimeField(verbose_name="Creado el: ", auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
