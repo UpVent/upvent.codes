@@ -2,34 +2,64 @@
 {% load static %}
 
 {% block body %}
-<section id="title">
-    <div class="container m-4">
-      <div class="container" id="elements">
-        <h1>{{post.title}}</h1>
-        
-        <div class="container">
-          Actualizado el: <span class="badge rounded-pill bg-info shadow-1">{{post.updated_on|date:"d \d\e F \d\e\l Y"}}</span>
-        </div>
-        
-        <div class="container m-1">
-          Categoría: <span class="badge rounded-pill bg-primary shadow-1" data-badge-caption="">{{post.category}}</span>
-        </div>
 
-      </div>
+    <!-- MDBootstrap Template -->
+    <!-- Jumbotron -->
+    <div id="intro" class="p-5 text-center bg-light">
+        <h1 class="mb-0 h4">{{post.title}}</h1>
     </div>
-  </section>
+    <!-- Jumbotron -->
+  </header>
+  <!--Main Navigation-->
 
-  <section id="body">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <span class="pl-2 center-align badge rounded-pill bg-danger shadow-1"><b>Escrito por: </b><span class="text-white">{{post.author}}</span></span>
-          <hr class="mb-3 mt-2">
-          <p class="flow-text center-align">
-            {{post.content|safe}}
-          </p>
-        </div>
+  <!--Main layout-->
+  <main class="mt-4 mb-5">
+      <div class="container">
+          <!--Grid row-->
+          <div class="row">
+              <!--Grid column-->
+              <div class="col-md-8 mb-4">
+                  <!--Section: Post data-mdb-->
+                  <section class="border-bottom mb-4">
+                      <img src="{{post.image.url}}"
+                           class="img-fluid shadow-2-strong rounded mb-4" alt="" />
+
+                      <div class="row align-items-center mb-4">
+                          <div class="col-lg-6 text-center text-lg-start mb-3 m-lg-0">
+                              <img src="{% static 'core/img/upvent-logo.png' %}" class="rounded shadow-1-strong me-2"
+                                   height="35" alt="" loading="lazy" />
+                              <span>Fecha de publicación: <u>{{post.created_on}}</u> por</span>
+                              <a href="" class="badge rounded-pill bg-primary text-white">{{post.author}}</a>
+                          </div>
+
+                          <div class="col-lg-6 text-center text-lg-end">
+                              <button type="button" class="btn btn-primary px-3 me-1" style="background-color: #3b5998;">
+                                  <i class="fab fa-facebook-f"></i>
+                              </button>
+                              <button type="button" class="btn btn-primary px-3 me-1" style="background-color: #55acee;">
+                                  <i class="fab fa-twitter"></i>
+                              </button>
+                              <button type="button" class="btn btn-primary px-3 me-1" style="background-color: #0082ca;">
+                                  <i class="fab fa-linkedin"></i>
+                              </button>
+                              <button type="button" class="btn btn-primary px-3 me-1">
+                                  <i class="fas fa-comments"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </section>
+                  <!--Section: Post data-mdb-->
+
+                  <!--Section: Text-->
+                  <section>
+                      <p>
+                          {{post.content|safe}}
+                      </p>
+                  </section>
+                  <!--Section: Text-->
+              </div>
+          </div>
       </div>
-    </div>
-  </section>
+  </main>
+  <!-- MDBootstrap Template -->
 {% endblock %}
