@@ -2,177 +2,211 @@
 {% load static %}
 
 {% block css %}
-    <link type="text/css" rel="stylesheet" href="{% static 'core/css/index.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'core/css/index.css' %}">
 {% endblock %}
 
 {% block body %}
-    <!-- Background image -->
-    <div class="p-5 text-center bg-image jumbotron">
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
-            <div class="d-flex justify-content-center align-items-center m-5 h-100">
-                <div class="text-white">
-                    <h1 class="text-center mb-3">
-                        Nube Inteligente.
-                        <br />
-                        Para Negocios Inteligentes.
-                    </h1>
+<!-- Background image -->
+<div class="p-5 text-center bg-image jumbotron">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+        <div class="d-flex justify-content-center align-items-center m-5 h-100">
+            <div class="text-white">
+                <h1 class="text-center mb-3">
+                    Nube Inteligente.
+                    <br />
+                    Para Negocios Inteligentes.
+                </h1>
 
 
-                    <h4 class="text-center fs-6 mb-3">
-                        Desarrollamos soluciones web inteligentes para los negocios Mexicanos.
-                    </h4>
+                <h4 class="text-center fs-6 mb-3">
+                    Desarrollamos soluciones web inteligentes para los negocios Mexicanos.
+                </h4>
 
-                    <a class="btn bg-upvent fw-normal text-white btn-lg" href="#img-btn" role="button">
-                        Leer más <i class="bi bi-arrow-right"></i>
-                    </a>
+                <a class="btn bg-upvent fw-normal text-white btn-lg" href="#img-btn" role="button">
+                    Leer más <i class="bi bi-arrow-right"></i>
+                </a>
 
-                </div>
             </div>
         </div>
     </div>
-    <!-- Background image -->
+</div>
+<!-- Background image -->
 
-    <!-- Solutions section -->
-    <div class="container mt-4 mb-4 justify-content-center">
-        <!-- Text -->
-        <div class="slide-in-left container text-center">
+<!-- Solutions section -->
+<div class="container mt-4 mb-4 justify-content-center">
+    <!-- Text -->
+    <div class="slide-in-left container text-center">
 
-            <div class="container mx-auto">
-                <img id="img-btn" class="rounded-circle shadow-1-strong" width="20%" src="{% static 'core/img/upvent-logo.png' %}" alt="" />
-            </div>
+        <div class="container mx-auto">
+            <img id="img-btn" class="rounded-circle shadow-1-strong" width="20%" src="{% static 'core/img/upvent-logo.png' %}" alt="" />
+        </div>
 
-            <h2>Soluciones en la nube</h2>
-            <h2>Para todo tipo de negocios</h2>
+        <h2>Soluciones en la nube</h2>
+        <h2>Para todo tipo de negocios</h2>
+        <br />
+        <p class="text-muted lead">
+            Desde entusiastas hasta desarrolladores.
             <br />
-            <p class="text-muted lead">
-                Desde entusiastas hasta desarrolladores.
-                <br />
-                Todos tienen espacio en la nube con UpVent.
-            </p>
-        </div>
-
-        <!-- First tree cards -->
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card m-3">
-                    <div class="card-body">
-                        <i class="text-upvent fs-3 bi bi-laptop"></i>
-                        <h5 class="card-title fw-bold">Desarrollo Universal</h5>
-                        <p class="card-text">
-                            Desarrollo profesional y universal.
-                            <br />
-                            Cualquier plataforma, cualquier dispositivo. Donde sea.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card m-3">
-                    <div class="card-body">
-                        <i class="text-upvent fs-3 bi bi-layers-half"></i>
-                        <h5 class="card-title fw-bold">Productos Escalables</h5>
-                        <p class="card-text">
-                            Software escalable desde el primer día.
-                            <br />
-                            Todas sus necesidades pueden ser cubiertas, sin importar su tamaño.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="card m-3">
-                    <div class="card-body">
-                        <i class="text-upvent fs-3 bi bi-lightning-charge-fill"></i>
-                        <h5 class="card-title fw-bold">Rápidos</h5>
-                        <p class="card-text">
-                            Programación cautelosa de los productos desde su raíz.
-                            <br />
-                            ¡No más software lento!
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+            Todos tienen espacio en la nube con UpVent.
+        </p>
     </div>
 
-    <!-- Solutions section -->
-
-    <!-- Features section -->
-    <div class="container mt-5 mb-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-8 col-lg-6 m-md-auto ml-lg-0 mr-lg-auto">
-                    <img alt="image" class="img-fluid rounded-3 shadow-1-strong" src="{% static 'core/img/work-desk.jpg' %}">
-                </div>
-                <div class="col-12 col-lg-6 col-xl-5 ml-sm-auto pt-5 pt-lg-0">
-                    <h1 class="text-center">¡Concéntrese solo en lo importante!</h1>
-                    <p class="text-muted text-center">
-                        No tendrá que preocuparse por la infraestructura, la disponibilidad o desarrollo. Podrá dedicar el cien por ciento del tiempo a su negocio y a sus clientes.
-                    </p>
-
-                    <div class="row pt-4 pt-xl-5">
-
-                        <div class="col-12 col-sm-6 col-xl-5">
-                            <h4 class="text-center"><strong><i class="bi bi-tools text-upvent"></i> Soluciones Personalizadas</strong></h4>
-                            <p class="text-center text-muted">Contamos con el mejor equipo disponible en el mercado para atender sus necesidad en todo momento.</p>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-xl-5 m-auto pt-3 pt-sm-0">
-                            <h4 class="text-center"><strong><i class="bi bi-cash-stack text-upvent"></i> Precios Accesibles</strong></h4>
-                            <p class="text-center text-muted">UpVent desarrolla servicios de todo tiempo, siempre cuidando el presupuesto de sus clientes.​​</p>
-                        </div>
-                    </div>
-
-                    <div class="row pt-3">
-
-                        <div class="col-12 col-sm-6 col-xl-5">
-                            <h4 class="text-center"><strong><i class="bi bi-people-fill text-upvent"></i> Tratos Personalizados</strong></h4>
-                            <p class="text-muted text-center">Tratos individuales o empresariales. UpVent siempre tendrá la solución adecuada para usted.</p>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-xl-5 m-auto pt-3 pt-sm-0">
-                            <h4 class="text-center"><strong><i class="bi bi-rulers text-upvent"></i> Diseño Inteligente</strong></h4>
-                            <p class="text-muted text-center">Todas nuestras soluciones hacen más, con menos recursos. No más soluciones pesadas ni gastos innecesarios.</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Accessibility Section -->
-    <div class="container-fluid mt-4 mb-4">
-        <div class="row">
-            <div class="col-md-6 bg-upvent">
-                <div class="container">
-
-                    <h1 class="m-5 text-wrap text-white display-3">Haciendo la nube accesible para todos.</h1>
-
-                    <p class="m-5 text-wrap text-white text-start">
-                        Digitalizar su empresa se está volviendo una tarea de alta importancia en estos años y,
-                        afortunadamente nosotros podemos ayudarle con asesorías y apoyo gratuito
-                        por un mes (de 30 días).
+    <!-- First tree cards -->
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card m-3">
+                <div class="card-body">
+                    <i class="text-upvent fs-3 bi bi-laptop"></i>
+                    <h5 class="card-title fw-bold">Desarrollo Universal</h5>
+                    <p class="card-text">
+                        Desarrollo profesional y universal.
                         <br />
-                        <br />
-                        Todo lo que debe hacer es unirse a nuestro programa de ayuda a PyMes sin digitalizar.
+                        Cualquier plataforma, cualquier dispositivo. Donde sea.
                     </p>
+                </div>
+            </div>
+        </div>
 
-                    <button type="button" class="m-5 btn btn-lg btn-outline-light" data-mdb-ripple-color="dark">
-                        <a class="text-white" href=""><i class="bi bi-envelope-fill"></i> Contacta con nosotros</a>
-                    </button>
+        <div class="col-md-4">
+            <div class="card m-3">
+                <div class="card-body">
+                    <i class="text-upvent fs-3 bi bi-layers-half"></i>
+                    <h5 class="card-title fw-bold">Productos Escalables</h5>
+                    <p class="card-text">
+                        Software escalable desde el primer día.
+                        <br />
+                        Todas sus necesidades pueden ser cubiertas, sin importar su tamaño.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card m-3">
+                <div class="card-body">
+                    <i class="text-upvent fs-3 bi bi-lightning-charge-fill"></i>
+                    <h5 class="card-title fw-bold">Rápidos</h5>
+                    <p class="card-text">
+                        Programación cautelosa de los productos desde su raíz.
+                        <br />
+                        ¡No más software lento!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Solutions section -->
+
+<!-- Features section -->
+<div class="container mt-5 mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-8 col-lg-6 m-md-auto ml-lg-0 mr-lg-auto">
+                <img alt="image" class="img-fluid rounded-3 shadow-1-strong" src="{% static 'core/img/work-desk.jpg' %}">
+            </div>
+            <div class="col-12 col-lg-6 col-xl-5 ml-sm-auto pt-5 pt-lg-0">
+                <h1 class="text-center">¡Concéntrese solo en lo importante!</h1>
+                <p class="text-muted text-center">
+                    No tendrá que preocuparse por la infraestructura, la disponibilidad o desarrollo. Podrá dedicar el cien por ciento del tiempo a su negocio y a sus clientes.
+                </p>
+
+                <div class="row pt-4 pt-xl-5">
+
+                    <div class="col-12 col-sm-6 col-xl-5">
+                        <h4 class="text-center"><strong><i class="bi bi-tools text-upvent"></i> Soluciones Personalizadas</strong></h4>
+                        <p class="text-center text-muted">Contamos con el mejor equipo disponible en el mercado para atender sus necesidad en todo momento.</p>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-5 m-auto pt-3 pt-sm-0">
+                        <h4 class="text-center"><strong><i class="bi bi-cash-stack text-upvent"></i> Precios Accesibles</strong></h4>
+                        <p class="text-center text-muted">UpVent desarrolla servicios de todo tiempo, siempre cuidando el presupuesto de sus clientes.​​</p>
+                    </div>
+                </div>
+
+                <div class="row pt-3">
+
+                    <div class="col-12 col-sm-6 col-xl-5">
+                        <h4 class="text-center"><strong><i class="bi bi-people-fill text-upvent"></i> Tratos Personalizados</strong></h4>
+                        <p class="text-muted text-center">Tratos individuales o empresariales. UpVent siempre tendrá la solución adecuada para usted.</p>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-5 m-auto pt-3 pt-sm-0">
+                        <h4 class="text-center"><strong><i class="bi bi-rulers text-upvent"></i> Diseño Inteligente</strong></h4>
+                        <p class="text-muted text-center">Todas nuestras soluciones hacen más, con menos recursos. No más soluciones pesadas ni gastos innecesarios.</p>
+                    </div>
 
                 </div>
             </div>
-            <div class="col-md-6">
-                <img class="img-fluid" src="{% static 'core/img/servers.jpg' %}" alt="" />
+        </div>
+    </div>
+</div>
+
+
+<!-- Accessibility Section -->
+<div class="container-fluid mt-4 mb-4">
+    <div class="row">
+        <div class="col-md-6 bg-upvent">
+            <div class="container">
+
+                <h1 class="m-5 text-wrap text-white display-3">Haciendo la nube accesible para todos.</h1>
+
+                <p class="m-5 text-wrap text-white text-start">
+                    Digitalizar su empresa se está volviendo una tarea de alta importancia en estos años y,
+                    afortunadamente nosotros podemos ayudarle con asesorías y apoyo gratuito
+                    por un mes (de 30 días).
+                    <br />
+                    <br />
+                    Todo lo que debe hacer es unirse a nuestro programa de ayuda a PyMes sin digitalizar.
+                </p>
+
+                <button type="button" class="m-5 btn btn-lg btn-outline-light" data-mdb-ripple-color="dark">
+                    <a class="text-white" href=""><i class="bi bi-envelope-fill"></i> Contacta con nosotros</a>
+                </button>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img class="img-fluid" src="{% static 'core/img/servers.jpg' %}" alt="" />
+        </div>
+    </div>
+</div>
+<!-- Accessibility Section -->
+
+
+<!-- Testimonials -->
+<section class="fdb-block">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 col-md-8 m-auto col-lg-4">
+                <div class="fdb-box fdb-touch">
+                    <img alt="image" class="fdb-icon" src="./imgs/icons/map.svg">
+                    <h2>Feature 1</h2>
+                    <p>Far far away, behind the word mountains, far from the countries.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
+                <div class="fdb-box fdb-touch">
+                    <img alt="image" class="fdb-icon" src="./imgs/icons/cloud.svg">
+                    <h2>Feature 2</h2>
+                    <p>Separated they live in Bookmarksgrove right at the coast.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
+                <div class="fdb-box fdb-touch">
+                    <img alt="image" class="fdb-icon" src="./imgs/icons/package.svg">
+                    <h2>Feature 3</h2>
+                    <p>A small river named Duden flows by their place and supplies.</p>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Accessibility Section -->
+</section>
+<!-- Testimonials -->
+
 {% endblock %}
