@@ -2,261 +2,311 @@
 {% load static %}
 
 {% block css %}
-<link type="text/css" rel="stylesheet" href="{% static 'core/css/index.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'core/css/index.css' %}">
 {% endblock %}
 
 {% block body %}
-<!-- Background image -->
-<div class="p-5 text-center bg-image jumbotron">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
-        <div class="d-flex justify-content-center align-items-center m-5 h-100">
-            <div class="text-white">
-                <h1 class="text-center mb-3">
-                    Nube Inteligente.
-                    <br />
-                    Para Negocios Inteligentes.
-                </h1>
+    <!-- Background image -->
+    <div class="p-5 text-center bg-image jumbotron">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+            <div class="d-flex justify-content-center align-items-center m-5 h-100">
+                <div class="text-white">
+                    <h1 class="text-center mb-3">
+                        Nube Inteligente.
+                        <br />
+                        Para Negocios Inteligentes.
+                    </h1>
 
 
-                <h4 class="text-center fs-6 mb-3">
-                    Desarrollamos soluciones web inteligentes para los negocios Mexicanos.
-                </h4>
+                    <h4 class="text-center fs-6 mb-3">
+                        Desarrollamos soluciones web inteligentes para los negocios Mexicanos.
+                    </h4>
 
-                <a class="btn bg-upvent fw-normal text-white btn-lg" href="#img-btn" role="button">
-                    Leer más <i class="bi bi-arrow-right"></i>
-                </a>
+                    <a class="btn bg-upvent fw-normal text-white btn-lg" href="#img-btn" role="button">
+                        Leer más <i class="bi bi-arrow-right"></i>
+                    </a>
 
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Background image -->
+    <!-- Background image -->
 
-<!-- Solutions section -->
-<div class="container mt-4 mb-4 justify-content-center">
-    <!-- Text -->
-    <div class="slide-in-left container text-center">
+    <!-- Solutions section -->
+    <div class="container mt-4 mb-4 justify-content-center">
+        <!-- Text -->
+        <div class="slide-in-left container text-center">
 
-        <div class="container mx-auto">
-            <img id="img-btn" class="rounded-circle shadow-1-strong" width="20%" src="{% static 'core/img/upvent-logo.png' %}" alt="" />
-        </div>
+            <div class="container mx-auto">
+                <img id="img-btn" class="rounded-circle shadow-1-strong" width="20%" src="{% static 'core/img/upvent-logo.png' %}" alt="" />
+            </div>
 
-        <h2>Soluciones en la nube</h2>
-        <h2>Para todo tipo de negocios</h2>
-        <br />
-        <p class="text-muted lead">
-            Desde entusiastas hasta desarrolladores.
+            <h2>Soluciones en la nube</h2>
+            <h2>Para todo tipo de negocios</h2>
             <br />
-            Todos tienen espacio en la nube con UpVent.
-        </p>
-    </div>
-
-    <!-- First tree cards -->
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class="card m-3">
-                <div class="card-body">
-                    <i class="text-upvent fs-3 bi bi-laptop"></i>
-                    <h5 class="card-title fw-bold">Desarrollo Universal</h5>
-                    <p class="card-text">
-                        Desarrollo profesional y universal.
-                        <br />
-                        Cualquier plataforma, cualquier dispositivo. Donde sea.
-                    </p>
-                </div>
-            </div>
+            <p class="text-muted lead">
+                Desde entusiastas hasta desarrolladores.
+                <br />
+                Todos tienen espacio en la nube con UpVent.
+            </p>
         </div>
 
-        <div class="col-md-4">
-            <div class="card m-3">
-                <div class="card-body">
-                    <i class="text-upvent fs-3 bi bi-layers-half"></i>
-                    <h5 class="card-title fw-bold">Productos Escalables</h5>
-                    <p class="card-text">
-                        Software escalable desde el primer día.
-                        <br />
-                        Todas sus necesidades pueden ser cubiertas, sin importar su tamaño.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-md-4">
-            <div class="card m-3">
-                <div class="card-body">
-                    <i class="text-upvent fs-3 bi bi-lightning-charge-fill"></i>
-                    <h5 class="card-title fw-bold">Rápidos</h5>
-                    <p class="card-text">
-                        Programación cautelosa de los productos desde su raíz.
-                        <br />
-                        ¡No más software lento!
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- Solutions section -->
-
-<!-- Features section -->
-<div class="container mt-5 mb-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-8 col-lg-6 m-md-auto ml-lg-0 mr-lg-auto">
-                <img alt="image" class="img-fluid rounded-3 shadow-1-strong" src="{% static 'core/img/work-desk.jpg' %}">
-            </div>
-            <div class="col-12 col-lg-6 col-xl-5 ml-sm-auto pt-5 pt-lg-0">
-                <h1 class="text-center">¡Concéntrese solo en lo importante!</h1>
-                <p class="text-muted text-center">
-                    No tendrá que preocuparse por la infraestructura, la disponibilidad o desarrollo. Podrá dedicar el cien por ciento del tiempo a su negocio y a sus clientes.
-                </p>
-
-                <div class="row pt-4 pt-xl-5">
-
-                    <div class="col-12 col-sm-6 col-xl-5">
-                        <h4 class="text-center"><strong><i class="bi bi-tools text-upvent"></i> Soluciones Personalizadas</strong></h4>
-                        <p class="text-center text-muted">Contamos con el mejor equipo disponible en el mercado para atender sus necesidad en todo momento.</p>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-xl-5 m-auto pt-3 pt-sm-0">
-                        <h4 class="text-center"><strong><i class="bi bi-cash-stack text-upvent"></i> Precios Accesibles</strong></h4>
-                        <p class="text-center text-muted">UpVent desarrolla servicios de todo tiempo, siempre cuidando el presupuesto de sus clientes.​​</p>
+        <!-- First tree cards -->
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card m-3">
+                    <div class="card-body">
+                        <i class="text-upvent fs-3 bi bi-laptop"></i>
+                        <h5 class="card-title fw-bold">Desarrollo Universal</h5>
+                        <p class="card-text">
+                            Desarrollo profesional y universal.
+                            <br />
+                            Cualquier plataforma, cualquier dispositivo. Donde sea.
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <div class="row pt-3">
-
-                    <div class="col-12 col-sm-6 col-xl-5">
-                        <h4 class="text-center"><strong><i class="bi bi-people-fill text-upvent"></i> Tratos Personalizados</strong></h4>
-                        <p class="text-muted text-center">Tratos individuales o empresariales. UpVent siempre tendrá la solución adecuada para usted.</p>
+            <div class="col-md-4">
+                <div class="card m-3">
+                    <div class="card-body">
+                        <i class="text-upvent fs-3 bi bi-layers-half"></i>
+                        <h5 class="card-title fw-bold">Productos Escalables</h5>
+                        <p class="card-text">
+                            Software escalable desde el primer día.
+                            <br />
+                            Todas sus necesidades pueden ser cubiertas, sin importar su tamaño.
+                        </p>
                     </div>
-
-                    <div class="col-12 col-sm-6 col-xl-5 m-auto pt-3 pt-sm-0">
-                        <h4 class="text-center"><strong><i class="bi bi-rulers text-upvent"></i> Diseño Inteligente</strong></h4>
-                        <p class="text-muted text-center">Todas nuestras soluciones hacen más, con menos recursos. No más soluciones pesadas ni gastos innecesarios.</p>
-                    </div>
-
                 </div>
             </div>
+
+
+            <div class="col-md-4">
+                <div class="card m-3">
+                    <div class="card-body">
+                        <i class="text-upvent fs-3 bi bi-lightning-charge-fill"></i>
+                        <h5 class="card-title fw-bold">Rápidos</h5>
+                        <p class="card-text">
+                            Programación cautelosa de los productos desde su raíz.
+                            <br />
+                            ¡No más software lento!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
+
+    <!-- Solutions section -->
+
+    <!-- Features section -->
+    <div class="container mt-5 mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-8 col-lg-6 m-md-auto ml-lg-0 mr-lg-auto">
+                    <img alt="image" class="img-fluid rounded-3 shadow-1-strong" src="{% static 'core/img/work-desk.jpg' %}">
+                </div>
+                <div class="col-12 col-lg-6 col-xl-5 ml-sm-auto pt-5 pt-lg-0">
+                    <h1 class="text-center">¡Concéntrese solo en lo importante!</h1>
+                    <p class="text-muted text-center">
+                        No tendrá que preocuparse por la infraestructura, la disponibilidad o desarrollo. Podrá dedicar el cien por ciento del tiempo a su negocio y a sus clientes.
+                    </p>
+
+                    <div class="row pt-4 pt-xl-5">
+
+                        <div class="col-12 col-sm-6 col-xl-5">
+                            <h4 class="text-center"><strong><i class="bi bi-tools text-upvent"></i> Soluciones Personalizadas</strong></h4>
+                            <p class="text-center text-muted">Contamos con el mejor equipo disponible en el mercado para atender sus necesidad en todo momento.</p>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-xl-5 m-auto pt-3 pt-sm-0">
+                            <h4 class="text-center"><strong><i class="bi bi-cash-stack text-upvent"></i> Precios Accesibles</strong></h4>
+                            <p class="text-center text-muted">UpVent desarrolla servicios de todo tiempo, siempre cuidando el presupuesto de sus clientes.​​</p>
+                        </div>
+                    </div>
+
+                    <div class="row pt-3">
+
+                        <div class="col-12 col-sm-6 col-xl-5">
+                            <h4 class="text-center"><strong><i class="bi bi-people-fill text-upvent"></i> Tratos Personalizados</strong></h4>
+                            <p class="text-muted text-center">Tratos individuales o empresariales. UpVent siempre tendrá la solución adecuada para usted.</p>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-xl-5 m-auto pt-3 pt-sm-0">
+                            <h4 class="text-center"><strong><i class="bi bi-rulers text-upvent"></i> Diseño Inteligente</strong></h4>
+                            <p class="text-muted text-center">Todas nuestras soluciones hacen más, con menos recursos. No más soluciones pesadas ni gastos innecesarios.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<!-- Accessibility Section -->
-<div class="container-fluid mt-4 mb-4">
-    <div class="row">
-        <div class="col-md-6 bg-upvent">
-            <div class="container">
+    <!-- Accessibility Section -->
+    <div class="container-fluid mt-4 mb-4">
+        <div class="row">
+            <div class="col-md-6 bg-upvent">
+                <div class="container">
 
-                <h1 class="m-5 text-wrap text-white display-3">Haciendo la nube accesible para todos.</h1>
+                    <h1 class="m-5 text-wrap text-white display-3">Haciendo la nube accesible para todos.</h1>
 
-                <p class="m-5 text-wrap text-white text-start">
-                    Digitalizar su empresa se está volviendo una tarea de alta importancia en estos años y,
-                    afortunadamente nosotros podemos ayudarle con asesorías y apoyo gratuito
-                    por un mes (de 30 días).
+                    <p class="m-5 text-wrap text-white text-start">
+                        Digitalizar su empresa se está volviendo una tarea de alta importancia en estos años y,
+                        afortunadamente nosotros podemos ayudarle con asesorías y apoyo gratuito
+                        por un mes (de 30 días).
+                        <br />
+                        <br />
+                        Todo lo que debe hacer es unirse a nuestro programa de ayuda a PyMes sin digitalizar.
+                    </p>
+
+                    <button type="button" class="m-5 btn btn-lg btn-outline-light" data-mdb-ripple-color="dark">
+                        <a class="text-white" href=""><i class="bi bi-envelope-fill"></i> Contacta con nosotros</a>
+                    </button>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid" src="{% static 'core/img/servers.jpg' %}" alt="" />
+            </div>
+        </div>
+    </div>
+    <!-- Accessibility Section -->
+
+
+    <!-- Testimonials -->
+    <div class="container mt-5 mb-5">
+
+        <div class="container mb-5">
+            <h2 class="text-center">Testimonios</h2>
+            <p class="text-muted text-center">
+                Nuestros clientes hablan por nosotros, conozca la opinión de los profesionales acerca del trabajo de UpVent.
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-8 m-auto col-lg-4">
+                    <div class="card">
+                        <img alt="image" class="card-img-top img-fluid" src="{% static 'core/img/aacosta.jpg' %}">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Armando Acosta</h4>
+                            <span class="badge rounded-pill bg-primary shadow-1"><a class="text-white" href="https://elmedionoticias.com/">Reportero Independiente</a></span>
+                            <hr />
+                            <p class="card-text text-muted">
+                                Amo que sea una empresa mexicana, además de que son jóvenes y
+                                super claros en los temas que no todos dominamos.
+                                Agradezco de sobremanera su apoyo y pues mi hosting
+                                será con ustedes por un buen rato. Saludos PD.
+                                En 24 horas estuvo listo mi sitio 🤯
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
+                    <div class="card">
+                        <img alt="image" class="card-img-top img-fluid" src="{% static 'core/img/asmith.jpg' %}">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Anthony Smith</h4>
+                            <span class="badge rounded-pill bg-primary shadow-1"><a class="text-white" href="https://me.as-card.com/">CEO - CyberIndustree</a></span>
+                            <hr />
+                            <p class="card-text text-muted">
+                                Inicié mi negocio de tecnología con muy poco tiempo
+                                entre manos y con poco dinero, ahora gracias a UpVent
+                                mi negocio a día de hoy se encuentra en línea las 24
+                                horas del día, los 7 días de la semana.
+                                Recomiendo ampliamente sus servicios
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
+                    <div class="card">
+                        <img alt="image" class="card-img-top img-fluid" src="{% static 'core/img/opurata.jpeg' %}">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Jair Sifuentes</h4>
+                            <span class="badge rounded-pill bg-primary shadow-1"><a class="text-white" href="https://midemejoraygana.com">CEO - Mide Mejora y Gana</a></span>
+                            <hr />
+                            <p class="card-text text-muted">
+                                Súper-recomendable! Muy buen dominio de las herramientas necesarias y te ofrece alternativas para lograr lo que le solicitas. Excelente!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials -->
+
+    <!-- Technologies -->
+    <div class="container mt-5 mb-5">
+        <div class="container text-center">
+            <h2 class="fw-bold">Todo lo que hacemos es de código libre</h2>
+            <p class="text-center text-wrap lead">
+                Nuestro modelo de desarrollo consiste totalmente de componentes de código
+                libre y se basa en múltiples principios éticos y prácticos para su conveniencia como empresa.
+                <br />
+                Además, colaboramos de manera activa con el ecosistema de software libre en México para mejorar dichas tecnologías para todos.
+            </p>
+            <a href="">Explore las tecnologías usadas en UpVent <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+    <!-- Technologies -->
+
+    <!-- Benefits -->
+
+    <div class="container text-center mt5 mb-5">
+        <h1>Beneficios</h1>
+        <p>Conozca los beneficios que UpVent tiene para usted y su empresa</p>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">¡Somos Low Cost! <span class="text-muted">¡Siempre!</span></h2>
+                <p class="lead">
+                    UpVent ofrece múltiples servicios a las empresas, todos y cada uno de ellos son económicos, sencillos y siguen un riguroso proceso para cumplir con la calidad esperada para nuestros clientes.
                     <br />
-                    <br />
-                    Todo lo que debe hacer es unirse a nuestro programa de ayuda a PyMes sin digitalizar.
+                    Esto nos hace una opción ideal para startups y pequeñas empresas que desean digitalizarse con poca inversión.
                 </p>
-
-                <button type="button" class="m-5 btn btn-lg btn-outline-light" data-mdb-ripple-color="dark">
-                    <a class="text-white" href=""><i class="bi bi-envelope-fill"></i> Contacta con nosotros</a>
-                </button>
-
+                <div class="container mt-5">
+                    <a href="">Conozca nuestros servicios <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid rounded-3 shadow-1-strong" src="{% static 'core/img/coins.jpg' %}" alt="" loading="lazy" />
             </div>
         </div>
-        <div class="col-md-6">
-            <img class="img-fluid" src="{% static 'core/img/servers.jpg' %}" alt="" />
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">¡A favor de la educación! <span class="text-muted">Aprenda con nosotros</span></h2>
+                <p class="lead">UpVent se fundó con la visión de compartir el conocimiento. Tenemos la promesa de educar de forma abierta y gratuita, llevando el conocimiento de nuestro equipo a todos los individuos que podamos.</p>
+                <a href="{% url 'blog:home' %}">Visite nuestro blog <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="img-fluid rounded-3 shadow-1-strong" src="{% static 'core/img/education.jpg' %}" alt="" loading="lazy" />
+            </div>
         </div>
-    </div>
-</div>
-<!-- Accessibility Section -->
 
+        <hr class="featurette-divider">
 
-<!-- Testimonials -->
-<div class="container mt-5 mb-5">
-
-    <div class="container mb-5">
-        <h2 class="text-center">Testimonios</h2>
-        <p class="text-muted text-center">
-            Nuestros clientes hablan por nosotros, conozca la opinión de los profesionales acerca del trabajo de UpVent.
-        </p>
-    </div>
-
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-12 col-md-8 m-auto col-lg-4">
-                <div class="card">
-                    <img alt="image" class="card-img-top img-fluid" src="{% static 'core/img/aacosta.jpg' %}">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold">Armando Acosta</h4>
-                        <span class="badge rounded-pill bg-primary shadow-1"><a class="text-white" href="https://elmedionoticias.com/">Reportero Independiente</a></span>
-                        <hr />
-                        <p class="card-text text-muted">
-                            Amo que sea una empresa mexicana, además de que son jóvenes y
-                            super claros en los temas que no todos dominamos.
-                            Agradezco de sobremanera su apoyo y pues mi hosting
-                            será con ustedes por un buen rato. Saludos PD.
-                            En 24 horas estuvo listo mi sitio 🤯
-                        </p>
-                    </div>
-                </div>
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">La estabilidad primero. <span class="text-muted">Puede confiar en UpVent</span></h2>
+                <p class="lead">UpVent mejorará constantemente sus tecnologías actuales, siempre procurando la estabilidad por encima de cualquier otra cualidad que podamos ofrecer, esto se hace con el objetivo de fortalecer su relación con los individuos que lo conforman.
+                </p>
+                <a href="">Conozca nuestro ciclo de desarrollo <i class="bi bi-arrow-right"></i></a>
             </div>
-            <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
-                <div class="card">
-                    <img alt="image" class="card-img-top img-fluid" src="{% static 'core/img/asmith.jpg' %}">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold">Anthony Smith</h4>
-                        <span class="badge rounded-pill bg-primary shadow-1"><a class="text-white" href="https://me.as-card.com/">CEO - CyberIndustree</a></span>
-                        <hr />
-                        <p class="card-text text-muted">
-                            Inicié mi negocio de tecnología con muy poco tiempo
-                            entre manos y con poco dinero, ahora gracias a UpVent
-                            mi negocio a día de hoy se encuentra en línea las 24
-                            horas del día, los 7 días de la semana.
-                            Recomiendo ampliamente sus servicios
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
-                <div class="card">
-                    <img alt="image" class="card-img-top img-fluid" src="{% static 'core/img/opurata.jpeg' %}">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold">Jair Sifuentes</h4>
-                        <span class="badge rounded-pill bg-primary shadow-1"><a class="text-white" href="https://midemejoraygana.com">CEO - Mide Mejora y Gana</a></span>
-                        <hr />
-                        <p class="card-text text-muted">
-                            Súper-recomendable! Muy buen dominio de las herramientas necesarias y te ofrece alternativas para lograr lo que le solicitas. Excelente!
-                        </p>
-                    </div>
-                </div>
+            <div class="col-md-5">
+                <img class="img-fluid rounded-3 shadow-1-strong" src="{% static 'core/img/brain.jpg' %}" alt="" loading="lazy" />
             </div>
         </div>
     </div>
-</div>
-<!-- Testimonials -->
-
-<!-- Technologies -->
-<div class="container mt-5 mb-5">
-    <div class="container text-center">
-        <h2 class="fw-bold">Todo lo que hacemos es de código libre</h2>
-        <p class="text-center text-wrap lead">
-            Nuestro modelo de desarrollo consiste totalmente de componentes de código
-            libre y se basa en múltiples principios éticos y prácticos para su conveniencia como empresa.
-            <br />
-            Además, colaboramos de manera activa con el ecosistema de software libre en México para mejorar dichas tecnologías para todos.
-        </p>
-        <a href="">Explore las tecnologías usadas en UpVent <i class="bi bi-arrow-right"></i></a>
-    </div>
-</div>
-<!-- Technologies -->
-
-<!-- Benefits -->
-
-<!-- Benefits -->
+    <!-- Benefits -->
 {% endblock %}
