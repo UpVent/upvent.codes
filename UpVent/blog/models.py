@@ -84,6 +84,12 @@ class Comment(models.Model):
     # Name or nickname of the commenter
     name = models.CharField(verbose_name="Nombre", max_length=255)
 
+    # The email of the commenter (Used to prevent spam)
+    email = models.EmailField(verbose_name="Email", default="mail@mail.com")
+
+    # The website of the commenter (Optional)
+    website = models.CharField(verbose_name="Sitio Web", blank=True, default='', max_length=255)
+
     # The comment body
     body = models.TextField(verbose_name="Comentario")
 
