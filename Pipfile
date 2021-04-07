@@ -8,6 +8,7 @@ django = "*"
 django-admin-honeypot = "*"
 django-ckeditor = "*"
 pillow = "*"
+django-admin-interface = "*"
 
 [dev-packages]
 pylint = "*"
