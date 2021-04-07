@@ -29,7 +29,7 @@
                               <img src="{% static 'core/img/upvent-logo.png' %}" class="rounded shadow-1-strong me-2"
                                    height="35" alt="" loading="lazy" />
                               <span>Fecha de publicación: <u>{{post.created_on}}</u> por</span>
-                              <a href="" class="badge rounded-pill bg-primary text-white">{{post.author}}</a>
+                              <a href="" class="badge rounded-pill bg-primary text-white">UpVent</a>
                           </div>
 
                           <div class="col-lg-6 text-center text-lg-end">
@@ -57,6 +57,70 @@
                       </p>
                   </section>
                   <!--Section: Text-->
+
+                  <hr />
+
+                  <!--Section: Comments-->
+                  <section class="border-bottom mb-3">
+                      <p class="text-center"><strong>Comentarios: {{ post.comments.count }}</strong></p>
+
+                      <!-- Comment -->
+                      {% for comment in post.comments.all %}
+                          <div class="row mb-4">
+                              <div class="col-2">
+                                  <img src="{% static 'core/img/avatar.png' %}"
+                                       class="img-fluid shadow-1-strong rounded" alt="avatar image" loading="lazy" />
+                              </div>
+
+                              <div class="col-10">
+                                  <p class="mb-2"><strong>{{ comment.name }}</strong></p>
+                                  <p class="text-muted text-wrap">
+                                      {{ comment.body }}
+                                  </p>
+                              </div>
+                          </div>
+                      {% endfor %}
+                  </section>
+                  <!--Section: Comments-->
+
+                  <!--Section: Reply-->
+                  <section>
+                      <p class="text-center"><strong>¡Déjanos tu comentario!</strong></p>
+
+                      <form>
+                          <!-- Name input -->
+                          <div class="form-outline mb-4">
+                              <input type="text" id="form4Example1" class="form-control" required/>
+                              <label class="form-label" for="form4Example1">Nombre*</label>
+                          </div>
+
+                          <!-- Email input -->
+                          <div class="form-outline mb-4">
+                              <input type="email" id="form4Example2" class="form-control" required/>
+                              <label class="form-label" for="form4Example2">Correo Electrónico* (Para evitar el spam)</label>
+                          </div>
+
+                          <!-- Website -->
+                          <div class="form-outline mb-4">
+                              <input type="text" id="form4Example2" class="form-control"/>
+                              <label class="form-label" for="form4Example2">Sitio web (Opcional)</label>
+                          </div>
+
+                          <!-- Message input -->
+                          <div class="form-outline mb-4">
+                              <textarea class="form-control" id="form4Example3" rows="4" required></textarea>
+                              <label class="form-label" for="form4Example3">Comentario...*</label>
+                          </div>
+
+
+                          <!-- Submit button -->
+                          <button type="submit" class="btn btn-primary bg-upvent btn-lg mb-4">
+                              Publicar Comentario <i class="bi bi-chat-fill"></i>
+                          </button>
+                      </form>
+                  </section>
+                  <!--Section: Reply-->
+
               </div>
               <!--Grid column-->
               <div class="col-md-4 mb-4">
@@ -64,8 +128,8 @@
                   <section class="sticky-top" style="top: 80px;">
                       <!--Section: Ad-->
                       <section class="text-center border-bottom pb-4 mb-4">
+                          <h1>Otros recursos</h1>
                           <div class="bg-image hover-overlay ripple mb-4">
-                              <h1>Otros recursos</h1>
                               <img
                                   src="https://upvent.codes/wp-content/uploads/2020/10/Desmitificando-el-Software-libre.png"
                                   class="img-fluid" />
