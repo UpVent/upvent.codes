@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -143,3 +145,6 @@ CKEDITOR_FORCE_JPEG_COMPRESSION = True
 
 # Allow only images to be uploaded
 CKEDITOR_ALLOW_NONIMAGE_FILES = False
+
+# Enforce same origin policy
+X_FRAME_OPTIONS='SAMEORIGIN'
