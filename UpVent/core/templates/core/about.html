@@ -1,6 +1,33 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'core/css/about.css' %}">
+{% endblock %}
+
 {% block body %}
+
+
+<!-- Background image -->
+<div class="p-5 text-center bg-image jumbotron">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+        <div class="d-flex justify-content-center align-items-center m-5 h-100">
+            <div class="text-white">
+                <h1 class="text-center display-3 mb-3">
+                    Llevando empresas a la nube desde nuestros inicios.
+                </h1>
+
+
+                <h1 class="text-center text-wrap fs-5 mb-3">
+                    UpVent es una compañía de tecnología y software empresarial
+                    <br />
+                    que sigue el modelo del software libre enfocado a las micro, pequeñas y mediananas empresas.
+                </h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Background image -->
 
 {% endblock %}
