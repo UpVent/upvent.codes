@@ -15,7 +15,7 @@ class Project(models.Model):
         upload_to="portfolio"
     )
 
-    site = models.CharField(
+    site = models.URLField(
         verbose_name="Sitio web",
         max_length=200,
     )
