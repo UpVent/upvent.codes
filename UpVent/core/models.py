@@ -1,18 +1,39 @@
 from django.db import models
-
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # (about-us) Project model
 class Project(models.Model):
 
-    # Project tile
     title = models.CharField(
-        verbose_name='Título',
+        verbose_name="Título",
         max_length=200,
         unique=True
     )
 
-    # Project image
     image = models.ImageField(
-        verbose_name='Imágen Destacada',
-        upload_to='portfolio'
+        verbose_name="Imágen Destacada",
+        upload_to="portfolio"
     )
+
+    site = models.CharField(
+        verbose_name="Sitio web",
+        max_length=200,
+    )
+
+    description = RichTextUploadingField(
+        verbose_name="Descripción"
+    )
+
+    created_on = models.DateTimeField(
+        auto_now_add=True
+    )
+
+    updated_on = models.DateTimeField(
+        auto_now_add=True
+    )
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return self.title
