@@ -16,21 +16,21 @@ jobs:
         python-version: [3.9]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pipenv
-        pipenv install
-        exit
-    - name: Run Tests
-      run: |
-        pipenv shell
-        python manage.py test
+#    - uses: actions/checkout@v2
+#    - name: Set up Python ${{ matrix.python-version }}
+#      uses: actions/setup-python@v2
+#      with:
+#        python-version: ${{ matrix.python-version }}
+#    - name: Install Dependencies
+#      run: |
+#        python -m pip install --upgrade pip
+#        pip install pipenv
+#        pipenv install
+#        exit
+#    - name: Run Tests
+#      run: |
+#        pipenv shell
+#        python manage.py test
    
     - name: Django Security Check
    # You may pin to the exact commit or the version.
