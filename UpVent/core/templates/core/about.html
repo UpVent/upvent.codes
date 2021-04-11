@@ -2,129 +2,173 @@
 {% load static %}
 
 {% block css %}
-<link type="text/css" rel="stylesheet" href="{% static 'core/css/about.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'core/css/about.css' %}">
 {% endblock %}
 
 {% block body %}
 
 
-<!-- Background image -->
-<div class="p-5 text-center bg-image jumbotron">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
-        <div class="d-flex justify-content-center align-items-center m-5 h-100">
-            <div class="text-white">
-                <h1 class="text-center display-3 mb-3">
-                    Llevando empresas a la nube desde nuestros inicios.
-                </h1>
+    <!-- Background image -->
+    <div class="p-5 text-center bg-image jumbotron">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+            <div class="d-flex justify-content-center align-items-center m-5 h-100">
+                <div class="text-white">
+                    <h1 class="text-center display-3 mb-3">
+                        Llevando empresas a la nube desde nuestros inicios.
+                    </h1>
 
 
-                <h1 class="text-center text-wrap fs-5 mb-3">
-                    UpVent es una compañía de tecnología y software empresarial
-                    <br />
-                    que sigue el modelo del software libre enfocado a las micro, pequeñas y mediananas empresas.
-                </h1>
+                    <h1 class="text-center text-wrap fs-5 mb-3">
+                        UpVent es una compañía de tecnología y software empresarial
+                        <br />
+                        que sigue el modelo del software libre enfocado a las micro, pequeñas y mediananas empresas.
+                    </h1>
 
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Background image -->
-
-<!-- Why Choose Us -->
-<div class="container mt-5 mb-5">
-    <div class="container">
-        <div class="row align-items-center pb-xl-5">
-            <div class="col-12 col-md-7 col-xl-5">
-                <h1>Razones para elegirnos</h1>
-                <p class="lead text-muted">
-                    UpVent es una organización comprometida con sus clientes. Planeamos el desarrollo de las soluciones de principio a fin, mantenemos la calidad y mejoramos constantemente para entregar productos pulidos y únicos.
-                </p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 m-sm-auto mr-md-0 ml-md-auto pt-4 pt-md-0">
-                <img alt="image" class="img-fluid" src="{% static 'core/img/construction.svg' %}">
-            </div>
-        </div>
-
-        <div class="row pt-5">
-            <div class="col-12 col-sm-6 col-md-3">
-                <h4><strong>Soluciones Ligeras <i class="bi bi-lightning-charge-fill text-upvent"></i></strong></h4>
-                <p class="text-center">Creamos nuestras soluciones personalizadas desde cero, todo el proceso de elaboración se realiza con código optimizado, rápido y flexible.
-                </p>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 pt-3 pt-sm-0">
-                <h4><strong>Mejoras Constantes <i class="bi bi-cloud-arrow-up-fill text-upvent"></i></strong></h4>
-                <p class="text-center">Todas nuestras soluciones personalizadas son actualizables a versiones con mejoras de seguridad o de rendimiento. ¡No mas obsolecencia programada!</p>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 pt-3 pt-md-0">
-                <h4><strong>Desarrollo Universal <i class="bi bi-phone-fill text-upvent"></i></strong></h4>
-                <p class="text-center">Las soluciones ofrecidas por nosotros funcionan en todo tipo de dispositivos de uso común, desde laptops hasta tablets.</p>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 pt-3 pt-md-0">
-                <h4><strong>Estabilidad Confiable <i class="bi bi-stack text-upvent"></i></strong></h4>
-                <p class="text-center">UpVent sigue un ciclo de desarrollo enfocado en la estabilidad y la escalabilidad del software, nuestras soluciones personalizadas no se romperán entre actualizaciones.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Why Choose Us -->
-
-<!-- Portfolio -->
-<div class="container mt-5 mb-5">
-    <div class="container text-center">
-        <h1>Portafolio de Trabajo</h1>
-        <p class="lead text-muted">
-            Conozca los trabajos de UpVent y la conformidad de sus clientes con los mismos. Además, también podrá ver nuestros proyectos de código libre en favor de la comunidad.
-        </p>
-    </div>
-</div>
-
-<!-- Project album rendering -->
-<div class="album py-5 bg-light">
-    <div class="container">
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {% for project in projects %}
-            <div class="col">
-                <div class="card shadow-sm rounded-3">
-                    <img class="card-img-top" src="{{ project.image.url }}" loading="lazy"/>
-
-                    <div class="card-body">
-                        <h5 class="fs-2 fw-bold">{{ project.title }}</h5>
-                        <p class="card-text">{{ project.description | safe }}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a class="btn btn-primary" href="{{ project.site }}">Visitar</a>
-                        </div>
-                    </div>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
-</div>
-<!-- Project album rendering -->
+    <!-- Background image -->
 
-<!-- Free software -->
-<div class="container col-xxl-8 px-4 py-5">
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-8 col-lg-6">
-      <img src="{% static 'core/img/programmer.svg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <!-- Why Choose Us -->
+    <div class="container mt-5 mb-5">
+        <div class="container">
+            <div class="row align-items-center pb-xl-5">
+                <div class="col-12 col-md-7 col-xl-5">
+                    <h1>Razones para elegirnos</h1>
+                    <p class="lead text-muted">
+                        UpVent es una organización comprometida con sus clientes. Planeamos el desarrollo de las soluciones de principio a fin, mantenemos la calidad y mejoramos constantemente para entregar productos pulidos y únicos.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 m-sm-auto mr-md-0 ml-md-auto pt-4 pt-md-0">
+                    <img alt="image" class="img-fluid" src="{% static 'core/img/construction.svg' %}">
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <h4><strong>Soluciones Ligeras <i class="bi bi-lightning-charge-fill text-upvent"></i></strong></h4>
+                    <p class="text-center">Creamos nuestras soluciones personalizadas desde cero, todo el proceso de elaboración se realiza con código optimizado, rápido y flexible.
+                    </p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 pt-3 pt-sm-0">
+                    <h4><strong>Mejoras Constantes <i class="bi bi-cloud-arrow-up-fill text-upvent"></i></strong></h4>
+                    <p class="text-center">Todas nuestras soluciones personalizadas son actualizables a versiones con mejoras de seguridad o de rendimiento. ¡No mas obsolecencia programada!</p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 pt-3 pt-md-0">
+                    <h4><strong>Desarrollo Universal <i class="bi bi-phone-fill text-upvent"></i></strong></h4>
+                    <p class="text-center">Las soluciones ofrecidas por nosotros funcionan en todo tipo de dispositivos de uso común, desde laptops hasta tablets.</p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 pt-3 pt-md-0">
+                    <h4><strong>Estabilidad Confiable <i class="bi bi-stack text-upvent"></i></strong></h4>
+                    <p class="text-center">UpVent sigue un ciclo de desarrollo enfocado en la estabilidad y la escalabilidad del software, nuestras soluciones personalizadas no se romperán entre actualizaciones.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-6">
-      <h1 class="display-5 fw-bold lh-1 mb-3">Tecnología libre para mentes libres</h1>
-      <p class="lead">UpVent entrega soluciones de código libre que logran hacer que las empresas trabajen de forma eficiente en entornos conectados. Todos nuestros servicios operan de forma transparente y ética en el mercado laboral, sin telemetría, letra pequeña o restricciones sobre licencias.</p>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a class="text-white" href="">Licencias</a></button>
-          <button type="button" class="btn btn-info btn-lg px-4"><a class="text-white" href="">Contacto <i class="bi bi-envelope"></i></a></button>
-      </div>
+    <!-- Why Choose Us -->
+
+    <!-- Portfolio -->
+    <div class="container mt-5 mb-5">
+        <div class="container text-center">
+            <h1>Portafolio de Trabajo</h1>
+            <p class="lead text-muted">
+                Conozca los trabajos de UpVent y la conformidad de sus clientes con los mismos. Además, también podrá ver nuestros proyectos de código libre en favor de la comunidad.
+            </p>
+        </div>
     </div>
-  </div>
-</div>
-<!-- Free software -->
 
-<!-- End -->
+    <!-- Project album rendering -->
+    <div class="album py-5 bg-light">
+        <div class="container">
 
-<!-- End -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                {% for project in projects %}
+                    <div class="col">
+                        <div class="card shadow-sm rounded-3">
+                            <img class="card-img-top" src="{{ project.image.url }}" loading="lazy"/>
+
+                            <div class="card-body">
+                                <h5 class="fs-2 fw-bold">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.description | safe }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a class="btn btn-primary" href="{{ project.site }}">Visitar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Project album rendering -->
+
+    <!-- Free software -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="{% static 'core/img/programmer.svg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Tecnología libre para mentes libres</h1>
+                <p class="lead">UpVent entrega soluciones de código libre que logran hacer que las empresas trabajen de forma eficiente en entornos conectados. Todos nuestros servicios operan de forma transparente y ética en el mercado laboral, sin telemetría, letra pequeña o restricciones sobre licencias.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a class="text-white" href="">Licencias</a></button>
+                    <button type="button" class="btn btn-info btn-lg px-4"><a class="text-white" href="">Contacto <i class="bi bi-envelope"></i></a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Free software -->
+
+    <!-- Showcase -->
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-12 text-center">
+                <h1 class="fw-bold">Líderes en soluciones de codigo libre en la industria</h1>
+            </div>
+        </div>
+
+        <div class="row text-left align-items-center pt-5 pb-md-5">
+            <div class="col-4 col-md-5">
+                <img alt="image" class="img-fluid" src="{% static 'core/img/desk.svg' %}">
+            </div>
+
+            <div class="col-12 col-md-5 m-md-auto">
+                <h2><strong>Feature One</strong></h2>
+                <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p><a href="https://www.froala.com">Learn More <i class="fas fa-angle-right"></i></a></p>
+            </div>
+        </div>
+
+        <div class="row text-left align-items-center pt-5 pb-md-5">
+            <div class="col-4 col-md-5 m-md-auto order-md-5">
+                <img alt="image" class="img-fluid" src="{% static 'core/img/partners.svg' %}">
+            </div>
+
+            <div class="col-12 col-md-5">
+                <h2><strong>Feature Two</strong></h2>
+                <p class="lead">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                <p><a href="https://www.froala.com">Learn More <i class="fas fa-angle-right"></i></a></p>
+            </div>
+        </div>
+
+        <div class="row text-left align-items-center pt-5">
+            <div class="col-4 col-md-5">
+                <img alt="image" class="img-fluid" src="{% static 'core/img/security.svg' %}">
+            </div>
+
+            <div class="col-12 col-md-5 m-md-auto">
+                <h2><strong>Feature Three</strong></h2>
+                <p class="lead">On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn
+                    around.
+                </p>
+                <p><a href="https://www.froala.com">Learn More <i class="fas fa-angle-right"></i></a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Showcase -->
 {% endblock %}
