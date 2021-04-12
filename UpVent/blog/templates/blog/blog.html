@@ -3,39 +3,50 @@
 
 {% block body %}
 
+<!-- Jumbotron -->
+<div id="intro" class="p-5 text-center bg-light">
+    <h1 class="mb-3 h2">Blog</h1>
+    <p class="mb-3 text-wrap lead">El conocimiento de UpVent, para la comunidad, por la comunidad. <i class="bi bi-heart"></i></p>
+</div>
+<!-- Jumbotron -->
+
+<!--Main layout-->
+<main class="my-5">
     <div class="container">
+        <!--Section: Content-->
+        <section class="text-center">
+            <h4 class="mb-5"><strong>Latest posts</strong></h4>
 
-        <section id="articles">
-            <div class="container">
-                <div class="mt-3 row">
-                    {% for post in posts %}
-                        {% if forloop.last %}
-                        {% else %}
-                            <div class="col">
-                        {% endif %}
-                        <div class="card shadow-1-strong m-2">
-
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                                </a>
-                            </div>
-
-                            <div class="card-body">
-                                <h3 class="card-title">{{post.title}}</h3>
-                                <hr>
-                                <p class="pb-2 mute">{{post.created_on}}</p>
-                                <p>{{post.content|truncatewords:28|safe}}</p>
-                                <div class="btn btn-primary">
-                                    <a href="{% url 'blog:post' post.slug %}" class="text-white">Leer mas...</a>
-                                </div>
-                            </div>
+            <div class="row">
+                {% for post in posts %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="{{ post.image.url }}" class="img-fluid" />
+                            <a href="{% url 'blog:post' post.slug %}">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
                         </div>
-                            </div>
-                    {% endfor %}
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">{{ post.title }}</h5>
+                            <span class="badge rounded-pill bg-primary">Categoría: {{post.category}}</span>
+                            <span class="badge rounded-pill bg-info"> Creado el: {{post.created_on}}</span>
+                            <hr />
+                            <p class="card-text">
+                                {{post.content|truncatewords:28|safe}}
+                            </p>
+                            <a href="{% url 'blog:post' post.slug %}" class="btn btn-primary">Leer más... <i class="bi bi-book"></i></a>
+                        </div>
+                    </div>
                 </div>
-        </section>
+                {% endfor %}
             </div>
+
+        </section>
+        <!--Section: Content-->
+
+    </div>
+</main>
+<!--Main layout-->
 
 {% endblock %}
