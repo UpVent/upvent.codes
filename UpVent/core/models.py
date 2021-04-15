@@ -74,6 +74,7 @@ class PrivacyPolicy(models.Model):
 
     class Meta:
         verbose_name = "Política de Privacidad"
+        verbose_name_plural = "Política de Privacidad"
 
     def __str__(self):
         return self.title
