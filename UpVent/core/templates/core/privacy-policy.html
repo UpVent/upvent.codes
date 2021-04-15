@@ -3,4 +3,19 @@
 
 {% block body %}
 
+<div class="container mt-5 mb-5">
+    <h1 class="display-3 fw-bold"> {{policies.title}} </h1>
+    <p class="lead">Ultima actualización: {{policies.updated_on}}</p>
+    <br />
+    <p class="text-muted">{{ policies.changelog }}</p>
+    <hr />
+    <p class="text-wrap">{{policies.text | safe}}</p>
+
+    <hr />
+    <p class="lead">Puede obtener una copia de esta página presionando el siguiente botón:
+        <button onclick="window.print()" class="badge rounded-pill bg-upvent border-0">Imprimir <i class="bi bi-printer"></i></button>
+    </p>
+</div>
+
+
 {% endblock %}
