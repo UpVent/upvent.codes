@@ -15,5 +15,5 @@ def services(request):
     return render(request, 'core/services.html')
 
 def privacy_policy(request):
-    priv_pol = PrivacyPolicy.objects.all()
-    return render(request, 'core/privacy-policy.html', {'policy': priv_pol})
+    policies = PrivacyPolicy.objects.all().first()
+    return render(request, 'core/privacy-policy.html', {'policies': policies})
