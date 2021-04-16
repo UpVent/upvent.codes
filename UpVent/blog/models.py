@@ -102,6 +102,7 @@ class Post(models.Model):
     side_button = models.CharField(
         verbose_name="Texto del botón lateral",
         max_length=50,
+        default="Leer más...",
         help_text="Texto que mostrará el botón mostrado en la parte derecha\
         de cada post."
     )
@@ -116,6 +117,7 @@ class Post(models.Model):
     side_video_title = models.CharField(
         verbose_name="Texto del vídeo lateral",
         max_length=100,
+        default="Conocer más",
         help_text="Texto que se mostrará como título del vídeo lateral"
     )
 
