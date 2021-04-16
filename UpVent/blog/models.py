@@ -79,6 +79,7 @@ class Post(models.Model):
     side_title = models.CharField(
         verbose_name="Título Lateral",
         max_length=200,
+        default="Otros Recursos",
         help_text="Título de la imágen que aparecerá en la parte derecha de\
         cada post"
     )
@@ -87,6 +88,7 @@ class Post(models.Model):
     side_img = models.ImageField(
         verbose_name="Imágen Lateral",
         upload_to="posts",
+        blank=True,
         help_text="Imágen que aparecera en la parte derecha de cada post.\
         puede usarse para publicidad u otros fines."
     )
@@ -94,6 +96,7 @@ class Post(models.Model):
     # Blog side text
     site_text = models.TextField(
         verbose_name="Texto Lateral",
+        default="Ver más",
         help_text="Texto mostrado en la parte derecha de cada post, debajo de\
         la imágen lateral."
     )
@@ -110,6 +113,7 @@ class Post(models.Model):
     # Blog side button url
     side_button_url = models.URLField(
         verbose_name="URL del botón lateral",
+        default="https://upvent.codes",
         help_text="Sitio al que dirigirá el botón lateral mostrado en la parte\
         derecha de cada post"
     )
