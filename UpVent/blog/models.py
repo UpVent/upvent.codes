@@ -124,6 +124,7 @@ class Post(models.Model):
     # Blog side video
     side_video = models.URLField(
         verbose_name="Video Lateral",
+        default="https://upvent.codes",
         help_text="URL hacia un vídeo que será mostrado en la parte derecha de\
         cada post."
     )
