@@ -128,31 +128,31 @@
                   <section class="sticky-top" style="top: 80px;">
                       <!--Section: Ad-->
                       <section class="text-center border-bottom pb-4 mb-4">
-                          <h1>Otros recursos</h1>
+                          <h1>{{ post.side_title }}</h1>
                           <div class="bg-image hover-overlay ripple mb-4">
                               <img
-                                  src="https://upvent.codes/wp-content/uploads/2020/10/Desmitificando-el-Software-libre.png"
+                                  src="{{ post.side_img.url }}"
                                   class="img-fluid" />
-                              <a href="https://mdbootstrap.com/docs/standard/" target="_blank">
+                              <a href="{{ post.side_button_url }}" target="_blank">
                                   <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
                               </a>
                           </div>
-                          <h5>Desmitificando el software libre</h5>
+                          <h5>{{ post.side_text_title }}</h5>
 
                           <p>
-                              Conoce los mitos más comunes que rondan en torno al software libre y como desmentirlos fácilmente.
+                              {{ post.site_text }}
                           </p>
-                          <a role="button" class="btn btn-primary" href="https://mdbootstrap.com/docs/standard/"
-                             target="_blank">Leer ya...</a>
+                          <a role="button" class="btn btn-primary" href="{{ post.side_button_url }}"
+                             target="_blank">{{ post.side_button }}</a>
                       </section>
                       <!--Section: Ad-->
 
                       <!--Section: Video-->
                       <section class="text-center">
-                          <h5 class="mb-4">¡Conoce más del software libre!</h5>
+                          <h5 class="mb-4">{{ post.side_video_title }}</h5>
 
                           <div class="embed-responsive embed-responsive-16by9 shadow-4-strong">
-                              <iframe class="embed-responsive-item rounded" sandbox="allow-same-origin allow-scripts allow-popups" src="https://framatube.org/videos/embed/32ded243-ea5f-4f69-8dd0-5628c9231379"
+                              <iframe class="embed-responsive-item rounded" sandbox="allow-same-origin allow-scripts allow-popups" src="{{ post.side_video }}"
                                       allowfullscreen></iframe>
                           </div>
                       </section>
