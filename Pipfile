@@ -11,8 +11,10 @@ pillow = "*"
 django-admin-interface = "*"
 
 [dev-packages]
-pylint = "*"
 bandit = "*"
 
 [requires]
 python_version = "3.9"
+
+[scripts]
+test = " sh -c 'cd UpVent/ && python manage.py test' "
