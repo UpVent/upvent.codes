@@ -93,6 +93,15 @@ class Post(models.Model):
         puede usarse para publicidad u otros fines."
     )
 
+    # Blog side text title
+    side_text_title = models.CharField(
+        verbose_name="Título Lateral",
+        max_length=200,
+        default="Título del recurso",
+        help_text="Título del texto inferior que aparecerá en la parte derecha\
+        de cada post"
+    )
+
     # Blog side text
     site_text = models.TextField(
         verbose_name="Texto Lateral",
