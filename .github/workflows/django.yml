@@ -38,17 +38,4 @@ jobs:
 
       - name: Run test suite
         run: |
-          pipenv run test -svvv
-
-      - name: Run linter
-        run: |
-          pipenv run lint
-
-      - name: Run formatting check
-        run: |
-          pipenv run format --check
-
-      - name: Run type checking
-        run: |
-          npm install -g pyright
-          pipenv run typecheck
+          pipenv run test
