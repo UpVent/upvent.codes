@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Project, PrivacyPolicy
+from .models import Project, FSProject, PrivacyPolicy
 
 # Create your views here.
 def index(request):
@@ -12,7 +12,8 @@ def about(request):
     return render(request, 'core/about.html', {'projects': projects})
 
 def services(request):
-    return render(request, 'core/services.html')
+    services = FSProject.objects.all()
+    return render(request, 'core/services.html', {'services': services})
 
 def privacy_policy(request):
     policies = PrivacyPolicy.objects.all().first()
