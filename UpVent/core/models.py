@@ -8,19 +8,19 @@ class Project(models.Model):
         verbose_name="Título",
         max_length=200,
         unique=True,
-        help_text="Ingrese el nombre del proyecto"
+        help_text="Ingrese el nombre del proyecto."
     )
 
     image = models.ImageField(
         verbose_name="Imágen Destacada",
         upload_to="portfolio",
-        help_text="Se recomiendan imágenes de dimensiones rectangulares. Solo formatos jpg, jpeg, png y webm"
+        help_text="Se recomiendan imágenes de dimensiones rectangulares."
     )
 
     site = models.URLField(
         verbose_name="Sitio web",
         max_length=200,
-        help_text="El sitio web donde se encuentra alojado el proyecto"
+        help_text="El sitio web donde se encuentra alojado el proyecto."
     )
 
     description = RichTextUploadingField(
@@ -43,6 +43,64 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+# (services) Free Software Services Model
+class FSProject(models.Model):
+    title = models.CharField(
+        verbose_name="Título",
+        max_length=100,
+        help_text="Ingrese el nombre del proyecto.",
+        default=""
+    )
+
+    image = models.ImageField(
+        verbose_name="Imágen Destacada",
+        upload_to="floss",
+        help_text="Se recomiendan imágenes de dimensiones rectangulares."
+    )
+
+    description = RichTextUploadingField(
+        verbose_name="Descripción",
+        help_text="Descripción del proyecto."
+    )
+
+
+    github_addr = models.URLField(
+        verbose_name="Dirección de Git",
+        max_length=200,
+        help_text="URL completa del repositorio donde se encuentra el proyecto",
+        default="https://github.com/"
+    )
+
+    support_addr = models.URLField(
+        verbose_name="Dirección de apoyo",
+        max_length=200,
+        help_text="URL completa donde los visitantes podrán apoyar al proyecto",
+        default="https://github.com/"
+    )
+
+    plicense = models.CharField(
+        verbose_name="Licencia",
+        max_length=25,
+        help_text="Ingrese la licencia del proyecto",
+        default=""
+    )
+
+    license_link = models.URLField(
+        verbose_name="URL de licencia",
+        max_length=200,
+        help_text="URL completa para ver la licencia del proyecto",
+        default="https://gnu.org/"
+    )
+
+    created_on = models.DateTimeField(
+        auto_now_add=True
+    )
+
+    updated_on = models.DateTimeField(
+        auto_now_add=True
+    )
+
 
 # (privacy-policy) Privacy Policy Project Model
 class PrivacyPolicy(models.Model):
