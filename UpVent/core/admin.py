@@ -9,9 +9,9 @@ class ProjectAdmin(admin.ModelAdmin):
     search_fields = ['title', 'site']
 
 class FSProjectAdmin(admin.ModelAdmin):
-    list_display = ('title', 'created_on')
-    list_filter = ('title',)
-    search_fields = ['title', 'description', 'site', 'created_on']
+    list_display = ('id', 'title', 'plicense', 'github_addr', 'created_on', 'updated_on')
+    list_filter = ('title', 'plicense')
+    search_fields = ['title', 'description', 'github_addr', 'created_on']
 
 class PolicyAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_on')
