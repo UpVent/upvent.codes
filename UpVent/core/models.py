@@ -101,6 +101,12 @@ class FSProject(models.Model):
         auto_now_add=True
     )
 
+    class Meta:
+        verbose_name = "Proyecto de código abierto"
+        verbose_name_plural = "Proyectos de código abierto"
+
+    def __str__(self):
+        return self.title
 
 # (privacy-policy) Privacy Policy Project Model
 class PrivacyPolicy(models.Model):
