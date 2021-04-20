@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 from ckeditor_uploader.fields import RichTextUploadingField
 
 # (about-us) Project model
