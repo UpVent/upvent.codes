@@ -61,40 +61,49 @@
 
             <div class="col-12 col-md-6 ml-auto">
                 <h2 class="fw-bold">Póngase en contacto con nosotros</h2>
-                <form>
+
+                {% if 'success' in request.GET %}
+                    <div class="alert alert-primary" role="alert">
+                        Gracias por ponerse en contacto con nosotros. Responderemos a su mensaje en menos de 12 horas.
+                    </div>
+                {% endif %}
+
+                <form action="?success" method="POST" id="form">
+                    {% csrf_token %}
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Nombre(s)" required>
+                            {{ form.first_name  }}
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Apellido(s)" required>
-                        </div>
-                    </div>
-
-                    <div class="row mt-4">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Nombre de compañía o Trabajo" required>
+                            {{ form.last_name }}
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
-                            <input type="email" class="form-control" placeholder="Correo Electrónico" required>
+                            {{ form.company_name }}
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
-                            <input type="tel" class="form-control" placeholder="Teléfono" required>
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Razón de Contacto" required>
+                            {{ form.email }}
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Mensaje..." required></textarea>
+                            {{ form.phone }}
+                        </div>
+
+                        <div class="col">
+                            {{ form.reason }}
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col">
+                            {{ form.message }}
                         </div>
                     </div>
                     <div class="row mt-4">
