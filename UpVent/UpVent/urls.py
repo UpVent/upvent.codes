@@ -20,11 +20,14 @@ from django.urls import path, include
 from django.conf import settings
 
 urlpatterns = [
+    # Special URL's (Mostly admin or managed things)
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('wp-admin/', admin.site.urls),
+    # Main Site URLs
     path('', include('core.urls'), name='index'),
-    path('blog/', include('blog.urls', namespace="blog"), name='blog')
+    path('blog/', include('blog.urls', namespace="blog"), name='blog'),
+    path('contact/', include('contact.urls', namespace="contact"), name='contact'),
 ]
 
 admin.site.site_header = "UpVent Admin"
