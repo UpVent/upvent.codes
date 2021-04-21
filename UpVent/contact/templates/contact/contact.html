@@ -3,13 +3,6 @@
 
 {% block body %}
 
-<!-- Jumbotron -->
-<div id="intro" class="p-5 text-center bg-light">
-    <h1 class="mb-3 h2">Contacto</h1>
-    <p class="mb-3 text-wrap lead"> ¿Necesita asesoramiento o enviarnos un mensaje? En la siguiente página podrá encontrar más información para comunicarse con nosotros. </p>
-</div>
-<!-- Jumbotron -->
-
 <!--Main layout-->
 <main class="my-5">
 
@@ -18,105 +11,95 @@
             <div class="row-100"></div>
             <div class="row text-left">
                 <div class="col-8">
-                    <h1>Contact Us</h1>
-                    <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <h1>Contacto</h1>
+                    <p class="lead">
+                        En la siguiente página podrá encontrar más información para comunicarse con nosotros.
+                    </p>
                 </div>
             </div>
             <div class="row-100"></div>
         </div>
     </div>
-    <div class="container bg-r">
+
+    <hr />
+
+    <div class="container mt-5 bg-r">
         <div class="row-100"></div>
         <div class="row">
             <div class="col-12 col-md-6 col-lg-5">
-                <h2>Call or email</h2>
-                <p class="text-large">Support, Sales, and Account Management services are currently available in English</p>
+                <h2>Consulte nuestras plataformas</h2>
+                <p class="text-large">Nuestras plataformas de soporte estarán ahí para ayudarlo siempre.</p>
 
                 <p class="h3 mt-4 mt-lg-5">
-                    <strong>Support</strong>
+                    <strong>Soporte para clientes</strong>
                 </p>
                 <p>
-                    +800 3005 4300
-                </p>
-                <p>
-                    <a href="https://www.froala.com">Contact Support</a>
-                </p>
-                <p>
-                    Our technical support is available by phone or email from 11am to 11pm BST, Monday through Friday.
+                    <a href="https://tickets.upvent.codes">Sistema de tickets</a>
                 </p>
 
-                <p class="h3 mt-4 mt-lg-5">
-                    <strong>Sales</strong>
-                </p>
                 <p>
-                    +800 3005 4300
-                </p>
-                <p>
-                    <a href="https://www.froala.com">Contact Sales</a>
-                </p>
-                <p>
-                    Our technical support is available by phone or email from 11am to 11pm BST, Monday through Friday.
+                    Nuestro soporte técnico está disponible por el sistema de tickets o correo electrónico de 11 a. M. A 11 p. M.  De lunes a viernes.
                 </p>
 
                 <p class="h3 mt-4 mt-lg-5">
-                    <strong>General inquiries</strong>
+                    <strong>Ventas</strong>
                 </p>
                 <p>
-                    <a href="https://www.froala.com">hello@website.com</a>
+                    <a href="mailto://upventmx@gmail.com">Contactar con ventas</a>
+                </p>
+                <p>
+                    Nuestro departamento de ventas está disponible de 11 a.M. a 11 a.M. A través del correo electrónico o por medio de nuestras redes sociales.
+                </p>
+
+                <p class="h3 mt-4 mt-lg-5">
+                    <strong>Preguntas Generales</strong>
+                </p>
+                <p>
+                    <a href="mailto://upventmx@gmail.com">upventmx@gmail.com</a>
                 </p>
             </div>
 
             <div class="col-12 col-md-6 ml-auto">
-                <h2>Drop us a line</h2>
+                <h2 class="fw-bold">Póngase en contacto con nosotros</h2>
                 <form>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="First name">
+                            <input type="text" class="form-control" placeholder="Nombre(s)" required>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name">
-                        </div>
-                    </div>
-
-                    <div class="row mt-4">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Company Name">
+                            <input type="text" class="form-control" placeholder="Apellido(s)" required>
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control" placeholder="Nombre de compañía o Trabajo" required>
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Phone">
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Country">
+                            <input type="email" class="form-control" placeholder="Correo Electrónico" required>
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
-                            <select class="form-control" required="">
-                                <option value="">Select Department</option>
-                                <option value="1">Support</option>
-                                <option value="2">Sales</option>
-                                <option value="3">Accounting</option>
-                            </select>
+                            <input type="tel" class="form-control" placeholder="Teléfono" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Razón de Contacto" required>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Mensaje..." required></textarea>
                         </div>
                     </div>
                     <div class="row mt-4">
                         <div class="col">
-                            <textarea class="form-control" name="message" rows="5" placeholder="How can we help?"></textarea>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-lg btn-primary">Enviar <i class="bi bi-envelope-fill"></i></button>
                         </div>
                     </div>
                 </form>
