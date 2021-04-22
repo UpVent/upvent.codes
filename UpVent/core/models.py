@@ -5,6 +5,11 @@ from ckeditor_uploader.fields import RichTextUploadingField
 # (about-us) Project model
 class Project(models.Model):
 
+    """
+    Stores a single instance of a project used in the portfolio section
+    in this site.
+    """
+
     title = models.CharField(
         verbose_name="Título",
         max_length=200,
@@ -47,6 +52,12 @@ class Project(models.Model):
 
 # (services) Free Software Services Model
 class FSProject(models.Model):
+
+    """
+    Stores a single Free Software Project shown in the "services" page of this
+    site.
+    """
+
     title = models.CharField(
         verbose_name="Título",
         max_length=100,
@@ -111,6 +122,14 @@ class FSProject(models.Model):
 
 # (privacy-policy) Privacy Policy Project Model
 class PrivacyPolicy(models.Model):
+
+    """
+    Stores a single and UNIQUE privacy policy to make this site compliant with
+    inside / outside country privacy laws.
+
+    This model has an overriden save() method to prevent more than one privacy
+    policy instance to be created.
+    """
 
     title = models.CharField(
         verbose_name="Título",
