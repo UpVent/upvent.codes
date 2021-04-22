@@ -9,6 +9,7 @@ django-admin-honeypot = "*"
 django-ckeditor = "*"
 pillow = "*"
 django-admin-interface = "*"
+docutils = "*"
 
 [dev-packages]
 bandit = "*"
