@@ -9,6 +9,11 @@ STATUS = (
 )
 
 class Post(models.Model):
+    """
+    Stores a single blog post. It is only related to :model:`auth.User` to set
+    the blog author.
+    """
+
     # Blog Title
     title = models.CharField(
         verbose_name="Título",
