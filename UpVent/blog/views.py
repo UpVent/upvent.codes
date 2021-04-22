@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .models import Post
 
 def Blog(request):
-    posts = Post.objects.all()[::-1]
+    posts = Post.objects.filter(status=1)[::-1]
     return render(request, 'blog/blog.html', {'posts':posts})
 
 def BlogEntry(request, slug):
