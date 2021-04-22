@@ -22,13 +22,55 @@ def index(request):
     return render(request, 'core/index.html', {'index': index})
 
 def about(request):
+
+    """
+    Display the "about" page for this site.
+
+    **Context**
+
+    ``projects``
+        All instances of the :model:`core.Project` saved in the database
+
+    **Template**
+        :template:`core/about.html`
+
+    """
+
     projects = Project.objects.all()
     return render(request, 'core/about.html', {'projects': projects})
 
 def services(request):
+
+    """
+    Display the "services" page for this site.
+
+    **Context**
+
+    ``services``
+        All instances of the :model:`core.FSProject` saved in the database
+
+    **Template**
+        :template:`core/services.html`
+
+    """
+
     services = FSProject.objects.all()
     return render(request, 'core/services.html', {'services': services})
 
 def privacy_policy(request):
+
+    """
+    Display the "privacy-policy" page for this site.
+
+    **Context**
+
+    ``projects``
+        All instances of the :model:`core.Project` saved in the database
+
+    **Template**
+        :template:`core/privacy-policy.html`
+
+    """
+
     policies = PrivacyPolicy.objects.all().first()
     return render(request, 'core/privacy-policy.html', {'policies': policies})
