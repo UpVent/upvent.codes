@@ -21,6 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     # Special URL's (Mostly admin or managed things)
+    path('wp-admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('wp-admin/', admin.site.urls),
