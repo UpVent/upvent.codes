@@ -157,6 +157,12 @@ class Post(models.Model):
 
 class Comment(models.Model):
 
+    """
+    Stores a single Comment made by an outside visitor of this site. For privacy
+    notes, this model should try to "save" emails as an encrypted field or as
+    a plain hash to prevent risking user data in the event of a data breach.
+    """
+
     # Which model is related to which post
     post = models.ForeignKey(
         Post,
