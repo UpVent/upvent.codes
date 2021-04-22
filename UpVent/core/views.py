@@ -4,6 +4,20 @@ from .models import Project, FSProject, PrivacyPolicy
 
 # Create your views here.
 def index(request):
+    """
+    Display the main page for this site.
+
+    **Context**
+
+    ``index``
+        A single array with a 1 value, meant to be used for something else.
+
+    **Template:**
+
+    :template:`core/index.html`
+
+    """
+
     index = ['01']
     return render(request, 'core/index.html', {'index': index})
 
