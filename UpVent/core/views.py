@@ -64,8 +64,9 @@ def privacy_policy(request):
 
     **Context**
 
-    ``projects``
-        All instances of the :model:`core.Project` saved in the database
+    ``policies``
+        Return the only instance of the :model:`core.PrivacyPolicy`
+        saved in the database. This model allows ONLY ONE privacy policy.
 
     **Template**
         :template:`core/privacy-policy.html`
