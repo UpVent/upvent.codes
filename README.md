@@ -91,7 +91,6 @@ If you wish to contribute to this project here are the steps you need to follow:
   ```
 
 
-
 ## Deployment
 
 We won't provide  (for now) instructions on how to deploy to a server, the steps should be the same as a simple django app. However here are a few steps you should follow:
@@ -101,9 +100,24 @@ We won't provide  (for now) instructions on how to deploy to a server, the steps
 - **DON'T** use the sqlite database, use the supported mysql or modify the project to connect to psql.
 - Protect your media folder against execution
 
-## License
+## License + Credits
 
+### Our Code
 The source code is free software distributed under the GNU General Public License, version 2, or, at your option, any later version. (See [LICENSE](https://github.com/UpVent/upvent.codes/blob/master/LICENSE).)
 
 The website contents are creative commons released under CC-BY-ND-3.0-International.
 
+
+### External Code
+
+#### hcaptcha implementation
+
+The hcaptcha impementation on this app is credited to
+(AndrejZbin)[https://github.com/AndrejZbin] who made `django-hcaptcha` 
+which we integrated directly in our codebase.
+
+- License: [BSD 3-Clause "New" or "Revised" License](https://github.com/AndrejZbin/django-hcaptcha/blob/master/LICENSE)
+
+#### Basecode help
+
+Thanks to [@corahama](https://github.com/corahama) for helping us jumpstart this project..
