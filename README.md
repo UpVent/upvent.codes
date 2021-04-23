@@ -2,6 +2,8 @@
 
 > Notice: The current GitHub action is broken due to upstream issues, your commits might be displayed as "non passing".  All PR's will be reviewed manually until this is solved or until we change our action.yml file.
 
+## :warning: For development purposes, when this project reaches beta we will "redo" the commited migrations. Please backup your database contents if you are using this project and restore it accordingly
+
 This is the source code for the UpVent's website under `upvent.codes`.
 
 Development occurs on the `master` branch and new branches are only opened when adding critical/unstable features. The main site is published by upvent making a fork of this project and adding some post-update commits in order to make deployment more secure.
