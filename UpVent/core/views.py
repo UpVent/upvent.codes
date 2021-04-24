@@ -57,6 +57,9 @@ def services(request):
     services = FSProject.objects.all()
     return render(request, 'core/services.html', {'services': services})
 
+def licenses(request):
+    return render(request, 'core/licenses.html')
+
 def privacy_policy(request):
 
     """
