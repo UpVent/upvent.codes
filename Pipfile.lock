@@ -42,11 +42,11 @@
         },
         "django-admin-interface": {
             "hashes": [
-                "sha256:588958d04bd199635654174d09af1ec1a8f818148eb2224df12bf52a048ab533",
-                "sha256:f94239f396bb4a990af7e5d23170d1951eec28411e436de6c6794ab1cae3f94f"
+                "sha256:74ec6733bc4f020f844d247c781194c9ad08eac98cecf1fd1e25805665f0aabe",
+                "sha256:970d5a82ac41d724dddfe75605e959c48a9a56f16beaf378718154ac64793856"
             ],
             "index": "pypi",
-            "version": "==0.16.1"
+            "version": "==0.16.2"
         },
         "django-ckeditor": {
             "hashes": [
