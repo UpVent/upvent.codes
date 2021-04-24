@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Project, FSProject, PrivacyPolicy
+from .models import Project, FSProject, License, HOF, PrivacyPolicy
 
 # Create your views here.
 def index(request):
@@ -58,7 +58,33 @@ def services(request):
     return render(request, 'core/services.html', {'services': services})
 
 def licenses(request):
-    return render(request, 'core/licenses.html')
+
+    """
+    Display the "licenses" page for this site.
+
+    **Context**
+
+    ``licenses``
+        Return all instances of the :model:`core.License`
+        saved in the database to display in the first section of the page.
+
+    ``HOF``
+        Return all instances of recognized projects shown in the
+        hall of fame at the last section of the page.
+
+    **Template**
+        :template:`core/licenses.html`
+    """
+
+    licenses = License.objects.all()
+    hall_of_fame = HOF.objects.all()
+
+    context = {
+        'licenses': licenses,
+        'hall_of_fame': hall_of_fame,
+    }
+
+    return render(request, 'core/licenses.html', context)
 
 def privacy_policy(request):
 

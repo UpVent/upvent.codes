@@ -2,5 +2,86 @@
 {% load static %}
 
 {% block body %}
+    <div class="container text-center mt-5 mb-5">
+        <h2 class="display-5 fw-bold">
+            Todo lo que hacemos es
+            <br />
+            de código libre.
+        </h2>
+
+        <p class="lead text-wrap">
+            El software creado por UpVent es cien por ciento de código libre y está
+            elaborado bajo una sólida base de reglas éticas y morales para la comunidad.
+
+            Además, intentamos colaborar de manera activa con el ecosistema para
+            mejorar el software para todos.
+        </p>
+
+        <a class="btn btn-primary btn-lg fw-bold" href="https://github.com/UpVent">Participar <i class="bi bi-github"></i></a>
+
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="container text-center mt-5 mb-5">
+            <h2 class="fw-bold">
+                Licencias <i class="text-warning bi bi-journal-text"></i>
+            </h2>
+
+            <p class="text-wrap">
+                Conozca las licencias utilizadas por UpVent en el desarrollo de sus proyectos.
+            </p>
+        </div>
+
+        <div class="container">
+
+            <div class="row mt-5 justify-content-center">
+
+                {% for license in licenses %}
+                    <div class="col-md-10 col-lg-3 pt-5 pt-lg-0 ml-auto mr-auto text-center">
+                        <div class="card  ">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ license.name }}</h5>
+                                <p class="card-text">
+                                    {{ license.verbatim | safe }}
+                                </p>
+                            </div>
+                            <div class="card-footer"><a class="badge rounded-pill bg-upvent text-white" href="{{ license.license_link }}">Licencia Completa <i class="bi bi-eye"></i></a></div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="container text-center mt-5 mb-5">
+            <h2 class="fw-bold">
+                Salón De La Fama <i class="text-warning bi bi-trophy-fill"></i>
+            </h2>
+
+            <p class="text-wrap">
+                El software libre es importante para nuestra comunidad, y de la misma forma que nos gusta ayudar a la comunidad, UpVent ha consumido
+                diferentes tipos de software de licencias libres para crear sus productos. En la siguiente página le mostraremos el software que ha hecho de UpVent
+                una realidad.
+            </p>
+        </div>
+
+        <div class="container">
+
+            <div class="row mt-5 justify-content-center">
+
+                {% for item in hall_of_fame %}
+                    <div class="col-md-10 col-lg-3 pt-5 pt-lg-0 ml-auto mr-auto text-center">
+                        <p><img alt="image" height="50" class="rounded-circle" src="{{ item.icon.url }}"></p>
+                        <p class="lead fw-bold"><strong>{{ item.name }}</strong></p>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
 
 {% endblock %}

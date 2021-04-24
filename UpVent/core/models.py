@@ -120,6 +120,70 @@ class FSProject(models.Model):
     def __str__(self):
         return self.title
 
+# (licenses) License Model
+class License(models.Model):
+
+    """
+    Stores a single License model shown in the "licenses" page of this
+    site.
+    """
+
+    name = models.CharField(
+        verbose_name="Nombre",
+        max_length=60,
+        help_text="Ingrese el nombre de la licencia a mostrar",
+        default="Gnu General Public License v2"
+    )
+
+    verbatim = RichTextUploadingField(
+        verbose_name="Texto corto de la licencia",
+        help_text="Escriba aquí el texto corto o resumen de la licencia",
+        default=""
+    )
+
+    license_link = models.URLField(
+        verbose_name="URL de licencia",
+        max_length=200,
+        help_text="URL completa para ver la licencia del proyecto",
+        default="https://gnu.org/"
+    )
+
+    class Meta:
+        verbose_name = "Licencia"
+        verbose_name_plural = "Licencias"
+
+    def __str__(self):
+        return self.name
+
+# (licenses) HOF Model
+class HOF(models.Model):
+
+    """
+    Stores a single Hall Of Fame Project shown in the "licenses" page of this
+    site.
+    """
+
+    name = models.CharField(
+        verbose_name="Nombre",
+        max_length=60,
+        help_text="Ingrese el nombre del proyecto a mostrar en\
+        el salón de la fama",
+        default="Gnu Compiler Colection"
+    )
+
+    icon = models.ImageField(
+        verbose_name="Icono del Proyecto",
+        upload_to="licenses",
+        help_text="Se recomiendan imágenes de dimensiones rectangulares."
+    )
+
+    class Meta:
+        verbose_name = "Proyecto del salón de la fama"
+        verbose_name_plural = "Proyectos del salón de la Fama"
+
+    def __str__(self):
+        return self.name
+
 # (privacy-policy) Privacy Policy Project Model
 class PrivacyPolicy(models.Model):
 
