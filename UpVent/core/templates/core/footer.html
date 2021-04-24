@@ -1,31 +1,15 @@
 {% load static %}
-<!-- Footer -->
 <footer class=" text-center text-white bg-upvent">
-    <!-- Grid container -->
     <div class="container p-4">
-
-        <!-- Section: Social media -->
         <section class="mb-4">
-
-            <!-- Twitter -->
             <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab bi-twitter"></i></a>
-
-            <!-- Instagram -->
             <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab bi-instagram"></i></a>
-
-            <!-- Facebook -->
             <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab bi-facebook"></i></a>
-
-            <!-- Github -->
             <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab bi-github"></i></a>
         </section>
-        <!-- Section: Social media -->
 
-        <!-- Section: Links -->
         <section class="">
-            <!--Grid row-->
             <div class="row">
-                <!--Grid column-->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <div class="container">
                         <img class="img-fluid" src="{% static 'core/img/logo-white.svg' %}" alt="UpVent Logo" />
@@ -34,12 +18,9 @@
                         Todos los derechos reservados © - UpVent {% now "Y" %}. Todos los logos son marcas registradas de sus respectivos dueños.
                     </p>
                 </div>
-                <!--Grid column-->
 
-                <!--Grid column-->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Enlaces Rápidos</h5>
-
                     <ul class="list-unstyled mb-0">
                         <li>
                             <a href="{% url 'index' %}" class="text-white fw-bold"><i class="bi bi-arrow-right"></i> Inicio</a>
@@ -61,12 +42,9 @@
                         </li>
                     </ul>
                 </div>
-                <!--Grid column-->
 
-                <!--Grid column-->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Enlaces Importantes</h5>
-
                     <ul class="list-unstyled mb-0">
                         <li>
                             <a href="https://github.com/UpVent" class="text-white fw-bold"><i class="bi bi-arrow-right"></i> Repositorio de Código Libre en GitHub</a>
@@ -83,13 +61,9 @@
                         </li>
                     </ul>
                 </div>
-                <!--Grid column-->
             </div>
-            <!--Grid row-->
         </section>
-        <!-- Section: Links -->
     </div>
-    <!-- Grid container -->
 
     <div class="container text-center-p-4">
         <p class="text-white fs-6">
@@ -97,12 +71,9 @@
         </p>
     </div>
 
-    <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © {% now "Y" %} Copyright:
         <a class="text-white" href="https://upvent.codes/">UpVent Technologies</a> - <a class="text-white border-bottom" href="{% url 'privacy-policy' %}"> Política de privacidad</a>
     </div>
-    <!-- Copyright -->
 
 </footer>
-<!-- Footer -->
