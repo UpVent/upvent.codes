@@ -3,12 +3,12 @@
 
 {% block body %}
 
-    <!-- MDBootstrap Template -->
-    <!-- Jumbotron -->
-    <div id="intro" class="p-5 text-center bg-light">
-        <h1 class="mb-0 h4">{{post.title}}</h1>
-    </div>
-    <!-- Jumbotron -->
+<!-- MDBootstrap Template -->
+<!-- Jumbotron -->
+<div id="intro" class="p-5 text-center bg-light">
+    <h1 class="mb-0 h4">{{post.title}}</h1>
+</div>
+<!-- Jumbotron -->
   </header>
   <!--Main Navigation-->
 
@@ -52,9 +52,7 @@
 
                   <!--Section: Text-->
                   <section>
-                      <p>
-                          {{post.content|safe}}
-                      </p>
+                      <p>{{post.content|safe}}</p>
                   </section>
                   <!--Section: Text-->
 
@@ -66,19 +64,16 @@
 
                       <!-- Comment -->
                       {% for comment in post.comments.all %}
-                          <div class="row mb-4">
-                              <div class="col-2">
-                                  <img src="{% static 'core/img/avatar.png' %}"
-                                       class="img-fluid shadow-1-strong rounded" alt="avatar image" loading="lazy" />
-                              </div>
-
-                              <div class="col-10">
-                                  <p class="mb-2"><strong>{{ comment.name }}</strong></p>
-                                  <p class="text-muted text-wrap">
-                                      {{ comment.body }}
-                                  </p>
-                              </div>
+                      <div class="row mb-4">
+                          <div class="col-2">
+                              <img src="{% static 'core/img/avatar.png' %}" class="img-fluid shadow-1-strong rounded" alt="avatar image" loading="lazy" />
                           </div>
+
+                          <div class="col-10">
+                              <p class="mb-2"><strong>{{ comment.name }}</strong></p>
+                              <p class="text-muted text-wrap">{{ comment.body }}</p>
+                          </div>
+                      </div>
                       {% endfor %}
                   </section>
                   <!--Section: Comments-->
@@ -114,9 +109,7 @@
 
 
                           <!-- Submit button -->
-                          <button type="submit" class="btn btn-primary bg-upvent btn-lg mb-4">
-                              Publicar Comentario <i class="bi bi-chat-fill"></i>
-                          </button>
+                          <button type="submit" class="btn btn-primary bg-upvent btn-lg mb-4">Publicar Comentario <i class="bi bi-chat-fill"></i></button>
                       </form>
                   </section>
                   <!--Section: Reply-->
@@ -139,9 +132,7 @@
                           </div>
                           <h5>{{ post.side_text_title }}</h5>
 
-                          <p>
-                              {{ post.site_text }}
-                          </p>
+                          <p>{{ post.site_text }}</p>
                           <a role="button" class="btn btn-primary" href="{{ post.side_button_url }}"
                              target="_blank">{{ post.side_button }}</a>
                       </section>
@@ -165,4 +156,4 @@
       </div>
   </main>
   <!-- MDBootstrap Template -->
-{% endblock %}
+  {% endblock %}
