@@ -35,10 +35,12 @@ class Project(models.Model):
     )
 
     created_on = models.DateTimeField(
+        verbose_name="Fecha de Creación",
         auto_now_add=True
     )
 
     updated_on = models.DateTimeField(
+        verbose_name="Fecha de Actualización",
         auto_now_add=True
     )
 
@@ -106,10 +108,12 @@ class FSProject(models.Model):
     )
 
     created_on = models.DateTimeField(
+        verbose_name="Fecha de Creación",
         auto_now_add=True
     )
 
     updated_on = models.DateTimeField(
+        verbose_name="Fecha de Actualización",
         auto_now_add=True
     )
 
@@ -203,10 +207,12 @@ class PrivacyPolicy(models.Model):
     )
 
     created_on = models.DateField(
+        verbose_name="Fecha de Creación",
         auto_now_add=True
     )
 
     updated_on = models.DateField(
+        verbose_name="Fecha de Actualización",
         auto_now_add=True
     )
 
