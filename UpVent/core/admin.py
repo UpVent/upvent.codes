@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Project, FSProject, License, HOF, PrivacyPolicy
+from .models import Project, FSProject, License, HOF, TeamMember, PrivacyPolicy
 
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('title', 'site', 'created_on')
@@ -22,6 +22,10 @@ class HOFAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ['name', ]
 
+class TeamMemberAdmin(admin.ModelAdmin):
+    list_display = ('name', 'position')
+    list_filter = ('name', 'position')
+    search_fields = ['name', 'position']
 
 class PolicyAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_on')
@@ -30,4 +34,5 @@ admin.site.register(Project, ProjectAdmin)
 admin.site.register(FSProject, FSProjectAdmin)
 admin.site.register(License, LicenseAdmin)
 admin.site.register(HOF, HOFAdmin)
+admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(PrivacyPolicy, PolicyAdmin)
