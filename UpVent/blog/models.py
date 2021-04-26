@@ -2,17 +2,17 @@ from django.db import models
 from django.contrib.auth.models import User
 from ckeditor_uploader.fields import RichTextUploadingField
 
-# Current blog post status
-STATUS = (
-    (0, "Draft"),
-    (1, "Published")
-)
-
 class Post(models.Model):
     """
     Stores a single blog post. It is only related to :model:`auth.User` to set
     the blog author.
     """
+
+    # Current blog post status
+    STATUS = (
+        (0, "Draft"),
+        (1, "Published")
+    )
 
     # Blog Title
     title = models.CharField(
