@@ -188,6 +188,54 @@ class HOF(models.Model):
     def __str__(self):
         return self.name
 
+# (team) Team member Model
+class TeamMember(models.Model):
+    """
+    Stores a single team member to show on the 'team/' url in this page.
+
+    The is_collab field is a boolean to indicate if the team member is an
+    outside collaborator. The status is pretty simple.
+
+    True = Is an outside collaborator
+    False = Is a staff member
+    """
+
+    image = models.ImageField(
+        verbose_name="Foto del integrante",
+        upload_to="team",
+        help_text="Se recomiendan imágenes de dimensiones rectangulares."
+    )
+
+    name = models.CharField(
+        verbose_name="Nombre del Integrante del equipo",
+        max_length=100,
+        help_text="Ingrese el nombre del integrante del equipo",
+        default=""
+    )
+
+    position = models.CharField(
+        verbose_name="Posición o contribución",
+        max_length=100,
+        help_text="Ingrese en que ha contribuido o que posición dentro\
+        de UpVent tiene el integrante.",
+        default=""
+    )
+
+    is_collab = models.BooleanField(
+        verbose_name="¿Es un colaborador externo?",
+        help_text="Indicar si el miembro siendo registrado es un colaborador\
+        externo, de no serlo se tomará como miembro de UpVent",
+        default=False
+    )
+
+    class Meta:
+        verbose_name = "Miembro del equipo"
+        verbose_name_plural = "Miembros del equipo"
+
+    def __str__(self):
+        return self.name
+
+
 # (privacy-policy) Privacy Policy Project Model
 class PrivacyPolicy(models.Model):
 
