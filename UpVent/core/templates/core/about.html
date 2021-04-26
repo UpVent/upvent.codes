@@ -37,7 +37,7 @@
                     </p>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 m-sm-auto mr-md-0 ml-md-auto pt-4 pt-md-0">
-                    <img alt="image" class="img-fluid" src="{% static 'core/img/construction.svg' %}">
+                    <img alt="Imágen mostrando a tres personas construyendo un sitio web" class="img-fluid" src="{% static 'core/img/construction.svg' %}" loading="lazy">
                 </div>
             </div>
 
@@ -82,7 +82,7 @@
                 {% for project in projects %}
                     <div class="col">
                         <div class="card shadow-sm rounded-3">
-                            <img class="card-img-top" src="{{ project.image.url }}" loading="lazy"/>
+                            <img class="card-img-top" alt="Imágen mostrando un proyecto creado por UpVent" src="{{ project.image.url }}" loading="lazy"/>
 
                             <div class="card-body">
                                 <h5 class="fs-2 fw-bold">{{ project.title }}</h5>
@@ -101,14 +101,14 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
-                <img src="{% static 'core/img/programmer.svg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                <img src="{% static 'core/img/programmer.svg' %}" class="d-block mx-lg-auto img-fluid" alt="Imágen mostrando una persona programando" width="700" height="500" loading="lazy">
             </div>
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3">Tecnología libre para mentes libres</h1>
                 <p class="lead">UpVent entrega soluciones de código libre que logran hacer que las empresas trabajen de forma eficiente en entornos conectados. Todos nuestros servicios operan de forma transparente y ética en el mercado laboral, sin telemetría, letra pequeña o restricciones sobre licencias.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a class="text-white" href="">Licencias</a></button>
-                    <button type="button" class="btn btn-info btn-lg px-4"><a class="text-white" href="">Contacto <i class="bi bi-envelope"></i></a></button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a class="text-white" href="{% url 'licenses' %}">Licencias</a></button>
+                    <button type="button" class="btn btn-info btn-lg px-4"><a class="text-white" href="{% url 'contact:home' %}">Contacto <i class="bi bi-envelope"></i></a></button>
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
 
         <div class="row text-left align-items-center pt-5 pb-md-5">
             <div class="col-4 col-md-5">
-                <img alt="image" class="img-fluid" src="{% static 'core/img/desk.svg' %}">
+                <img alt="image" class="Imágen de una persona sentada en un escritorio junto a una computadora" src="{% static 'core/img/desk.svg' %}" loading="lazy">
             </div>
 
             <div class="col-12 col-md-5 m-md-auto">
@@ -135,26 +135,26 @@
 
         <div class="row text-left align-items-center pt-5 pb-md-5">
             <div class="col-4 col-md-5 m-md-auto order-md-5">
-                <img alt="image" class="img-fluid" src="{% static 'core/img/partners.svg' %}">
+                <img alt="Imágen mostrando los logos de los aliados de UpVent" class="img-fluid" src="{% static 'core/img/partners.svg' %}" loading="lazy">
             </div>
 
             <div class="col-12 col-md-5">
                 <h2><strong>Clientes beneficiados.</strong></h2>
                 <p class="lead">Nuestros clientes llevan productos al mundo todos los días utilizando la tecnología libre de UpVent. Estas organizaciones son la prueba de que el software libre y la innovación van de la mano en el mundo tecnológico.</p>
-                <p><a href="">Ver casos de éxito <i class="bi bi-arrow-right"></i></a></p>
+                <p><a href="#">Ver casos de éxito <i class="bi bi-arrow-right"></i></a></p>
             </div>
         </div>
 
         <div class="row text-left align-items-center pt-5">
             <div class="col-4 col-md-5">
-                <img alt="image" class="img-fluid" src="{% static 'core/img/security.svg' %}">
+                <img alt="Imágen mostrando una computadora y un escudo" class="img-fluid" src="{% static 'core/img/security.svg' %}" loading="lazy">
             </div>
 
             <div class="col-12 col-md-5 m-md-auto">
                 <h2><strong>Líderes en Seguridad</strong></h2>
                 <p class="lead">El equipo de UpVent siempre estará al pendiente de las actualizaciones, parches y mejoras de seguridad de sus productos. Olvide el software viejo y el riesgo de ataques informáticos, nosotros le tenemos cubierto.
                 </p>
-                <p><a href="https://www.froala.com">Consultoría <i class="bi bi-arrow-right"></i></a></p>
+                <p><a href="{% url 'contact:home' %}">Consultoría <i class="bi bi-arrow-right"></i></a></p>
             </div>
         </div>
     </div>
@@ -162,13 +162,13 @@
     <div class="container mt-5 mb-5 align-items-end justify-content-center d-flex">
         <div class="row align-items-top text-left">
             <div class="col-12 col-md-6 col-lg-5">
-                <p class="mb-5 mt-5"><img alt="image" height="40" src="{% static 'core/img/logo-grey.png' %}"></p>
+                <p class="mb-5 mt-5"><img alt="Logo de UpVent" height="40" src="{% static 'core/img/logo-grey.png' %}" loading="lazy"></p>
                 <h1>Permítanos solucionar sus problemas con software libre...</h1>
                 <p class="mt-4"><a href="{% url 'services' %}" class="btn btn-primary fw-bold">Explorar nuestras soluciones</a></p>
             </div>
 
             <div class="col-12 col-sm-4 col-md-6 col-lg-4 m-auto pt-5">
-                <img alt="image" class="img-fluid rounded-0" src="{% static 'core/img/app.svg' %}">
+                <img alt="Imágen mostrando una persona mirando a un teléfono" class="img-fluid rounded-0" src="{% static 'core/img/app.svg' %}" loading="lazy">
             </div>
         </div>
     </div>
