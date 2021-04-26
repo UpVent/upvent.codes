@@ -2,18 +2,13 @@
 {% load static %}
 
 {% block body %}
-
-<!-- Jumbotron -->
 <div id="intro" class="p-5 text-center bg-light">
     <h1 class="mb-3 h2">Blog</h1>
     <p class="mb-3 text-wrap lead">El conocimiento de UpVent, para la comunidad, por la comunidad. <i class="bi bi-heart"></i></p>
 </div>
-<!-- Jumbotron -->
 
-<!--Main layout-->
 <main class="my-5">
     <div class="container">
-        <!--Section: Content-->
         <section class="text-center">
             <h4 class="mb-5"><strong>Latest posts</strong></h4>
 
@@ -22,7 +17,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src="{{ post.image.url }}" class="img-fluid" />
+                            <img alt="Portada de blog" src="{{ post.image.url }}" class="img-fluid" loading="lazy"/>
                             <a href="{% url 'blog:post' post.slug %}">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                             </a>
@@ -41,12 +36,8 @@
                 </div>
                 {% endfor %}
             </div>
-
         </section>
-        <!--Section: Content-->
-
     </div>
 </main>
-<!--Main layout-->
 
 {% endblock %}
