@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>UpVent - Soluciones en la nube para tu negocio. Low cost, siempre listas.</title>
         {% block css %}{% endblock %}
 
@@ -26,7 +27,7 @@
                 <!-- Navbar brand -->
                 <a class="navbar-brand" href="{% url 'index' %}">
                     <div class="d-inline-flex ml-2">
-                        <img class="img-fluid" src="{% static 'core/img/logo-white.svg' %}" alt="" />
+                        <img class="img-fluid" src="{% static 'core/img/logo-white.svg' %}" alt="Logotipo de UpVent en color blanco" />
                     </div>
                 </a>
 
@@ -84,7 +85,7 @@
 
         {% include 'core/footer.html' %}
 
-        <script async type="text/javascript" src="{% static 'core/js/mdb.min.js' %}"></script>
+        <script async defer type="text/javascript" src="{% static 'core/js/mdb.min.js' %}"></script>
         <!-- custom scripts -->
         {% block js %}{% endblock %}
     </body>
