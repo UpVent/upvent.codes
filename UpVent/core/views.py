@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Project, FSProject, License, HOF, PrivacyPolicy
+from .models import Project, FSProject, License, HOF, TeamMember, PrivacyPolicy
 
 # Create your views here.
 def index(request):
@@ -85,6 +85,32 @@ def licenses(request):
     }
 
     return render(request, 'core/licenses.html', context)
+
+def team(request):
+    """
+    Display the "team" page for this site.
+
+    **Context**
+
+    ``members``
+        Return all the members with the field is_collab marked as "False".
+
+    ``collabs``
+        Return all the members with the field is_collab marked as "True".
+
+    **Template**
+        :template:`core/team.html`
+    """
+
+    members = TeamMember.objects.filter(is_collab = False)
+    collabs = TeamMember.objects.filter(is_collab = True)
+
+    context = {
+        'members': members,
+        'collabs': collabs,
+    }
+
+    return render(request, 'core/team.html', context)
 
 def privacy_policy(request):
 
