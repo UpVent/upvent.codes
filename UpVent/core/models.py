@@ -2,6 +2,52 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from ckeditor_uploader.fields import RichTextUploadingField
 
+# (index) Testimonial Model
+class Testimonial(models.Model):
+
+    """
+    Stores a single instance of a testimonial made by any UpVent client.
+    """
+
+    image = models.ImageField(
+        verbose_name="Foto del cliente",
+        upload_to="testimonials",
+        help_text="Se recomiendan imágenes cuadradas"
+    )
+
+    name = models.CharField(
+        verbose_name="Nombre Completo",
+        max_length=100,
+        unique=True,
+        help_text="Ingrese el nombre de la persona dando su testimonio.",
+        default=""
+    )
+
+    testimonial = RichTextUploadingField(
+        verbose_name="Testimonio",
+        help_text="Testimonio de la persona."
+    )
+
+    workplace = models.CharField(
+        verbose_name="Lugar de Trabajo",
+        max_length=80,
+        help_text="Ingrese el puesto que desempeña la persona que da el\
+        testimonio."
+    )
+
+    site = models.URLField(
+        verbose_name="Sitio web",
+        max_length=200,
+        help_text="El sitio web donde se encuentra alojado el proyecto."
+    )
+
+    class Meta:
+        verbose_name = "Testimonio"
+        verbose_name_plural = "Testimonios"
+
+    def __str__(self):
+        return self.name
+
 # (about-us) Project model
 class Project(models.Model):
 
