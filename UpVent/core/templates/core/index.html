@@ -172,54 +172,17 @@
     </div>
 
     <div class="container">
-        <div class="row text-center">
-            <div class="col-12 col-md-8 m-auto col-lg-4">
-                <div class="card">
-                    <img alt="Imágen mostrando a un cliente de UpVent" class="card-img-top img-fluid" src="{% static 'core/img/aacosta.jpg' %}" loading="lazy">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold">Armando Acosta</h4>
-                        <span class="badge rounded-pill bg-primary shadow-1"><a class="text-white" href="https://elmedionoticias.com/">Reportero Independiente</a></span>
-                        <hr />
-                        <p class="card-text text-muted">
-                            Amo que sea una empresa mexicana, además de que son jóvenes y
-                            super claros en los temas que no todos dominamos.
-                            Agradezco de sobremanera su apoyo y pues mi hosting
-                            será con ustedes por un buen rato. Saludos PD.
-                            En 24 horas estuvo listo mi sitio 🤯
-                        </p>
-                    </div>
-                </div>
+        <div class="row mt-5 text-center">
+            {% for testimonial in testimonials %}
+            <div class="col-md-10 col-lg-3 pt-5 pt-lg-0 m-5 ml-auto mr-auto text-center border-top border-primary border-3 rounded-3 shadow-lg">
+                <p class="mb-4 mb-lg-5">{{testimonial.testimonial | safe}}</p>
+
+                <p><img alt="Imágen de una persona" height="50" class="rounded-circle" src="{{testimonial.image.url}}"></p>
+                <p class="lead">{{testimonial.name}}</p>
+                <p><a class="badge rounded-pill bg-upvent text-uppercase" href="{{testimonial.site}}">{{testimonial.workplace}}</a></p>
             </div>
-            <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
-                <div class="card">
-                    <img alt="Imágen mostrando a un cliente de UpVent" class="card-img-top img-fluid" src="{% static 'core/img/asmith.jpg' %}" loading="lazy">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold">Anthony Smith</h4>
-                        <span class="badge rounded-pill bg-primary shadow-1"><a class="text-white" href="https://me.as-card.com/">CEO - CyberIndustree</a></span>
-                        <hr />
-                        <p class="card-text text-muted">
-                            Inicié mi negocio de tecnología con muy poco tiempo
-                            entre manos y con poco dinero, ahora gracias a UpVent
-                            mi negocio a día de hoy se encuentra en línea las 24
-                            horas del día, los 7 días de la semana.
-                            Recomiendo ampliamente sus servicios
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
-                <div class="card">
-                    <img alt="Imágen mostrando a un cliente de UpVent" class="card-img-top img-fluid" src="{% static 'core/img/opurata.jpeg' %}" loading="lazy">
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold">Jair Sifuentes</h4>
-                        <span class="badge rounded-pill bg-primary shadow-1"><a class="text-white" href="https://midemejoraygana.com">CEO - Mide Mejora y Gana</a></span>
-                        <hr />
-                        <p class="card-text text-muted">
-                            Súper-recomendable! Muy buen dominio de las herramientas necesarias y te ofrece alternativas para lograr lo que le solicitas. Excelente!
-                        </p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+
         </div>
     </div>
 </div>

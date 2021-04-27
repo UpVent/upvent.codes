@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Project, FSProject, License, HOF, TeamMember, PrivacyPolicy
+from .models import Testimonial, Project, FSProject, License, HOF, TeamMember, PrivacyPolicy
 
 # Create your views here.
 def index(request):
@@ -9,8 +9,8 @@ def index(request):
 
     **Context**
 
-    ``index``
-        A single array with a 1 value, meant to be used for something else.
+    ``testimonials``
+        All instances of the :model:`core.Testimonial` saved in the database.
 
     **Template:**
 
@@ -18,8 +18,8 @@ def index(request):
 
     """
 
-    index = ['01']
-    return render(request, 'core/index.html', {'index': index})
+    testimonials = Testimonial.objects.all()
+    return render(request, 'core/index.html', {'testimonials': testimonials})
 
 def about(request):
 
