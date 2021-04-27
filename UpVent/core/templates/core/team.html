@@ -2,5 +2,63 @@
 {% load static %}
 
 {% block body %}
+    <div class="container mt-5 mb-5">
+        <div class="row text-center justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <h1 class="fw-bold">¡Conozca al equipo de UpVent!</h1>
+                <p class="lead">Creemos en la unión de la comunidad, el código libre y la ética de los programas modernos.</p>
+            </div>
+        </div>
+
+        <div class="row mt-5 align-items-center justify-content-center">
+            {% for member in members %}
+            <div class="col-md-8 col-lg-4 mt-4 mt-lg-0">
+                <div class="container">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-3">
+                            <img alt="Foto mostrando una persona" class="img-fluid rounded-circle shadow-sm" src="{{member.image.url}}">
+                        </div>
+                        <div class="col-8 ml-auto">
+                            <p>
+                                <strong>{{member.name}}</strong><br>
+                                <em>{{member.position}}</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="container mt-5 mb-5">
+        <div class="row text-center justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <h1 class="fw-bold">Colaboradores</h1>
+                <p>UpVent no sería una realidad sin la ayuda de otros miembros de la comunidad de código libre y los colaboradores externos que han sido de gran ayuda.</p>
+            </div>
+        </div>
+
+        <div class="row mt-5 align-items-center justify-content-center">
+            {% for collab in collabs %}
+            <div class="col-md-8 col-lg-4 mt-4 mt-lg-0">
+                <div class="container">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-3">
+                            <img alt="Foto mostrando una persona" class="img-fluid rounded-circle shadow-sm" src="{{collab.image.url}}">
+                        </div>
+                        <div class="col-8 ml-auto">
+                            <p>
+                                <strong>{{collab.name}}</strong><br>
+                                <em>{{collab.position}}</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}
