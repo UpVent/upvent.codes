@@ -3,19 +3,55 @@
 
 {% block body %}
 
-<div class="container mt-5 mb-5">
-    <h1 class="display-3 fw-bold"> {{policies.title}} </h1>
-    <p class="lead">Ultima actualización: {{policies.updated_on}}</p>
-    <br />
-    <p class="text-muted">{{ policies.changelog }}</p>
-    <hr />
-    <p class="text-wrap">{{policies.text | safe}}</p>
+    <section class="pt-8 pt-md-11 pb-8 pb-md-12">
+        <div class="container mt-5 mb-5">
+            <div class="row align-items-center">
 
-    <hr />
-    <p class="lead">Puede obtener una copia de esta página presionando el siguiente botón:
-        <button onclick="window.print()" class="badge rounded-pill bg-upvent border-0">Imprimir <i class="bi bi-printer"></i></button>
-    </p>
-</div>
+                <div class="col-12 col-md">
+                    <h1 class="display-4 mb-2">{{policies.title}}</h1>
+                    <p class="fs-5 text-muted mb-md-0">Actualizado el: {{policies.updated_on}}</p>
+                </div>
 
+                <div class="col-auto">
+                    <a class="btn btn-primary" href="">Imprimir</a>
+                </div>
 
+                <div class="row">
+                    <div class="col-12">
+                        <hr class="my-6 my-md-8"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <p class="fs-5 text-muted mb-6 mb-md-8">
+                            {{policies.changelog}}
+                        </p>
+                        <hr class="mt-2 mb-2"/>
+
+                        <p class="text-wrap">{{policies.text | safe}}</p>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4>¿Tiene alguna pregunta?</h4>
+                                <p class="fs-6 text-muted mb-5">
+                                    ¿No está seguro exactamente de lo que estamos buscando o simplemente desea una aclaración? Estaremos encantados de charlar contigo y aclararte las cosas. ¡En cualquier momento!
+                                </p>
+                                <h6 class="fw-bold text-uppercase text-muted mb-2">
+                                    ¡Envíe un mensaje!
+                                </h6>
+                                <p class="fs-6 mb-5">
+                                    <a class="text-reset" href="mailto:upvent@gmail.com">Enviar un correo electrónico <i class="bi bi-envelope"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
 {% endblock %}
