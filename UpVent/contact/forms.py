@@ -1,5 +1,6 @@
 from django import forms
 from .models import Contact
+from hcaptcha.fields import hCaptchaField
 
 class ContactForm(forms.ModelForm):
     class Meta:
@@ -12,7 +13,7 @@ class ContactForm(forms.ModelForm):
             'email',
             'phone',
             'reason',
-            'message'
+            'message',
         ]
 
         widgets = {

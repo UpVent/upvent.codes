@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
     'debug_toolbar',
     'admin_honeypot',
-    'hcaptcha',
     'ckeditor',
     'ckeditor_uploader',
     'core',
