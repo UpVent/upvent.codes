@@ -110,13 +110,7 @@ The website contents are creative commons released under CC-BY-ND-3.0-Internatio
 
 ### External Code
 
-#### hcaptcha implementation
 
-The hcaptcha impementation on this app is credited to
-(AndrejZbin)[https://github.com/AndrejZbin] who made `django-hcaptcha` 
-which we integrated directly in our codebase.
-
-- License: [BSD 3-Clause "New" or "Revised" License](https://github.com/AndrejZbin/django-hcaptcha/blob/master/LICENSE)
 
 #### Basecode help
 
