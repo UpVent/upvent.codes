@@ -43,19 +43,19 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a {% if request.path == '/' %} class="nav-link active border border rounded-3" {% else %} class="nav-link" {% endif %} href="{% url 'index' %}">Inicio</a>
+                            <a {% if request.path == '/' %} class="nav-link active border border-2 rounded-3 fw-bold" {% else %} class="nav-link" {% endif %} href="{% url 'index' %}">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a {% if request.path == '/blog/' %} class="nav-link active border rounded-3" {% else %} class="nav-link" {% endif %} href="{% url 'blog:home' %}">Blog</a>
+                            <a {% if request.path == '/blog/' %} class="nav-link active border border-2 rounded-3 fw-bold" {% else %} class="nav-link" {% endif %} href="{% url 'blog:home' %}">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a {% if request.path == '/about/' %} class="nav-link active border rounded-3" {% else %} class="nav-link" {% endif %} href="{% url 'about' %}">Nosotros</a>
+                            <a {% if request.path == '/about/' %} class="nav-link active border border-2 rounded-3 fw-bold" {% else %} class="nav-link" {% endif %} href="{% url 'about' %}">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a {% if request.path == '/services/' %} class="nav-link active border rounded-3" {% else %} class="nav-link" {% endif %} href="{% url 'services' %}">Servicios</a>
+                            <a {% if request.path == '/services/' %} class="nav-link active border border-2 rounded-3 fw-bold" {% else %} class="nav-link" {% endif %} href="{% url 'services' %}">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a {% if request.path == '/contact/' %} class="nav-link active border rounded-3" {% else %} class="nav-link" {% endif %} href="{% url 'contact:home' %}">Contacto</a>
+                            <a {% if request.path == '/contact/' %} class="nav-link active border border-2 rounded-3 fw-bold" {% else %} class="nav-link" {% endif %} href="{% url 'contact:home' %}">Contacto</a>
                         </li>
 
                     </ul>
