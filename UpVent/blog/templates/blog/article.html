@@ -15,27 +15,30 @@
                 <div class="col-md-8 mb-4">
                     <!--Section: Post data-mdb-->
                     <section class="border-bottom mb-4">
-                        <img src="{{post.image.url}}" class="img-fluid shadow-2-strong rounded mb-4" alt="Portada del post" loading="lazy"/>
+                        <img src="{{post.image.url}}" class="img-fluid shadow-sm rounded mb-4" alt="Portada del post" loading="lazy"/>
 
                         <div class="row align-items-center mb-4">
                             <div class="col-lg-6 text-center text-lg-start mb-3 m-lg-0">
-                                <img src="{% static 'core/img/upvent-logo.png' %}" class="rounded shadow-1-strong me-2"
-                                     height="35" alt="Imágen del autor" loading="lazy" />
-                                <span>Fecha de publicación: <u>{{post.created_on}}</u> por</span>
-                                <a href="https://upvent.codes" class="badge rounded-pill bg-primary text-white">UpVent</a>
+                                <img src="{% static 'core/img/upvent-logo.png' %}" class="rounded shadow me-2"
+                                     width="15%" alt="Imágen del autor" loading="lazy" />
+                                <span>Fecha de publicación: <u class="text-muted">{{post.created_on}}</u> por</span>
+                                <a href="https://upvent.codes" class="badge rounded-pill bg-primary text-white text-decoration-none">UpVent</a>
                             </div>
 
                             <div class="col-lg-6 text-center text-lg-end">
-                                <a href="https://facebook.com/UpVentMX" type="button" class="btn btn-primary px-3 me-1" style="background-color: #3b5998;">
+
+                                <span class="text-muted">Compartir: </span>
+
+                                <a href="https://facebook.com/UpVentMX" class="btn btn-sm btn-primary rounded-circle bg-facebook ml-2">
                                     <i class="bi bi-facebook"></i>
                                 </a>
-                                <a href="https://twitter.com/UpVentMX" type="button" class="btn btn-primary px-3 me-1" style="background-color: #55acee;">
+                                <a href="https://twitter.com/UpVentMX" class="btn btn-sm btn-primary rounded-circle bg-twitter ml-2">
                                     <i class="bi bi-twitter"></i>
                                 </a>
-                                <a href="https://github.com/UpVent" type="button" class="btn btn-primary px-3 me-1" style="background-color: #333333;">
+                                <a href="https://github.com/UpVent" class="btn btn-sm btn-primary rounded-circle bg-github ml-2">
                                     <i class="bi bi-github"></i>
                                 </a>
-                                <a href="#comentarios" type="button" class="btn btn-primary px-3 me-1">
+                                <a href="#comentarios" class="btn btn-sm btn-primary rounded-circle ml-2">
                                     <i class="bi bi-chat-fill"></i>
                                 </a>
                             </div>
@@ -59,7 +62,7 @@
                                 </div>
 
                                 <div class="col-10">
-                                    <p class="mb-2"><strong>{{ comment.name }}</strong></p>
+                                    <p class="mb-2 fw-bold">{{ comment.name }}</p>
                                     <p class="text-muted text-wrap">{{ comment.body }}</p>
                                 </div>
                             </div>
@@ -67,7 +70,7 @@
                     </section>
 
                     <section>
-                        <p class="text-center"><strong>¡Déjanos tu comentario!</strong></p>
+                        <p class="text-center fw-bold">¡Déjanos tu comentario!</p>
 
                         <form>
                             <!-- Name input -->
@@ -109,10 +112,9 @@
                         <!--Section: Ad-->
                         <section class="text-center border-bottom pb-4 mb-4">
                             <h1>{{ post.side_title }}</h1>
-                            <div class="bg-image hover-overlay ripple mb-4">
-                                <img class="Imágen patrocinada" src="{{ post.side_img.url }}" class="img-fluid" loading="lazy" />
+                            <div class="container mb-4">
+                                <img alt="Imágen patrocinada" src="{{ post.side_img.url }}" class="img-fluid" loading="lazy" />
                                 <a href="{{ post.side_button_url }}" target="_blank" rel="noopener noreferrer">
-                                    <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
                                 </a>
                             </div>
                             <h5>{{ post.side_text_title }}</h5>
