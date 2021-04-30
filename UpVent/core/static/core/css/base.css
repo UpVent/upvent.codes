@@ -2,6 +2,27 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Custom Colors */
+
+.bg-twitter {
+  background-color: #55acee;
+}
+
+
+.bg-instagram {
+  background-color: #ac2bac;
+}
+
+
+.bg-facebook {
+  background-color: #0082ca;
+}
+
+
+.bg-github {
+  background-color: #333333;
+}
+
 .bg-upvent {
     background-color: #007BFC;
 }

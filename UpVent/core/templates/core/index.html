@@ -8,22 +8,17 @@
 {% block body %}
 
 <div class="p-5 text-center bg-image jumbotron">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
-        <div class="d-flex justify-content-center align-items-center m-5 h-100">
-            <div class="text-white">
-                <h1 class="text-center mb-3">
-                    Nube Inteligente.
-                    <br />
-                    Para Negocios Inteligentes.
-                </h1>
-
-                <h4 class="text-center fs-6 mb-3">Desarrollamos soluciones web inteligentes para los negocios Mexicanos.</h4>
-
-                <a class="btn bg-upvent fw-normal text-white btn-lg" href="#img-btn" role="button">
-                    Leer más <i class="bi bi-arrow-right"></i>
-                </a>
-
-            </div>
+    <div class="d-flex justify-content-center align-items-center m-5 h-100">
+        <div class="text-white">
+            <h1 class="text-center mb-3">
+                Nube Inteligente.
+                <br />
+                Para Negocios Inteligentes.
+            </h1>
+            <h4 class="text-center fs-6 mb-3">Desarrollamos soluciones web inteligentes para los negocios Mexicanos.</h4>
+            <a class="btn bg-upvent fw-normal text-white btn-lg" href="#img-btn" role="button">
+                Leer más <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
     </div>
 </div>
@@ -33,7 +28,7 @@
     <div class="slide-in-left container text-center">
 
         <div class="container mx-auto">
-            <img id="img-btn" class="rounded-circle shadow-1-strong" width="20%" src="{% static 'core/img/upvent-logo.png' %}" alt="Logo de UpVent en forma circular con sombra" loading="lazy" />
+            <img id="img-btn" class="rounded-circle shadow" width="20%" src="{% static 'core/img/upvent-logo.png' %}" alt="Logo de UpVent en forma circular con sombra" loading="lazy" />
         </div>
 
         <h2>Soluciones en la nube</h2>
@@ -95,7 +90,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-md-8 col-lg-6 m-md-auto ml-lg-0 mr-lg-auto">
-                <img alt="Imágen mostrando una persona trabajando en un escritorio" class="img-fluid rounded-3 shadow-1-strong" src="{% static 'core/img/work-desk.jpg' %}" loading="lazy">
+                <img alt="Imágen mostrando una persona trabajando en un escritorio" class="img-fluid rounded-3 shadow" src="{% static 'core/img/work-desk.jpg' %}" loading="lazy">
             </div>
             <div class="col-12 col-lg-6 col-xl-5 ml-sm-auto pt-5 pt-lg-0">
                 <h1 class="text-center">¡Concéntrese solo en lo importante!</h1>
@@ -104,7 +99,6 @@
                 </p>
 
                 <div class="row pt-4 pt-xl-5">
-
                     <div class="col-12 col-sm-6 col-xl-5 border-top border-2 border-primary rounded-3 shadow-sm">
                         <h4 class="mt-2 text-center"><strong><i class="bi bi-tools text-upvent"></i> Soluciones Personalizadas</strong></h4>
                         <p class="text-center text-muted">Contamos con el mejor equipo disponible en el mercado para atender sus necesidad en todo momento.</p>
@@ -117,7 +111,6 @@
                 </div>
 
                 <div class="row pt-3">
-
                     <div class="col-12 col-sm-6 col-xl-5 border-top border-2 border-primary rounded-3 shadow-sm">
                         <h4 class="mt-2 text-center"><strong><i class="bi bi-people-fill text-upvent"></i> Tratos Personalizados</strong></h4>
                         <p class="text-muted text-center">Tratos individuales o empresariales. UpVent siempre tendrá la solución adecuada para usted.</p>
@@ -151,7 +144,7 @@
                 </p>
 
                 <button type="button" class="m-5 btn btn-lg btn-outline-light" data-mdb-ripple-color="dark">
-                    <a class="text-white" href="{% url 'contact:home' %}"><i class="bi bi-envelope-fill"></i> Contacta con nosotros</a>
+                    <a class="text-white text-decoration-none" href="{% url 'contact:home' %}"><i class="bi bi-envelope-fill"></i> Contacta con nosotros</a>
                 </button>
 
             </div>
@@ -179,7 +172,7 @@
 
                 <p><img alt="Imágen de una persona" height="50" class="rounded-circle" src="{{testimonial.image.url}}"></p>
                 <p class="lead">{{testimonial.name}}</p>
-                <p><a class="badge rounded-pill bg-upvent text-uppercase" href="{{testimonial.site}}">{{testimonial.workplace}}</a></p>
+                <p><a class="badge rounded-pill bg-upvent text-uppercase text-decoration-none" href="{{testimonial.site}}">{{testimonial.workplace}}</a></p>
             </div>
             {% endfor %}
 
@@ -252,7 +245,7 @@
 </div>
 
 <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4 rounded-circle shadow-1-strong" src="{% static 'core/img/upvent-logo.png' %}" alt="Logo de UpVent circular" width="100" height="100" loading="lazy" />
+    <img class="d-block mx-auto mb-4 rounded-circle shadow" src="{% static 'core/img/upvent-logo.png' %}" alt="Logo de UpVent circular" width="100" height="100" loading="lazy" />
     <h1 class="display-5 fw-bold">Comenzar a trabajar con UpVent...</h1>
     <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">Visite nuestra página de servicios para explorar nuestras ofertas prediseñadas para su empresa o contacte directo con ventas.</p>
