@@ -1,8 +1,17 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F1F4F8;
 }
 
 /* Custom Colors */
+
+.bg-gray {
+  background-color: #F1F4F8;
+}
+
+bg-grey {
+  background-color: #F1F4F8;
+}
 
 .bg-twitter {
   background-color: #55acee;
