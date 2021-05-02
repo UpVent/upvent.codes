@@ -71,34 +71,24 @@
 
                     <section>
                         <p class="text-center fw-bold">¡Déjanos tu comentario!</p>
-
-                        <form>
-                            <!-- Name input -->
+                        <form action="?sent" method="POST" id="form">
+                            {% csrf_token %}
                             <div class="form-outline mb-4">
-                                <input type="text" id="form4Example1" class="form-control" required/>
-                                <label class="form-label" for="form4Example1">Nombre*</label>
+                                {{form.name}}
                             </div>
 
-                            <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="form4Example2" class="form-control" required/>
-                                <label class="form-label" for="form4Example2">Correo Electrónico* (Para evitar el spam)</label>
+                                {{form.email}}
                             </div>
 
-                            <!-- Website -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="form4Example2" class="form-control"/>
-                                <label class="form-label" for="form4Example2">Sitio web (Opcional)</label>
+                                {{form.website}}
                             </div>
 
-                            <!-- Message input -->
                             <div class="form-outline mb-4">
-                                <textarea class="form-control" id="form4Example3" rows="4" required></textarea>
-                                <label class="form-label" for="form4Example3">Comentario...*</label>
+                                {{form.body}}
                             </div>
 
-
-                            <!-- Submit button -->
                             <button type="submit" class="btn btn-primary bg-upvent btn-lg mb-4">Publicar Comentario <i class="bi bi-chat-fill"></i></button>
                         </form>
                     </section>
