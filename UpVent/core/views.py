@@ -1,6 +1,12 @@
 from django.shortcuts import render
 
-from .models import Testimonial, Project, FSProject, License, HOF, TeamMember, PrivacyPolicy
+from .models import (Testimonial,
+                     Project,
+                     FSProject,
+                     License,
+                     HOF,
+                     TeamMember,
+                     PrivacyPolicy)
 
 # Create your views here.
 def index(request):
