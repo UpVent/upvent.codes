@@ -48,54 +48,6 @@
 
                     <hr />
 
-                    <section id="comentarios" class="border-bottom mb-3">
-                        <p class="text-center"><strong>Comentarios: {{ post.comments.count }}</strong></p>
-
-                        <!-- Comment -->
-                        {% for comment in post.comments.all %}
-                            <div class="row mb-4">
-                                <div class="col-2">
-                                    <img src="{% static 'core/img/avatar.png' %}" class="img-fluid shadow-1-strong rounded" alt="avatar image" loading="lazy" />
-                                </div>
-
-                                <div class="col-10">
-                                    <p class="mb-2 fw-bold">{{ comment.name }}</p>
-                                    <p class="text-muted text-wrap">{{ comment.body }}</p>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </section>
-
-                    <section>
-                        <p class="text-center fw-bold">¡Déjanos tu comentario!</p>
-
-                        {% if 'sent' in request.GET %}
-                            <div class="alert alert-primary" role="alert">
-                                Comentario enviado con éxito.
-                            </div>
-                        {% endif %}
-
-                        <form action="sent" method="POST" id="form">
-                            {% csrf_token %}
-                            <div class="form-outline mb-4">
-                                {{form.name}}
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                {{form.email}}
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                {{form.website}}
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                {{form.body}}
-                            </div>
-
-                            <button type="submit" class="btn btn-primary bg-upvent btn-lg mb-4">Publicar Comentario <i class="bi bi-chat-fill"></i></button>
-                        </form>
-                    </section>
                 </div>
 
                 <div class="col-md-4 mb-4">
