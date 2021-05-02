@@ -48,4 +48,10 @@ def BlogEntry(request, slug):
         'form': form
     }
 
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'blog/article.html', context)
+
     return render(request, 'blog/article.html', context)

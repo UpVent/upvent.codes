@@ -68,7 +68,14 @@
 
                     <section>
                         <p class="text-center fw-bold">¡Déjanos tu comentario!</p>
-                        <form action="?sent" method="POST" id="form">
+
+                        {% if 'sent' in request.GET %}
+                            <div class="alert alert-primary" role="alert">
+                                Comentario enviado con éxito.
+                            </div>
+                        {% endif %}
+
+                        <form action="sent" method="POST" id="form">
                             {% csrf_token %}
                             <div class="form-outline mb-4">
                                 {{form.name}}
