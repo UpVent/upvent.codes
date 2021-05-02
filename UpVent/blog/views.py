@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import Post
-from .forms import CommentForm
 
 def Blog(request):
 
@@ -41,17 +40,9 @@ def BlogEntry(request, slug):
     """
 
     post = Post.objects.get(slug=slug)
-    form = CommentForm
 
     context = {
         'post': post,
-        'form': form
     }
-
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request, 'blog/article.html', context)
 
     return render(request, 'blog/article.html', context)
