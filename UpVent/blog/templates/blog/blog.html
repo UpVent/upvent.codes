@@ -16,12 +16,7 @@
                 {% for post in posts %}
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card">
-                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img alt="Portada de blog" src="{{ post.image.url }}" class="img-fluid" loading="lazy"/>
-                            <a href="{% url 'blog:post' post.slug %}">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
+                        <img alt="Portada de blog" src="{{ post.image.url }}" class="img-fluid card-img-top" loading="lazy"/>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">{{ post.title }}</h5>
                             <span class="badge rounded-pill bg-primary">Categoría: {{post.category}}</span>
