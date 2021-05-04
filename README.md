@@ -1,13 +1,11 @@
 # UpVent Web Source
 
-> Notice: The current GitHub action is broken due to upstream issues, your commits might be displayed as "non passing".  All PR's will be reviewed manually until this is solved or until we change our action.yml file.
+## :warning: For development purposes, when this project reaches STABLE we will "redo" the commited migrations. This will be the last time migrations are reset.
 
-## :warning: For development purposes, when this project reaches beta we will "redo" the commited migrations. Please backup your database contents if you are using this project and restore it accordingly
 
 This is the source code for the UpVent's website under `upvent.codes`.
 
 Development occurs on the `master` branch and new branches are only opened when adding critical/unstable features. The main site is published by upvent making a fork of this project and adding some post-update commits in order to make deployment more secure.
-
 
 
 **PLEASE CONSIDER THESE THINGS FIRST**
@@ -31,9 +29,9 @@ Development occurs on the `master` branch and new branches are only opened when 
 
 ## Philosophies
 
-- **KEEP IT SIMPLE**, we are already using two frameworks and five libraries. As much as these technologies are useful, we don't want to contribute to the bloated web, keep things simple, secure and easy to maintain
+- **KEEP IT SIMPLE**, we are already using two frameworks and six libraries. As much as these technologies are useful, we don't want to contribute to the bloated web, keep things simple, secure and easy to maintain
   - Frameworks: Django, Bootstrap 5
-  - Libraries: `django-admin-honeypot`, `pillow`, `django-ckeditor`, `django-admin-interface` and `bootstrap-icons`
+  - Libraries: `django-admin-honeypot`, `pillow`, `django-ckeditor`, `django-admin-interface`, `django-simple-captcha` and `bootstrap-icons`
 - Very tiny CMS. Not full featured. Not complex.
 - Keep it as secure as possible. We use `django-honeypot` to protect our admin url from attackers. Change your real admin url and use the honeypot for common attack patterns.
 - Don't break `stable`. All changes must undergo testing or find a way to prevent breakage on the `stable` branch, if breakage is unavoidable, create a decent solution to allow existing stable users to migrate easily.
