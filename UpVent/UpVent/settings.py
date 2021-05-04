@@ -121,10 +121,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'toolreferenceinpassword@prog.com'
 EMAIL_HOST_PASSWORD = 'ThisPasswordIsRosettaStoned'
 
-# Hcaptcha Settings
-HCAPTCHA_SITEKEY = '<your sitekey>'
-HCAPTCHA_SECRET = '<your secret key>'
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
