@@ -43,7 +43,8 @@ class Contact(models.Model):
         validators=[phone_regex],
         max_length=12,
         default="",
-        help_text="Ingrese el número de teléfono de la persona que nos contactó"
+        help_text="Ingrese el número de teléfono de la persona que nos\
+        contactó"
     )
 
     reason = models.CharField(
@@ -73,4 +74,4 @@ class Contact(models.Model):
         verbose_name_plural = "Contactos"
 
     def __str__(self):
-        return self.name
+        return f'{self.email} | {self.reason}'
