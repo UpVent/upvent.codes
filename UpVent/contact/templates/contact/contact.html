@@ -31,12 +31,12 @@
                 <p class="h3 mt-4 mt-lg-5"><strong>Soporte para clientes</strong></p>
                 <p><a href="https://tickets.upvent.codes">Sistema de tickets</a></p>
 
-                <p>Nuestro soporte técnico está disponible por el sistema de tickets o correo electrónico de 11 a. M. A 11 p. M.  De lunes a viernes.</p>
+                <p>Nuestro soporte técnico está disponible por el sistema de tickets o correo electrónico de 9:00 A.M. - 11 P.M.  De Lunes a Viernes.</p>
 
                 <p class="h3 mt-4 mt-lg-5"><strong>Ventas</strong></p>
                 <p><a href="mailto://upventmx@gmail.com">Contactar con ventas</a></p>
 
-                <p>Nuestro departamento de ventas está disponible de 11 a.M. a 11 a.M. A través del correo electrónico o por medio de nuestras redes sociales.</p>
+                <p>Nuestro departamento de ventas está disponible de  9:00 A.M. - 11 P.M. A través del correo electrónico o por medio de nuestras redes sociales.</p>
 
                 <p class="h3 mt-4 mt-lg-5"><strong>Preguntas Generales</strong></p>
                 <p><a href="mailto://upventmx@gmail.com">upventmx@gmail.com</a></p>
@@ -45,54 +45,84 @@
             <div class="col-12 col-md-6 ml-auto">
                 <h2 class="fw-bold">Póngase en contacto con nosotros</h2>
 
-                {% if 'success' in request.GET %}
-                    <div class="alert alert-primary" role="alert">
-                        Gracias por ponerse en contacto con nosotros. Responderemos a su mensaje en menos de 12 horas.
-                    </div>
-                {% endif %}
 
-                <form action="success" method="POST" id="form">
+                {% for message in messages %}
+                    <div class="alert {% if message.tags == 'error' %} alert-danger {% endif %}" role="alert">
+                        <p>{{ message }}</p>
+                    </div>
+                {% endfor %}
+
+                <form action="" method="POST" id="form">
                     {% csrf_token %}
                     <div class="row">
                         <div class="col">
                             {{ form.first_name  }}
+                            <ul>
+                                {% for error in form.errors.first_name%}
+                                    <li class="text-danger">{{error}}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
                         <div class="col">
                             {{ form.last_name }}
+                            <ul>
+                                {% for error in form.errors.last_name%}
+                                    <li class="text-danger">{{error}}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
                             {{ form.company_name }}
+                            <ul>
+                                {% for error in form.errors.company_name%}
+                                    <li class="text-danger">{{error}}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
                             {{ form.email }}
+                            <ul>
+                                {% for error in form.errors.email%}
+                                    <li class="text-danger">{{error}}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
                             {{ form.phone }}
+                            <ul>
+                                {% for error in form.errors.phone%}
+                                    <li class="text-danger">{{error}}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
 
                         <div class="col">
                             {{ form.reason }}
+                            <ul>
+                                {% for error in form.errors.reason%}
+                                    <li class="text-danger">{{error}}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </div>
 
                     <div class="row mt-4">
                         <div class="col">
                             {{ form.message }}
-                        </div>
-                    </div>
-
-                    <div class="row mt-4">
-                        <div class="col">
-                            {{ form.hcaptcha }}
+                            <ul>
+                                {% for error in form.errors.message%}
+                                    <li class="text-danger">{{error}}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </div>
 
@@ -105,8 +135,6 @@
             </div>
         </div>
     </div>
-
 </main>
-<!--Main layout-->
 
 {% endblock %}
