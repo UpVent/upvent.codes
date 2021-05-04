@@ -12,6 +12,9 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
+            # Captcha Settings
+            human = True
+
             # Email settings
             subject = "Contacto via Sitio Web"
             body = {

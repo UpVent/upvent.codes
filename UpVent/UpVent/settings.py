@@ -114,6 +114,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Simple Captcha Settings
+CAPTCHA_FONT_SIZE = 24
+CAPTCHA_LETTER_ROTATION = (-40, 40)
+CAPTCHA_TIMEOUT = 2
+CAPTCHA_LENGTH = 8
+
+
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

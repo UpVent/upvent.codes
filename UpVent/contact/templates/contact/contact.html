@@ -128,6 +128,18 @@
 
                     <div class="row mt-4">
                         <div class="col">
+                            {{ form.captcha }}
+                            <ul>
+                                {% for error in form.errors.message%}
+                                    <li class="text-danger">{{error}}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-4">
+                        <div class="col">
                             <button type="submit" class="btn btn-lg bg-upvent text-white">Enviar <i class="bi bi-envelope-fill"></i></button>
                         </div>
                     </div>

@@ -25,6 +25,7 @@ urlpatterns = [
     # Special URL's (Mostly admin or managed things)
     path('__debug__/', include(debug_toolbar.urls)),
     path('wp-admin/doc/', include('django.contrib.admindocs.urls')),
+    path('captcha/', include('captcha.urls')),
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('wp-admin/', admin.site.urls),
