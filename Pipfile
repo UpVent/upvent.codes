@@ -10,6 +10,7 @@ django-ckeditor = "*"
 pillow = "*"
 django-admin-interface = "*"
 docutils = "*"
+django-simple-captcha = "*"
 
 [dev-packages]
 bandit = "*"
