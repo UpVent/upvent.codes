@@ -1,6 +1,26 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
+{% block metatags %}
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{post.title}}">
+    <meta name="description" content="{{post.content|truncatechars:20}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://upvent.codes">
+    <meta property="og:title" content="{{post.title}}">
+    <meta property="og:description" content="{{post.content|truncatechars:20}}">
+    <meta property="og:image" content="https://upvent.codes{{post.image.url}}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Meta Tags — Preview, Edit and Generate">
+    <meta property="twitter:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
+    <meta property="twitter:image" content="https://metatags.io/asset
+{% endblock %}
+
 {% block body %}
 
     <div id="intro" class="p-5 text-center bg-light">

@@ -22,6 +22,14 @@ class Post(models.Model):
         help_text="Título del post"
     )
 
+    # SEO Description
+    description = models.CharField(
+        verbose_name="Descripción",
+        max_length=160,
+        help_text="Descripción del post. Usada para mostrarse en motores de\
+        búsqueda y en redes sociales como un texto corto."
+    )
+
     # Blog portrait
     image = models.ImageField(
         verbose_name="Imágen Destacada",
