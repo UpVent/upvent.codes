@@ -26,6 +26,7 @@ class Post(models.Model):
     description = models.CharField(
         verbose_name="Descripción",
         max_length=160,
+        default="",
         help_text="Descripción del post. Usada para mostrarse en motores de\
         búsqueda y en redes sociales como un texto corto."
     )
