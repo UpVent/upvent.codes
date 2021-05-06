@@ -1,6 +1,27 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
+{% block metatags %}
+    <!-- Primary Meta Tags -->
+    <title>UpVent - Licencias</title>
+    <meta name="title" content="UpVent - Licencias">
+    <meta name="description" content="¡Conozca las licencias y proyectos que hicieron de UpVent una realidad para usted y para nosotros!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://upvent.codes/licenses/">
+    <meta property="og:title" content="UpVent - Licencias">
+    <meta property="og:description" content="¡Conozca las licencias y proyectos que hicieron de UpVent una realidad para usted y para nosotros!">
+    <meta property="og:image" content="https://upvent.codes/static/core/img/gnu.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://upvent.codes/licenses/">
+    <meta property="twitter:title" content="UpVent - Licencias">
+    <meta property="twitter:description" content="¡Conozca las licencias y proyectos que hicieron de UpVent una realidad para usted y para nosotros!">
+    <meta property="twitter:image" content="https://upvent.codes/static/core/img/gnu.png">
+{% endblock %}
+
 {% block body %}
     <div class="container text-center mt-5 mb-5">
         <h2 class="display-5 fw-bold">
