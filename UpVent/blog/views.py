@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.core.paginator import Paginator
+
 
 from .models import Post
 
@@ -20,7 +22,12 @@ def Blog(request):
 
     """
 
-    posts = Post.objects.filter(status=1)[::-1]
+    articles = Post.objects.filter(status=1)[::-1]
+    paginator = Paginator(articles, 6)
+
+    page_number = request.GET.get('page')
+    posts = paginator.get_page(page_number)
+
     return render(request, 'blog/blog.html', {'posts':posts})
 
 def BlogEntry(request, slug):
