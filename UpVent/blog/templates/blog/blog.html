@@ -24,8 +24,11 @@
 
 {% block body %}
     <div id="intro" class="p-5 text-center bg-light">
-        <h1 class="mb-3 h2">Blog</h1>
-        <p class="mb-3 text-wrap lead">El conocimiento de UpVent, para la comunidad, por la comunidad. <i class="bi bi-heart"></i></p>
+        <h1 class="mb-3">Blog</h1>
+        <p class="mb-3 text-wrap lead">Bienvenido al blog de UpVent. Has llegado
+            a la página principal para ver artículos sobre tecnología,
+            tutoriales de programación, servidores, sistemas operativos tipo unix
+            y todo tipo de contenido relacionado con el ecosistema de software libre. <i class="bi bi-heart"></i></p>
 
     </div>
 
@@ -63,9 +66,9 @@
                             <a class="page-link" href="?page=1" tabindex="-1" aria-disabled="true">Primero</a>
                         </li>
 
-                    <li class="page-item">
-                        <a class="page-link" href="?page={{ posts.previous_page_number }}" tabindex="-1" aria-disabled="true">{{ posts.previous_page_number  }}</a>
-                    </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ posts.previous_page_number }}" tabindex="-1" aria-disabled="true">{{ posts.previous_page_number  }}</a>
+                        </li>
                     {% endif %}
 
                     <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{ posts.number }}</a></li>
