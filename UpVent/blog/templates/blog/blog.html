@@ -28,7 +28,57 @@
         <p class="mb-3 text-wrap lead">Bienvenido al blog de UpVent. Has llegado
             a la página principal para ver artículos sobre tecnología,
             tutoriales de programación, servidores, sistemas operativos tipo unix
-            y todo tipo de contenido relacionado con el ecosistema de software libre. <i class="bi bi-heart"></i></p>
+            y todo tipo de contenido relacionado con el ecosistema de software libre. <i class="bi bi-heart"></i>
+        </p>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Apoyar <i class="bi bi-bookmark-heart"></i></button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Compartir <i class="bi bi-share-fill"></i></button>
+        </div>
+
+        <!-- "Apoyar" Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Apoyar a UpVent</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Puedes apoyar a UpVent de las siguientes formas:
+                            <ul class="list-group">
+                                <li class="list-group-item"><a class="text-decoration-none" href="https://liberapay.com/VentGrey"><i class="bi bi-cash"></i> Liberapay</a></li>
+                                <li class="list-group-item"><a class="text-decoration-none" href="https://vendor.cryptopayment.link/p/RZH91U2K"><i class="bi bi-credit-card"></i> Donar crypto</a></li>
+                                <li class="list-group-item"><a class="text-decoration-none" href="https://github.com/UpVent/upvent.codes"><i class="bi bi-github"></i> Dar una estrella a esta página en GitHub</a></li>
+                                <li class="list-group-item"><a class="text-decoration-none" href="https://web.facebook.com/UpVentMX/reviews/?ref=page_internal"><i class="bi bi-facebook"></i> Calificarnos en Facebook</a></li>
+                                <li class="list-group-item"><a class="text-decoration-none" href="{% url 'licenses' %}"><i class="bi bi-star"></i> Donar a cualquier proyecto de software libre listado en nuestro salón de la fama</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- "Compartir" Modal -->
+        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Compartir en Redes Sociales</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://upvent.codes/blog" class="btn btn-primary">Facebook <i class="bi bi-facebook"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url=https://upvent.codes/blog&text=%C2%A1Hoy%20aprend%C3%AD%20algo%20nuevo%20en%20el%20blog%20de%20#UpVent!%20%C2%BFQuieres%20aprender%20algo%20tu%20tambi%C3%A9n?%20%20%F0%9F%91%A9%E2%80%8D%F0%9F%92%BB%F0%9F%92%BB" class="btn btn-info text-white">Twitter <i class="bi bi-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
 
     </div>
 
