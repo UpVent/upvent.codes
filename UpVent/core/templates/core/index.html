@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <section class="mt-5 mb-5 pt-12 pt-md-13 bg-gray">
+    <section class="mt-5 mb-5 pt-12 pt-md-13">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-md-5 col-lg-6 order-md-2">
@@ -112,9 +112,9 @@
             {% for testimonial in testimonials %}
                 <div class="col">
                     <div class="card shadow-sm text-center border-0 border-top border-5 border-primary">
-                        <img class="img-fluid rounded-3 p-2" alt="Imágen de una persona" src="{{testimonial.image.url}}"/>
+                        <img class="img-fluid rounded-3 p-2" alt="Imágen de una persona" src="{{testimonial.image.url}}" loading="lazy"/>
                         <div class="card-body">
-                            <h6>{{testimonial.name}}</h6>
+                            <h5 class="fw-bold">{{testimonial.name}}</h5>
                             <hr />
                             <small class="card-text">{{testimonial.testimonial | safe}}</small>
                             <div class="d-flex justify-content-center align-items-center">
@@ -163,9 +163,9 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider">
+            <hr>
 
-            <div class="row featurette">
+            <div class="row">
                 <div class="col-md-7 order-md-2">
                     <h2 class="featurette-heading">¡A favor de la educación! <span class="text-muted">Aprenda con nosotros</span></h2>
                     <p class="lead">UpVent se fundó con la visión de compartir el conocimiento. Tenemos la promesa de educar de forma abierta y gratuita, llevando el conocimiento de nuestro equipo a todos los individuos que podamos.</p>
@@ -176,9 +176,9 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider">
+            <hr>
 
-            <div class="row featurette">
+            <div class="row">
                 <div class="col-md-7">
                     <h2 class="featurette-heading">La estabilidad primero. <span class="text-muted">Puede confiar en UpVent</span></h2>
                     <p class="lead">UpVent mejorará constantemente sus tecnologías actuales, siempre procurando la estabilidad por encima de cualquier otra cualidad que podamos ofrecer, esto se hace con el objetivo de fortalecer su relación con los individuos que lo conforman.
