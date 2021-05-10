@@ -14,12 +14,134 @@
                     Para Negocios Inteligentes.
                 </h1>
                 <h4 class="text-center fs-6 mb-3">Desarrollamos soluciones web inteligentes para los negocios Mexicanos.</h4>
-                <a class="btn bg-upvent fw-normal text-white btn-lg" href="#img-btn" role="button">
+                <a class="btn btn-light btn-lg text-upvent" href="#about" role="button">
                     Leer más <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
         </div>
     </div>
+
+    <section class="pt-8 pt-md-10" id="about">
+        <div class="container mt-5 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
+
+                    <!-- Heading -->
+                    <h2 class="fw-bold">
+                        Soluciones en la nube <span class="text-primary">para todo tipo de negocios</span>.
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="fs-5 text-muted mb-9">
+                        UpVent es una empresa de soluciones creadas con software libre para
+                        su proyecto, empresa o equipo de trabajo. Soluciones, Infraestructura. ¡Lo tenemos cubierto!
+                    </p>
+
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+
+                    <!-- Item -->
+                    <div class="row align-items-center mb-8 aos-init aos-animate" data-aos="fade-up">
+                        <div class="col-4 col-lg-5">
+
+                            <!-- Image -->
+                            <img src="{% static 'core/img/universal.svg' %}" alt="..." class="img-fluid">
+
+                        </div>
+                        <div class="col-8 col-lg-7">
+
+                            <!-- Heading -->
+                            <h3 class="fw-bold mb-2">
+                                Universal
+                            </h3>
+
+                            <!-- Text -->
+                            <p class="text-muted mb-0">
+                                Haga uso de su solución personalizada en computadoras, tabletas y teléfonos.
+                            </p>
+
+                        </div>
+                    </div> <!-- / .row -->
+
+                    <!-- Item -->
+                    <div class="row align-items-center mb-8 aos-init aos-animate" data-aos="fade-up">
+                        <div class="col-4 col-lg-5">
+
+                            <!-- Image -->
+                            <img src="assets/img/illustrations/illustration-8.png" alt="..." class="img-fluid">
+
+                        </div>
+                        <div class="col-8 col-lg-7">
+
+                            <!-- Heading -->
+                            <h3 class="font-weight-bold mb-2">
+                                Unified
+                            </h3>
+
+                            <!-- Text -->
+                            <p class="text-gray-700 mb-0">
+                                Keep everything in one place and feel at peace and organized rather than scattered.
+                            </p>
+
+                        </div>
+                    </div> <!-- / .row -->
+
+
+                </div>
+                <div class="col-12 col-lg-6">
+                    <!-- Item -->
+                    <div class="row align-items-center mb-8 aos-init aos-animate" data-aos="fade-up">
+                        <div class="col-4 col-lg-5">
+
+                            <!-- Image -->
+                            <img src="assets/img/illustrations/illustration-7.png" alt="..." class="img-fluid">
+
+                        </div>
+                        <div class="col-8 col-lg-7">
+
+                            <!-- Heading -->
+                            <h3 class="font-weight-bold mb-2">
+                                Analytics
+                            </h3>
+
+                            <!-- Text -->
+                            <p class="text-gray-700 mb-0">
+                                Keep track of what's happening in your company from a centralized dashboard.
+                            </p>
+
+                        </div>
+                    </div> <!-- / .row -->
+
+                    <!-- Item -->
+                    <div class="row align-items-center mb-8 aos-init aos-animate" data-aos="fade-up">
+                        <div class="col-4 col-lg-5">
+
+                            <!-- Image -->
+                            <img src="assets/img/illustrations/illustration-6.png" alt="..." class="img-fluid">
+
+                        </div>
+                        <div class="col-8 col-lg-7">
+
+                            <!-- Heading -->
+                            <h3 class="font-weight-bold mb-2">
+                                Permissions
+                            </h3>
+
+                            <!-- Text -->
+                            <p class="text-gray-700 mb-0">
+                                Control who has access to which projects and data through our control panel.
+                            </p>
+
+                        </div>
+                    </div> <!-- / .row -->
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
 
     <div class="container mt-4 mb-4 justify-content-center">
         <div class="slide-in-left container text-center">
@@ -127,79 +249,79 @@
         </div>
     </div>
 
-        <div class="container mt-5 mb-5">
-            <div class="container text-center">
-                <h2 class="fw-bold">Todo lo que hacemos es de código libre</h2>
-                <p class="text-center text-wrap lead">
-                    Nuestro modelo de desarrollo consiste totalmente de componentes de código
-                    libre y se basa en múltiples principios éticos y prácticos para su conveniencia como empresa.
+    <div class="container mt-5 mb-5">
+        <div class="container text-center">
+            <h2 class="fw-bold">Todo lo que hacemos es de código libre</h2>
+            <p class="text-center text-wrap lead">
+                Nuestro modelo de desarrollo consiste totalmente de componentes de código
+                libre y se basa en múltiples principios éticos y prácticos para su conveniencia como empresa.
+                <br />
+                Además, colaboramos de manera activa con el ecosistema de software libre en México para mejorar dichas tecnologías para todos.
+            </p>
+            <a href="{% url 'licenses' %}">Explore las tecnologías usadas en UpVent <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="container text-center mt5 mb-5">
+        <h1>Beneficios</h1>
+        <p>Conozca los beneficios que UpVent tiene para usted y su empresa</p>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">¡Somos Low Cost! <span class="text-muted">¡Siempre!</span></h2>
+                <p class="lead">
+                    UpVent ofrece múltiples servicios a las empresas, todos y cada uno de ellos son económicos, sencillos y siguen un riguroso proceso para cumplir con la calidad esperada para nuestros clientes.
                     <br />
-                    Además, colaboramos de manera activa con el ecosistema de software libre en México para mejorar dichas tecnologías para todos.
+                    Esto nos hace una opción ideal para startups y pequeñas empresas que desean digitalizarse con poca inversión.
                 </p>
-                <a href="{% url 'licenses' %}">Explore las tecnologías usadas en UpVent <i class="bi bi-arrow-right"></i></a>
+                <div class="container mt-5">
+                    <a href="{% url 'services' %}">Conozca nuestros servicios <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img class="slide-in-right img-fluid rounded-3 shadow" src="{% static 'core/img/coins.jpg' %}" alt="Imágen mostrando unas monedas y un bolígrafo" loading="lazy" />
             </div>
         </div>
 
-        <div class="container text-center mt5 mb-5">
-            <h1>Beneficios</h1>
-            <p>Conozca los beneficios que UpVent tiene para usted y su empresa</p>
-        </div>
+        <hr>
 
-        <div class="container mt-5 mb-5">
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">¡Somos Low Cost! <span class="text-muted">¡Siempre!</span></h2>
-                    <p class="lead">
-                        UpVent ofrece múltiples servicios a las empresas, todos y cada uno de ellos son económicos, sencillos y siguen un riguroso proceso para cumplir con la calidad esperada para nuestros clientes.
-                        <br />
-                        Esto nos hace una opción ideal para startups y pequeñas empresas que desean digitalizarse con poca inversión.
-                    </p>
-                    <div class="container mt-5">
-                        <a href="{% url 'services' %}">Conozca nuestros servicios <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <img class="slide-in-right img-fluid rounded-3 shadow" src="{% static 'core/img/coins.jpg' %}" alt="Imágen mostrando unas monedas y un bolígrafo" loading="lazy" />
-                </div>
+        <div class="row">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">¡A favor de la educación! <span class="text-muted">Aprenda con nosotros</span></h2>
+                <p class="lead">UpVent se fundó con la visión de compartir el conocimiento. Tenemos la promesa de educar de forma abierta y gratuita, llevando el conocimiento de nuestro equipo a todos los individuos que podamos.</p>
+                <a href="{% url 'blog:home' %}">Visite nuestro blog <i class="bi bi-arrow-right"></i></a>
             </div>
-
-            <hr>
-
-            <div class="row">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">¡A favor de la educación! <span class="text-muted">Aprenda con nosotros</span></h2>
-                    <p class="lead">UpVent se fundó con la visión de compartir el conocimiento. Tenemos la promesa de educar de forma abierta y gratuita, llevando el conocimiento de nuestro equipo a todos los individuos que podamos.</p>
-                    <a href="{% url 'blog:home' %}">Visite nuestro blog <i class="bi bi-arrow-right"></i></a>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <img class="slide-in-left img-fluid rounded-3 shadow" src="{% static 'core/img/education.jpg' %}" alt="Imágen mostrando una persona estudiando" loading="lazy" />
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="row">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">La estabilidad primero. <span class="text-muted">Puede confiar en UpVent</span></h2>
-                    <p class="lead">UpVent mejorará constantemente sus tecnologías actuales, siempre procurando la estabilidad por encima de cualquier otra cualidad que podamos ofrecer, esto se hace con el objetivo de fortalecer su relación con los individuos que lo conforman.
-                    </p>
-                    <a href="{% url 'about' %}">Conozca nuestro ciclo de desarrollo <i class="bi bi-arrow-right"></i></a>
-                </div>
-                <div class="col-md-5">
-                    <img class="slide-in-right img-fluid rounded-3 shadow" src="{% static 'core/img/brain.jpg' %}" alt="Imágen mostrando un cerebro y engranajes" loading="lazy" />
-                </div>
+            <div class="col-md-5 order-md-1">
+                <img class="slide-in-left img-fluid rounded-3 shadow" src="{% static 'core/img/education.jpg' %}" alt="Imágen mostrando una persona estudiando" loading="lazy" />
             </div>
         </div>
 
-        <div class="px-4 py-5 my-5 text-center">
-            <img class="d-block mx-auto mb-4 rounded-circle shadow" src="{% static 'core/img/upvent-logo.png' %}" alt="Logo de UpVent circular" width="100" height="100" loading="lazy" />
-            <h1 class="display-5 fw-bold">Comenzar a trabajar con UpVent...</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Visite nuestra página de servicios para explorar nuestras ofertas prediseñadas para su empresa o contacte directo con ventas.</p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Ir a Servicios <i class="bi bi-laptop"></i></button>
-                    <button type="button" class="btn btn-outline-primary btn-lg px-4">Contactar con ventas <i class="bi bi-headset"></i></button>
-                </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">La estabilidad primero. <span class="text-muted">Puede confiar en UpVent</span></h2>
+                <p class="lead">UpVent mejorará constantemente sus tecnologías actuales, siempre procurando la estabilidad por encima de cualquier otra cualidad que podamos ofrecer, esto se hace con el objetivo de fortalecer su relación con los individuos que lo conforman.
+                </p>
+                <a href="{% url 'about' %}">Conozca nuestro ciclo de desarrollo <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="col-md-5">
+                <img class="slide-in-right img-fluid rounded-3 shadow" src="{% static 'core/img/brain.jpg' %}" alt="Imágen mostrando un cerebro y engranajes" loading="lazy" />
             </div>
         </div>
+    </div>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4 rounded-circle shadow" src="{% static 'core/img/upvent-logo.png' %}" alt="Logo de UpVent circular" width="100" height="100" loading="lazy" />
+        <h1 class="display-5 fw-bold">Comenzar a trabajar con UpVent...</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Visite nuestra página de servicios para explorar nuestras ofertas prediseñadas para su empresa o contacte directo con ventas.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Ir a Servicios <i class="bi bi-laptop"></i></button>
+                <button type="button" class="btn btn-outline-primary btn-lg px-4">Contactar con ventas <i class="bi bi-headset"></i></button>
+            </div>
+        </div>
+    </div>
 {% endblock %}
