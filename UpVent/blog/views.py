@@ -22,7 +22,7 @@ def Blog(request):
 
     """
 
-    articles = Post.objects.filter(status=1)[::-1]
+    articles = Post.objects.filter(status=1).order_by("created_on")
     paginator = Paginator(articles, 6)
 
     page_number = request.GET.get('page')
