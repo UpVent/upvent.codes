@@ -12,7 +12,8 @@ class Testimonial(models.Model):
     image = models.ImageField(
         verbose_name="Foto del cliente",
         upload_to="testimonials",
-        help_text="Se recomiendan imágenes cuadradas"
+        help_text="Se recomiendan imágenes cuadradas",
+        blank=False
     )
 
     name = models.CharField(
@@ -20,7 +21,8 @@ class Testimonial(models.Model):
         max_length=100,
         unique=True,
         help_text="Ingrese el nombre de la persona dando su testimonio.",
-        default=""
+        default="",
+        blank=False
     )
 
     testimonial = RichTextUploadingField(
@@ -32,13 +34,15 @@ class Testimonial(models.Model):
         verbose_name="Lugar de Trabajo",
         max_length=80,
         help_text="Ingrese el puesto que desempeña la persona que da el\
-        testimonio."
+        testimonio.",
+        blank=False
     )
 
     site = models.URLField(
         verbose_name="Sitio web",
         max_length=200,
-        help_text="El sitio web donde se encuentra alojado el proyecto."
+        help_text="El sitio web donde se encuentra alojado el proyecto.",
+        blank=False
     )
 
     class Meta:
@@ -60,19 +64,22 @@ class Project(models.Model):
         verbose_name="Título",
         max_length=200,
         unique=True,
-        help_text="Ingrese el nombre del proyecto."
+        help_text="Ingrese el nombre del proyecto.",
+        blank=False
     )
 
     image = models.ImageField(
         verbose_name="Imágen Destacada",
         upload_to="portfolio",
-        help_text="Se recomiendan imágenes de dimensiones rectangulares."
+        help_text="Se recomiendan imágenes de dimensiones rectangulares.",
+        blank=False
     )
 
     site = models.URLField(
         verbose_name="Sitio web",
         max_length=200,
-        help_text="El sitio web donde se encuentra alojado el proyecto."
+        help_text="El sitio web donde se encuentra alojado el proyecto.",
+        blank=False
     )
 
     description = RichTextUploadingField(
@@ -110,13 +117,15 @@ class FSProject(models.Model):
         verbose_name="Título",
         max_length=100,
         help_text="Ingrese el nombre del proyecto.",
-        default=""
+        default="",
+        blank=False
     )
 
     image = models.ImageField(
         verbose_name="Imágen Destacada",
         upload_to="floss",
-        help_text="Se recomiendan imágenes de dimensiones rectangulares."
+        help_text="Se recomiendan imágenes de dimensiones rectangulares.",
+        blank=False
     )
 
     description = RichTextUploadingField(
@@ -129,28 +138,32 @@ class FSProject(models.Model):
         verbose_name="Dirección de Git",
         max_length=200,
         help_text="URL completa del repositorio donde se encuentra el proyecto",
-        default="https://github.com/"
+        default="https://github.com/",
+        blank=False
     )
 
     support_addr = models.URLField(
         verbose_name="Dirección de apoyo",
         max_length=200,
         help_text="URL completa donde los visitantes podrán apoyar al proyecto",
-        default="https://github.com/"
+        default="https://github.com/",
+        blank=False
     )
 
     plicense = models.CharField(
         verbose_name="Licencia",
         max_length=25,
         help_text="Ingrese la licencia del proyecto",
-        default=""
+        default="",
+        blank=False
     )
 
     license_link = models.URLField(
         verbose_name="URL de licencia",
         max_length=200,
         help_text="URL completa para ver la licencia del proyecto",
-        default="https://gnu.org/"
+        default="https://gnu.org/",
+        blank=False
     )
 
     created_on = models.DateTimeField(
@@ -182,7 +195,8 @@ class License(models.Model):
         verbose_name="Nombre",
         max_length=60,
         help_text="Ingrese el nombre de la licencia a mostrar",
-        default="Gnu General Public License v2"
+        default="Gnu General Public License v2",
+        blank=False
     )
 
     verbatim = RichTextUploadingField(
@@ -195,7 +209,8 @@ class License(models.Model):
         verbose_name="URL de licencia",
         max_length=200,
         help_text="URL completa para ver la licencia del proyecto",
-        default="https://gnu.org/"
+        default="https://gnu.org/",
+        blank=False
     )
 
     class Meta:
@@ -218,13 +233,15 @@ class HOF(models.Model):
         max_length=60,
         help_text="Ingrese el nombre del proyecto a mostrar en\
         el salón de la fama",
-        default="Gnu Compiler Colection"
+        default="Gnu Compiler Colection",
+        blank=False
     )
 
     icon = models.ImageField(
         verbose_name="Icono del Proyecto",
         upload_to="licenses",
-        help_text="Se recomiendan imágenes de dimensiones rectangulares."
+        help_text="Se recomiendan imágenes de dimensiones rectangulares.",
+        blank=False
     )
 
     class Meta:
@@ -249,14 +266,16 @@ class TeamMember(models.Model):
     image = models.ImageField(
         verbose_name="Foto del integrante",
         upload_to="team",
-        help_text="Se recomiendan imágenes de dimensiones rectangulares."
+        help_text="Se recomiendan imágenes de dimensiones rectangulares.",
+        blank=False
     )
 
     name = models.CharField(
         verbose_name="Nombre del Integrante del equipo",
         max_length=100,
         help_text="Ingrese el nombre del integrante del equipo",
-        default=""
+        default="",
+        blank=False
     )
 
     position = models.CharField(
@@ -264,14 +283,16 @@ class TeamMember(models.Model):
         max_length=100,
         help_text="Ingrese en que ha contribuido o que posición dentro\
         de UpVent tiene el integrante.",
-        default=""
+        default="",
+        blank=False
     )
 
     is_collab = models.BooleanField(
         verbose_name="¿Es un colaborador externo?",
         help_text="Indicar si el miembro siendo registrado es un colaborador\
         externo, de no serlo se tomará como miembro de UpVent",
-        default=False
+        default=False,
+        null=False
     )
 
     class Meta:
@@ -297,7 +318,8 @@ class PrivacyPolicy(models.Model):
         verbose_name="Título",
         max_length=100,
         help_text="Ingrese el título para su política de privacidad",
-        default="Política de Privacidad"
+        default="Política de Privacidad",
+        blank=False
     )
 
     created_on = models.DateField(
@@ -312,7 +334,8 @@ class PrivacyPolicy(models.Model):
 
     changelog = models.TextField(
         verbose_name="Registro de Cambios",
-        help_text="Ingrese la razón de cambiar la política de privacidad."
+        help_text="Ingrese la razón de cambiar la política de privacidad.",
+        blank=False
     )
 
     text = RichTextUploadingField(
