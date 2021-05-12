@@ -86,17 +86,17 @@
                 <div class="row">
                     {% for post in posts %}
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card">
-                                <img alt="Portada de blog" src="{{ post.image.url }}" class="img-fluid card-img-top" loading="lazy"/>
+                            <div class="card shadow-sm border-0">
+                                <img alt="Portada de blog" src="{{ post.image.url }}" class="card-img-top" loading="lazy"/>
                                 <div class="card-body">
                                     <h5 class="card-title fw-bold">{{ post.title }}</h5>
                                     <span class="badge rounded-pill bg-primary">Categoría: {{post.category}}</span>
-                                    <span class="badge rounded-pill bg-info"> Creado el: {{post.created_on}}</span>
                                     <hr />
-                                    <p class="card-text">
-                                        {{post.content|truncatewords:28|safe}}
+                                    <p class="card-text text-muted fw-light">
+                                        {{post.description|truncatewords:30}}
                                     </p>
-                                    <a href="{% url 'blog:post' post.slug %}" class="btn btn-primary">Leer más... <i class="bi bi-book"></i></a>
+                                    <hr />
+                                    <a href="{% url 'blog:post' post.slug %}" class="btn btn-primary mt-2">Leer más... <i class="bi bi-book"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -130,5 +130,4 @@
             </nav>
         </div>
     </main>
-
 {% endblock %}
