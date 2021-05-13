@@ -1,5 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static %}
+{% load humanize %}
 
 {% block metatags %}
     <!-- Primary Meta Tags -->
@@ -40,8 +41,10 @@
                             <div class="col-lg-6 text-center text-lg-start mb-3 m-lg-0">
                                 <img src="{% static 'core/img/upvent-logo.png' %}" class="rounded shadow me-2"
                                      width="15%" alt="Imágen del autor" loading="lazy" />
-                                <span>Fecha de publicación: <u class="text-muted">{{post.created_on}}</u> por</span>
+                                <span>Fecha de publicación: <u class="text-muted">{{post.created_on | naturaltime}}</u> por</span>
                                 <a href="https://upvent.codes" class="badge rounded-pill bg-primary text-white text-decoration-none">UpVent</a>
+                                <hr />
+                                <span>Última actualización: <u class="text-muted">{{post.updated_on | naturaltime}}</u></span>
                             </div>
 
                             <div class="col-lg-6 text-center text-lg-end">
