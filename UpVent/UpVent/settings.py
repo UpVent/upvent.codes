@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
+    'django.contrib.sites',
+    'django.contrib.redirects',
     'debug_toolbar',
     'admin_honeypot',
     'ckeditor',
@@ -57,6 +59,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
@@ -80,6 +83,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'UpVent.wsgi.application'
+
+# Redirects framework site ID
+SITE_ID = 1
 
 # Debug Toolbar
 INTERNAL_IPS = [
