@@ -62,11 +62,50 @@ fieldset[disabled] .btn-twitter.active {
 }
 
 .btn-instagram {
-  color: #fff;
-  background-color: #ac2bac;
-  border-color: #ac2bac;
+  color: #FFFFFF;
+  background-color: #AC2BAC;
+  border-color: #AC2BAC;
 }
 
+.btn-instagram:hover,
+.btn-instagram:focus,
+.btn-instagram:active,
+.btn-instagram.active,
+.open .dropdown-toggle.btn-instagram {
+  color: #FFFFFF;
+  background-color: #992599;
+  border-color: #AC2BAC;
+}
+
+.btn-instagram:active,
+.btn-instagram.active,
+.open .dropdown-toggle.btn-instagram {
+  background-image: none;
+}
+
+.btn-instagram.disabled,
+.btn-instagram[disabled],
+fieldset[disabled] .btn-instagram,
+.btn-instagram.disabled:hover,
+.btn-instagram[disabled]:hover,
+fieldset[disabled] .btn-instagram:hover,
+.btn-instagram.disabled:focus,
+.btn-instagram[disabled]:focus,
+fieldset[disabled] .btn-instagram:focus,
+.btn-instagram.disabled:active,
+.btn-instagram[disabled]:active,
+fieldset[disabled] .btn-instagram:active,
+.btn-instagram.disabled.active,
+.btn-instagram[disabled].active,
+fieldset[disabled] .btn-instagram.active {
+  background-color: #AC2BAC;
+  border-color: #AC2BAC;
+}
+
+.btn-instagram .badge {
+  color: #AC2BAC;
+  background-color: #FFFFFF;
+}
 
 .btn-facebook {
   color: #fff;
