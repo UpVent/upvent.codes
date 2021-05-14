@@ -16,11 +16,50 @@ body {
 /* Custom Buttons */
 
 .btn-twitter {
-  color: #fff;
-  background-color: #55acee;
-  border-color: #55acee;
+  color: #FFF;
+  background-color: #55ACEE;
+  border-color: #55ACEE;
 }
 
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  color: #FFF;
+  background-color: #559DD4;
+  border-color: #55ACEE;
+}
+
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  background-image: none;
+}
+
+.btn-twitter.disabled,
+.btn-twitter[disabled],
+fieldset[disabled] .btn-twitter,
+.btn-twitter.disabled:hover,
+.btn-twitter[disabled]:hover,
+fieldset[disabled] .btn-twitter:hover,
+.btn-twitter.disabled:focus,
+.btn-twitter[disabled]:focus,
+fieldset[disabled] .btn-twitter:focus,
+.btn-twitter.disabled:active,
+.btn-twitter[disabled]:active,
+fieldset[disabled] .btn-twitter:active,
+.btn-twitter.disabled.active,
+.btn-twitter[disabled].active,
+fieldset[disabled] .btn-twitter.active {
+  background-color: #55ACEE;
+  border-color: #55ACEE;
+}
+
+.btn-twitter .badge {
+  color: #55ACEE;
+  background-color: #FFF;
+}
 
 .btn-instagram {
   color: #fff;
