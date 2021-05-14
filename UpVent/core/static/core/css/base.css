@@ -108,23 +108,143 @@ fieldset[disabled] .btn-instagram.active {
 }
 
 .btn-facebook {
-  color: #fff;
-  background-color: #0082ca;
-  border-color: #0082ca;
+  color: #FFFFFF;
+  background-color: #0082CA;
+  border-color: #0082CA;
 }
 
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  color: #FFFFFF;
+  background-color: #0074B3;
+  border-color: #0082CA;
+}
+
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+
+.btn-facebook.disabled,
+.btn-facebook[disabled],
+fieldset[disabled] .btn-facebook,
+.btn-facebook.disabled:hover,
+.btn-facebook[disabled]:hover,
+fieldset[disabled] .btn-facebook:hover,
+.btn-facebook.disabled:focus,
+.btn-facebook[disabled]:focus,
+fieldset[disabled] .btn-facebook:focus,
+.btn-facebook.disabled:active,
+.btn-facebook[disabled]:active,
+fieldset[disabled] .btn-facebook:active,
+.btn-facebook.disabled.active,
+.btn-facebook[disabled].active,
+fieldset[disabled] .btn-facebook.active {
+  background-color: #0082CA;
+  border-color: #0082CA;
+}
+
+.btn-facebook .badge {
+  color: #0082CA;
+  background-color: #FFFFFF;
+}
 
 .btn-github {
-  color: #fff;
+  color: #FFFFFF;
   background-color: #333333;
   border-color: #333333;
 }
 
+.btn-github:hover,
+.btn-github:focus,
+.btn-github:active,
+.btn-github.active,
+.open .dropdown-toggle.btn-github {
+  color: #FFFFFF;
+  background-color: #1A1A1A;
+  border-color: #333333;
+}
+
+.btn-github:active,
+.btn-github.active,
+.open .dropdown-toggle.btn-github {
+  background-image: none;
+}
+
+.btn-github.disabled,
+.btn-github[disabled],
+fieldset[disabled] .btn-github,
+.btn-github.disabled:hover,
+.btn-github[disabled]:hover,
+fieldset[disabled] .btn-github:hover,
+.btn-github.disabled:focus,
+.btn-github[disabled]:focus,
+fieldset[disabled] .btn-github:focus,
+.btn-github.disabled:active,
+.btn-github[disabled]:active,
+fieldset[disabled] .btn-github:active,
+.btn-github.disabled.active,
+.btn-github[disabled].active,
+fieldset[disabled] .btn-github.active {
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.btn-github .badge {
+  color: #333333;
+  background-color: #FFFFFF;
+}
+
 .btn-upvent {
-  color: #fff;
+  color: #FFFFFF;
   background-color: #007BFC;
   border-color: #007BFC;
 }
+
+.btn-upvent:hover,
+.btn-upvent:focus,
+.btn-upvent:active,
+.btn-upvent.active,
+.open .dropdown-toggle.btn-upvent {
+  color: #FFFFFF;
+  background-color: #0070E8;
+  border-color: #007BFC;
+}
+
+.btn-upvent:active,
+.btn-upvent.active,
+.open .dropdown-toggle.btn-upvent {
+  background-image: none;
+}
+
+.btn-upvent.disabled,
+.btn-upvent[disabled],
+fieldset[disabled] .btn-upvent,
+.btn-upvent.disabled:hover,
+.btn-upvent[disabled]:hover,
+fieldset[disabled] .btn-upvent:hover,
+.btn-upvent.disabled:focus,
+.btn-upvent[disabled]:focus,
+fieldset[disabled] .btn-upvent:focus,
+.btn-upvent.disabled:active,
+.btn-upvent[disabled]:active,
+fieldset[disabled] .btn-upvent:active,
+.btn-upvent.disabled.active,
+.btn-upvent[disabled].active,
+fieldset[disabled] .btn-upvent.active {
+  background-color: #007BFC;
+  border-color: #007BFC;
+}
+
+.btn-upvent .badge {
+  color: #007BFC;
+  background-color: #FFFFFF;
+}
+
 /* Other Colors */
 
 .bg-upvent {
