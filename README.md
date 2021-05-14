@@ -101,7 +101,7 @@ We won't provide  (for now) instructions on how to deploy to a server, the steps
 ## License + Credits
 
 ### Our Code
-The source code is free software distributed under the GNU General Public License, version 2, or, at your option, any later version. (See [LICENSE](https://github.com/UpVent/upvent.codes/blob/master/LICENSE).)
+The source code is free software distributed under the GNU General Public License, version 2 ONLY. (See [LICENSE](https://github.com/UpVent/upvent.codes/blob/master/LICENSE).)
 
 The website contents are creative commons released under CC-BY-ND-3.0-International.
 
