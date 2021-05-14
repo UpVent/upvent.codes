@@ -33,7 +33,8 @@
         <!-- Material Bootstrap stylesheet -->
         <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}" type="text/css" media="screen" />
         <!-- Custom stylesheet for this page -->
-        <link rel="stylesheet" href="{% static 'core/css/base-min.css' %}" type="text/css" media="screen" />
+        <link rel="preload" href="{% static 'core/css/base-min.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
         <!-- Bootstrap icons-->
         <link rel="stylesheet" href="{% static 'core/css/bootstrap-icons.css' %}">
         <!-- Google Fonts -->
