@@ -13,24 +13,41 @@ body {
   background-color: #F1F4F8;
 }
 
-.bg-twitter {
+/* Custom Buttons */
+
+.btn-twitter {
+  color: #fff;
   background-color: #55acee;
+  border-color: #55acee;
 }
 
 
-.bg-instagram {
+.btn-instagram {
+  color: #fff;
   background-color: #ac2bac;
+  border-color: #ac2bac;
 }
 
 
-.bg-facebook {
+.btn-facebook {
+  color: #fff;
   background-color: #0082ca;
+  border-color: #0082ca;
 }
 
 
-.bg-github {
+.btn-github {
+  color: #fff;
   background-color: #333333;
+  border-color: #333333;
 }
+
+.btn-upvent {
+  color: #fff;
+  background-color: #007BFC;
+  border-color: #007BFC;
+}
+/* Other Colors */
 
 .bg-upvent {
     background-color: #007BFC;
