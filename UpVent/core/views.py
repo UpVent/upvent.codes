@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib import messages
+
 
 from .models import (Testimonial,
                      Project,
@@ -136,3 +138,27 @@ def privacy_policy(request):
 
     policies = PrivacyPolicy.objects.all().first()
     return render(request, 'core/privacy-policy.html', {'policies': policies})
+
+# Search field related
+def search(request):
+
+    from Blog.models import Post
+
+    query = request.GET['search']
+
+    if len(query) > 80:
+        all_posts = Post.objects.none()
+    else:
+        all_testimonials = Testimonial.objects.filter(name__icontains=query)
+        all_posts = Post.objects.filter(title__icontains=query)
+        all_posts_desc = Post.objects.filter(description__icontains=query)
+        all_posts_cont = Post.objects.filter(content__icontains=query)
+        all_projects = Project.objects.all()
+        all_services = FSProject.objects.all()
+        all_licenses = License.objects.all()
+        all_hall_of_fame = HOF.objects.all()
+        members = TeamMember.objects.filter(is_collab = False)
+        collabs = TeamMember.objects.filter(is_collab = True)
+
+
+    return render(request, 'core/results.html', context)
