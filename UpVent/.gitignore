@@ -6,6 +6,13 @@ __pycache__
 db.sqlite3
 media
 
+# Migrations (For now) #
+blog/migrations/
+contact/migrations/
+core/migrations/
+UpVent/migrations/
+
+
 # Backup files #
 *.bak
 
