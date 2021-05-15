@@ -2,4 +2,131 @@
 {% load static %}
 
 {% block body %}
+    <div class="container mt-5 mb-5">
+        <h1 class="display-3 fw-bold slide-in-left">Resultados de la búsqueda</h1>
+        <hr />
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <h2 class="fw-bold">Testimonios</h2>
+        {% if all_testimonials|length < 1 %}
+            <p>Búsqueda sin resultados</p>
+            Su búsqueda: <i>"{{query}}"</i> no encontró ningún testimonio.
+        {% else %}
+            {% for testimonial in all_testimonials %}
+                <div class="container card mt-2 mb-2 p-2">
+                    <strong class="d-inline-block mb-2 text-primary">Testimonio de: {{testimonial.name}}</strong>
+                    <p class="mb-auto">{{testimonial.testimonial|truncatewords:20|safe}}</p>
+                    <a href="{% url 'index' %}#testimonials" class="stretched-link">Ir a los testimonios</a>
+                    {% if request.user.is_superuser %}
+                        <hr />
+                        <p>Acciones de administrador:</p>
+                        <a class="btn btn-warning" href="{% url 'admin:index' %}"> Editar Testimonios <i class="bi bi-pencil"></i></a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <h2 class="fw-bold">Artículos del Blog</h2>
+        {% if all_posts|length < 1 %}
+            <p>Búsqueda sin resultados</p>
+            Su búsqueda: <i>"{{query}}"</i> no encontró ningún artículo del blog.
+        {% else %}
+            {% for post in all_posts %}
+                <div class="container card mt-2 mb-2 p-2">
+                    <strong class="d-inline-block mb-2 text-primary">{{post.title}}</strong>
+                    <p class="mb-auto">{{post.description|truncatewords:20}}</p>
+                    <a href="{% url 'blog:post' post.slug %}" class="stretched-link">Ir al post</a>
+                    {% if request.user.is_superuser %}
+                        <hr />
+                        <p>Acciones de administrador:</p>
+                        <a class="btn btn-warning" href="{% url 'admin:index' %}"> Editar Posts <i class="bi bi-pencil"></i></a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <h2 class="fw-bold">Proyectos del portafolio</h2>
+        {% if all_projects|length < 1 %}
+            <p>Búsqueda sin resultados</p>
+            Su búsqueda: <i>"{{query}}"</i> no encontró ningún proyecto en el portafolio.
+        {% else %}
+            {% for project in all_projects %}
+                <div class="container card mt-2 mb-2 p-2">
+                    <strong class="d-inline-block mb-2 text-primary">Nombre del proyecto: {{project.title}}</strong>
+                    <p class="mb-auto">{{project.description|truncatewords:20|safe}}</p>
+                    <a href="{{project.site}}" class="stretched-link">Ir al proyecto</a>
+                    {% if request.user.is_superuser %}
+                        <hr />
+                        <p>Acciones de administrador:</p>
+                        <a class="btn btn-warning" href="{% url 'admin:index' %}"> Editar Proyectos del portafolio <i class="bi bi-pencil"></i></a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <h2 class="fw-bold">Proyectos / Servicios de Software Libre</h2>
+        {% if all_services|length < 1 %}
+            <p>Búsqueda sin resultados</p>
+            Su búsqueda: <i>"{{query}}"</i> no encontró ningún proyecto de software libre.
+        {% else %}
+            {% for service in all_services %}
+                <div class="container card mt-2 mb-2 p-2">
+                    <strong class="d-inline-block mb-2 text-primary">Nombre del software/servicio: {{service.title}}</strong>
+                    <p class="mb-auto">{{service.description|truncatewords:20|safe}}</p>
+                    <a href="{{ service.github_addr }}" class="stretched-link">Ir al servicio</a>
+                    {% if request.user.is_superuser %}
+                        <hr />
+                        <p>Acciones de administrador:</p>
+                        <a class="btn btn-warning" href="{% url 'admin:index' %}"> Editar Proyectos de Software Libre <i class="bi bi-pencil"></i></a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <h2 class="fw-bold">Salón de la Fama</h2>
+        {% if all_hall_of_fame|length < 1 %}
+            <p>Búsqueda sin resultados</p>
+            Su búsqueda: <i>"{{query}}"</i> no encontró ningún proyecto del salón de la fama.
+        {% else %}
+            {% for fame in all_hall_of_fame %}
+                <div class="container card mt-2 mb-2 p-2">
+                    <strong class="d-inline-block mb-2 text-primary">Nombre de la tecnología: {{fame.name}}</strong>
+                    {% if request.user.is_superuser %}
+                        <hr />
+                        <p>Acciones de administrador:</p>
+                        <a class="btn btn-warning" href="{% url 'admin:index' %}"> Editar Salón de la Fama <i class="bi bi-pencil"></i></a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <h2 class="fw-bold">Miembros del equipo</h2>
+        {% if all_members|length < 1 %}
+            <p>Búsqueda sin resultados</p>
+            Su búsqueda: <i>"{{query}}"</i> no encontró ningún miembro.
+        {% else %}
+            {% for member in all_members %}
+                <div class="container card mt-2 mb-2 p-2">
+                    <strong class="d-inline-block mb-2 text-primary">Nombre del miembro: {{member.name}}</strong>
+                    <p class="mb-auto">{{member.position}}</p>
+                    {% if request.user.is_superuser %}
+                        <hr />
+                        <p>Acciones de administrador:</p>
+                        <a class="btn btn-warning" href="{% url 'admin:index' %}"> Editar Miembros <i class="bi bi-pencil"></i></a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
 {% endblock %}

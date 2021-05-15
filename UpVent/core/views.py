@@ -142,7 +142,7 @@ def privacy_policy(request):
 # Search field related
 def search(request):
 
-    from Blog.models import Post
+    from blog.models import Post
 
     query = request.GET['search']
 
@@ -151,14 +151,44 @@ def search(request):
     else:
         all_testimonials = Testimonial.objects.filter(name__icontains=query)
         all_posts = Post.objects.filter(title__icontains=query)
-        all_posts_desc = Post.objects.filter(description__icontains=query)
-        all_posts_cont = Post.objects.filter(content__icontains=query)
-        all_projects = Project.objects.all()
-        all_services = FSProject.objects.all()
-        all_licenses = License.objects.all()
-        all_hall_of_fame = HOF.objects.all()
-        members = TeamMember.objects.filter(is_collab = False)
-        collabs = TeamMember.objects.filter(is_collab = True)
+        all_posts = all_posts.filter(status=1)
+        all_projects = Project.objects.filter(title__icontains=query)
+        all_services = FSProject.objects.filter(title__icontains=query)
+        all_hall_of_fame = HOF.objects.filter(name__icontains=query)
+        all_members = TeamMember.objects.filter(name__icontains=query)
 
+    if all_testimonials.count() == 0:
+        messages.warning(request, "No se encontraron testimonios en esta\
+        búsqueda.")
+
+    if all_posts.count() == 0:
+        messages.warning(request, "No se encontró ningún post de blog en esta\
+        búsqueda.")
+
+    if all_projects.count() == 0:
+        messages.warning(request, "No se encontró ningún proyecto en esta\
+        búsqueda.")
+
+    if all_services.count() == 0:
+        messages.warning(request, "No se encontraron proyectos de software\
+        libre en esta búsqueda.")
+
+    if all_hall_of_fame.count() == 0:
+        messages.warning(request, "No se encontraron proyectos del salón de la\
+        fama en esta búsqueda.")
+
+    if all_members.count() == 0:
+        messages.warning(request, "No se encontraron miembros ó colaboradores\
+        en esta búsqueda.")
+
+    context = {
+        'all_testimonials' : all_testimonials,
+        'all_posts' : all_posts,
+        'all_projects' : all_projects,
+        'all_services' : all_services,
+        'all_hall_of_fame' : all_hall_of_fame,
+        'all_members' : all_members,
+        'query': query
+    }
 
     return render(request, 'core/results.html', context)
