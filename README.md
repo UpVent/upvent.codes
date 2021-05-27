@@ -1,8 +1,5 @@
 # UpVent Web Source
 
-## :warning: For development purposes, when this project reaches STABLE we will "redo" the commited migrations. This will be the last time migrations are reset.
-
-
 This is the source code for the UpVent's website under `upvent.codes`.
 
 Development occurs on the `master` branch and new branches are only opened when adding critical/unstable features. The main site is published by upvent making a fork of this project and adding some post-update commits in order to make deployment more secure.
@@ -12,7 +9,7 @@ Development occurs on the `master` branch and new branches are only opened when 
 
 1- Some content is in Spanish(MX), translate it at your own will.
 
-2- There might be dummy content in `master` branch, if you cannot afford to have experimental features in production, please use the `stable` branch instead.
+2- There might be dummy content in `master` branch, if you cannot afford to have experimental features in production, please use the release tags or the `stable` branch instead.
 
 ## Architecture / Stack
 
