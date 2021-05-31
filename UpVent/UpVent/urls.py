@@ -33,6 +33,7 @@ urlpatterns = [
     path('', include('core.urls'), name='index'),
     path('blog/', include('blog.urls', namespace="blog"), name='blog'),
     path('contact/', include('contact.urls', namespace="contact"), name='contact'),
+    path('marketcloud/', include('marketcloud.urls', namespace="marketcloud"), name='marketcloud'),
 ]
 
 admin.site.site_header = "UpVent Admin"
