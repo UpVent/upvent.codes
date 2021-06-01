@@ -147,7 +147,12 @@ def search(request):
     query = request.GET['search']
 
     if len(query) > 80:
+        all_testimonials = Testimonial.objects.none()
         all_posts = Post.objects.none()
+        all_projects = Project.objects.none()
+        all_services = FSProject.objects.none()
+        all_hall_of_fame = HOF.objects.none()
+        all_members = TeamMember.objects.none()
     else:
         all_testimonials = Testimonial.objects.filter(name__icontains=query)
         all_posts = Post.objects.filter(title__icontains=query)
