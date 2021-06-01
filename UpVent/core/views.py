@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
-
+from django.http import HttpResponse
+from django.views.decorators.http import require_GET
 
 from .models import (Testimonial,
                      Project,
@@ -173,3 +174,23 @@ def search(request):
     }
 
     return render(request, 'core/results.html', context)
+
+@require_GET
+def robots_txt(request):
+    """
+        Modify this in production, these URL's are used as an example for
+        forkers. Do this especially if you changed your admin site url.
+    """
+    lines = [
+        "User-Agent: *",
+        "Crawl-delay: 120",
+        "Disallow: /admin/",
+        "Disallow: /administration/",
+        "Disallow: /administrator/",
+        "Disallow: /administrador/",
+        "Disallow: /administracion/",
+        "Disallow: /wp-admin/",
+        "Disallow: /category/",
+        "Disallow: /tag/"
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
