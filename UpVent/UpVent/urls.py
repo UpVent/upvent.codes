@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# Import robots.txt
+from core.views import robots_txt
+
 # Import settings if not imported
 from django.conf import settings
 
@@ -29,6 +32,7 @@ urlpatterns = [
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('wp-admin/', admin.site.urls),
+    path('robots.txt', robots_txt),
     # Main Site URLs
     path('', include('core.urls'), name='index'),
     path('blog/', include('blog.urls', namespace="blog"), name='blog'),

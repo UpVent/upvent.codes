@@ -11,7 +11,6 @@ urlpatterns = [
     path('team/', views.team, name='team'),
     path('privacy-policy/', views.privacy_policy, name='privacy-policy'),
     path('search/', views.search, name='search'),
-    path('robots.txt', views.robots_txt),
 ]
 
 
