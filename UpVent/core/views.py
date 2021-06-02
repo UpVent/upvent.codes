@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.views.decorators.http import require_GET
 
+from blog.models import Post
+
 from .models import (Testimonial,
                      Project,
                      FSProject,
@@ -142,9 +144,6 @@ def privacy_policy(request):
 
 # Search field related
 def search(request):
-
-    from blog.models import Post
-
     query = request.GET['search']
 
     if len(query) > 80:
