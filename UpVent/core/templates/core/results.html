@@ -2,27 +2,31 @@
 {% load static %}
 
 {% block body %}
-    <div class="container mt-5 mb-5">
-        <h1 class="display-3 fw-bold slide-in-left">Resultados de la búsqueda: "{{query}}"</h1>
+    <div class="container text-center mt-5 mb-5">
+        <h1 class="display-5 fw-bold slide-in-left">Resultados de la búsqueda: "{{query}}"</h1>
         <hr />
     </div>
 
     <div class="container mt-5 mb-5">
-        <h2 class="fw-bold">Artículos del Blog</h2>
+        <h2 class="fw-normal">Artículos del Blog</h2>
         {% if all_posts|length < 1 %}
-            <p>Búsqueda sin resultados</p>
-            Su búsqueda: <i>"{{query}}"</i> no encontró ningún artículo del blog.
+            <p class="text-danger fs-5">Búsqueda sin resultados</p>
+            <p>Su búsqueda: <i class="text-muted">"{{query}}"</i> no arrojó ningún resultado.</p>
         {% else %}
             {% for post in all_posts %}
-                <div class="container card mt-2 mb-2 p-2">
-                    <strong class="d-inline-block mb-2 text-primary">{{post.title}}</strong>
-                    <p class="mb-auto">{{post.description|truncatewords:20}}</p>
-                    <a href="{% url 'blog:post' post.slug %}" class="stretched-link">Ir al post</a>
-                    {% if request.user.is_superuser %}
-                        <hr />
-                        <p>Acciones de administrador:</p>
-                        <a class="btn btn-warning" href="{% url 'admin:index' %}"> Editar Posts <i class="bi bi-pencil"></i></a>
-                    {% endif %}
+                <div class="container slide-in-left mt-2 mb-2 p-2">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">{{post.title}}</h5>
+                            <p class="card-text text-muted fst-italic">{{post.description}}</p>
+                            <hr />
+                            <p class="card-text">{{post.content|truncatewords:20|safe}}</p>
+                            <a href="{% url 'blog:post' post.slug %}" class="btn btn-primary">Leer Post <i class="bi bi-book"></i></a>
+                        </div>
+                        <div class="card-footer text-muted">
+                           Última actualización: {{post.updated_on}}
+                        </div>
+                    </div>
                 </div>
             {% endfor %}
         {% endif %}
