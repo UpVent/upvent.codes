@@ -146,29 +146,14 @@ def privacy_policy(request):
 def search(request):
     query = request.GET['search']
 
-    if len(query) > 80:
-        all_testimonials = Testimonial.objects.none()
+    if len(query) > 80 or len(query) < 5:
         all_posts = Post.objects.none()
-        all_projects = Project.objects.none()
-        all_services = FSProject.objects.none()
-        all_hall_of_fame = HOF.objects.none()
-        all_members = TeamMember.objects.none()
     else:
-        all_testimonials = Testimonial.objects.filter(name__icontains=query)
         all_posts = Post.objects.filter(title__icontains=query)
         all_posts = all_posts.filter(status=1)
-        all_projects = Project.objects.filter(title__icontains=query)
-        all_services = FSProject.objects.filter(title__icontains=query)
-        all_hall_of_fame = HOF.objects.filter(name__icontains=query)
-        all_members = TeamMember.objects.filter(name__icontains=query)
 
     context = {
-        'all_testimonials' : all_testimonials,
         'all_posts' : all_posts,
-        'all_projects' : all_projects,
-        'all_services' : all_services,
-        'all_hall_of_fame' : all_hall_of_fame,
-        'all_members' : all_members,
         'query': query
     }
 
