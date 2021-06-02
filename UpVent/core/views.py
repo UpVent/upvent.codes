@@ -186,9 +186,12 @@ def search(request):
 
     return render(request, 'core/results.html', context)
 
+
 @require_GET
 def robots_txt(request):
     """
+        This renders a robots.txt file
+
         Modify this in production, these URL's are used as an example for
         forkers. Do this especially if you changed your admin site url.
     """
