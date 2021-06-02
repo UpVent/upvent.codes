@@ -14,10 +14,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 
 # Import robots.txt
 from core.views import robots_txt
+
+# Import sitemaps
+from core.sitemaps import StaticViewSitemap, BlogSitemap
+
+sitemaps = {
+    'static': StaticViewSitemap,
+    'posts': BlogSitemap,
+}
+
 
 # Import settings if not imported
 from django.conf import settings
@@ -33,6 +43,7 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('wp-admin/', admin.site.urls),
     path('robots.txt', robots_txt),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     # Main Site URLs
     path('', include('core.urls'), name='index'),
     path('blog/', include('blog.urls', namespace="blog"), name='blog'),
