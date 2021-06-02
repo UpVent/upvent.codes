@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
     'django.contrib.sites',
+    'django.contrib.sitemaps',
     'django.contrib.redirects',
     'debug_toolbar',
     'admin_honeypot',
