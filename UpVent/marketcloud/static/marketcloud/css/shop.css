@@ -1,0 +1,5 @@
+.jumbotron {
+    background-image: url('/static/core/img/core-marketcloud.jpg');
+    background-size: cover;
+    height: 600px;
+}
