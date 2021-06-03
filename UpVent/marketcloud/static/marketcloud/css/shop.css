@@ -1,5 +1,7 @@
 .jumbotron {
-    background-image: url('/static/core/img/core-marketcloud.jpg');
+    background: url('/static/marketcloud/img/core-marketplace.png') rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    background-blend-mode: multiply;
+    height: 500px;
 }
