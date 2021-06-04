@@ -51,17 +51,17 @@
     </div>
 
     <div class="container mt-5 mb-5">
-        <div class="row row-cols-5 row-cols-xs-1 row-cols-sm-1 row-cols-md-5 gx-1 gy-3">
+        <div class="row row-cols-5 row-cols-xs-1 row-cols-sm-1 row-cols-md-5 gx-2 gy-3">
             {% for product in products %}
             <div class="col-auto">
-                <div class="card">
+                <div class="card border-0 shadow-sm">
                     <img src="{{product.icon.url}}" height="80" width="80" class="m-2" alt="...">
                     <div class="card-body mt-3">
-                        <h4 class="text-primary text-wrap text-break">{{product.name}}</h4>
+                        <h5 class="text-primary text-wrap text-break">{{product.name}}</h5>
                         <p class="m-0 text-muted">{{product.category}}</p>
                         <p class="m-0 fw-bold">{{product.apptype}}</p>
-                        <p class="small text-muted"><small class="card-text">{{product.short_description|truncatewords:11}}</small></p>
-                        <a href="{% url 'marketcloud:item' product.slug %}" class="btn btn-primary">Comprar <i class="bi bi-cart"></i></a>
+                        <p class="small text-muted text-wrap text-break"><small class="card-text">{{product.short_description|truncatewords:10}}</small></p>
+                        <a href="{% url 'marketcloud:item' product.slug %}" class="btn btn-primary fw-light">Comprar <i class="bi bi-cart"></i></a>
                     </div>
                 </div>
             </div>
