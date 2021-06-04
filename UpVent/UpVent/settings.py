@@ -178,6 +178,3 @@ CKEDITOR_ALLOW_NONIMAGE_FILES = False
 
 # Enforce same origin policy
 X_FRAME_OPTIONS = 'SAMEORIGIN'
-
-# Stripe Configurations
-STRIPE_SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
