@@ -23,16 +23,13 @@ from core.views import robots_txt
 # Import sitemaps
 from core.sitemaps import StaticViewSitemap, BlogSitemap
 
+# Import settings if not imported
+from django.conf import settings
+
 sitemaps = {
     'static': StaticViewSitemap,
     'posts': BlogSitemap,
 }
-
-
-# Import settings if not imported
-from django.conf import settings
-
-import debug_toolbar
 
 urlpatterns = [
     # Special URL's (Mostly admin or managed things)
@@ -46,8 +43,10 @@ urlpatterns = [
     # Main Site URLs
     path('', include('core.urls'), name='index'),
     path('blog/', include('blog.urls', namespace="blog"), name='blog'),
-    path('contact/', include('contact.urls', namespace="contact"), name='contact'),
-    path('marketcloud/', include('marketcloud.urls', namespace="marketcloud"), name='marketcloud'),
+    path('contact/', include('contact.urls', namespace="contact"),
+         name='contact'),
+    path('marketcloud/', include('marketcloud.urls', namespace="marketcloud"),
+         name='marketcloud'),
 ]
 
 admin.site.site_header = "UpVent Admin"
