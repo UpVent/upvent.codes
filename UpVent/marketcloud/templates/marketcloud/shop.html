@@ -51,22 +51,21 @@
     </div>
 
     <div class="container mt-5 mb-5">
-        <div class="row row-cols-6 row-cols-sm-1 row-cols-md-6 g-3">
-            <div class="col">
+        <div class="row row-cols-5 row-cols-xs-1 row-cols-sm-1 row-cols-md-5 gx-1 gy-3">
+            {% for product in products %}
+            <div class="col-auto">
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="{{product.icon.url}}" height="80" width="80" class="m-2" alt="...">
                     <div class="card-body mt-3">
-                        <h4 class="text-primary">Name</h4>
-                        <p class="text-muted">Category</p>
-                        <p class="fw-bold">Application Type</p>
-                        <small class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</small>
+                        <h4 class="text-primary text-wrap text-break">{{product.name}}</h4>
+                        <p class="m-0 text-muted">{{product.category}}</p>
+                        <p class="m-0 fw-bold">{{product.apptype}}</p>
+                        <p class="small text-muted"><small class="card-text">{{product.short_description|truncatewords:11}}</small></p>
                         <a href="#" class="btn btn-primary">Comprar <i class="bi bi-cart"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col">Column</div>
-            <div class="col">Column</div>
-            <div class="col">Column</div>
+            {% endfor %}
         </div>
     </div>
 
