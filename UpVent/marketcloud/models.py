@@ -4,8 +4,8 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Product(models.Model):
 
     STATUS = (
-        (0, "Oculto"),
-        (1, "Publicado")
+        (0, "Agotado"),
+        (1, "Disponible")
     )
 
     icon = models.ImageField(
@@ -68,9 +68,9 @@ class Product(models.Model):
         help_text="Ingrese una descripción detallada del producto."
     )
 
-    coinbase_link = models.URLField(
-        verbose_name="Enlace para pagos con cripto en Coinbase",
-        help_text="Ingrese el enlace para pagos con cripto en coinbase",
+    stripe_link = models.URLField(
+        verbose_name="Enlace para pagos con cripto en Stripe",
+        help_text="Ingrese el enlace para pagos con stipe",
         blank=True
     )
 
