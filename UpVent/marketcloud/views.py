@@ -14,4 +14,11 @@ def MarketCloud(request):
     return render(request, 'marketcloud/shop.html', context)
 
 def Item(request, slug):
-    return render(request, 'marketcloud/product.html')
+
+    products = Product.objects.get(slug=slug)
+
+    context = {
+        'products': products
+    }
+
+    return render(request, 'marketcloud/product.html', context)
