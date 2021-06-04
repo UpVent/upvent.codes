@@ -3,6 +3,11 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 class Product(models.Model):
 
+    STATUS = (
+        (0, "Oculto"),
+        (1, "Publicado")
+    )
+
     icon = models.ImageField(
         verbose_name="Ícono del producto"
     )
@@ -13,6 +18,14 @@ class Product(models.Model):
         unique=True,
         help_text="Ingrese el nombre del producto",
         default="",
+        blank=False
+    )
+
+    slug = models.SlugField(
+        verbose_name="Slug",
+        max_length=200,
+        unique=True,
+        help_text="Campo autogenerado. Modifique de acuerdo a sus necesidades",
         blank=False
     )
 
@@ -53,3 +66,23 @@ class Product(models.Model):
         verbose_name="Descripción detallada del producto",
         help_text="Ingrese una descripción detallada del producto."
     )
+
+    created_on = models.DateTimeField(
+        verbose_name="Creado el: ",
+        auto_now_add=True
+    )
+
+    # Blog publishing status
+    status = models.IntegerField(
+        choices=STATUS,
+        default=0,
+        help_text="Estatus actual del producto"
+    )
+
+    class Meta:
+        ordering = ['created_on']
+        verbose_name = "Producto"
+        verbose_name_plural = "Productos"
+
+    def __str__(self):
+        return self.title
