@@ -31,8 +31,10 @@ class Product(models.Model):
     )
 
     # This is expressed in cents
-    price = models.IntegerField(
+    price = models.DecimalField(
         verbose_name="Precio del Producto",
+        decimal_places=2,
+        max_digits=8,
         help_text="Ingrese el precio del producto. Es recomendable usar solo\
         dos decimales en caso de necesitar el uso de los mismos.",
         default=0
@@ -84,7 +86,7 @@ class Product(models.Model):
         auto_now_add=True
     )
 
-    # Product publishing status
+    # Product inventory status
     status = models.IntegerField(
         choices=STATUS,
         default=0,
