@@ -11,7 +11,7 @@ pillow = "*"
 django-admin-interface = "*"
 docutils = "*"
 django-simple-captcha = "*"
-dj-stripe = "*"
+stripe = "*"
 
 [dev-packages]
 bandit = "*"
