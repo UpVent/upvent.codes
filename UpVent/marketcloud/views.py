@@ -1,7 +1,17 @@
 from django.shortcuts import render
 
-def MarketCloud(request):
-    return render(request, 'marketcloud/shop.html')
+from .models import Product
 
-def Product(request, slug):
+def MarketCloud(request):
+
+    products = Product.objects.filter(status=1).order_by("created_on")
+
+
+    context = {
+        'products': products
+    }
+
+    return render(request, 'marketcloud/shop.html', context)
+
+def Item(request, slug):
     return render(request, 'marketcloud/product.html')
