@@ -68,6 +68,12 @@ class Product(models.Model):
         help_text="Ingrese una descripción detallada del producto."
     )
 
+    coinbase_link = models.URLField(
+        verbose_name="Enlace para pagos con cripto en Coinbase",
+        help_text="Ingrese el enlace para pagos con cripto en coinbase",
+        blank=True
+    )
+
     created_on = models.DateTimeField(
         verbose_name="Creado el: ",
         auto_now_add=True
