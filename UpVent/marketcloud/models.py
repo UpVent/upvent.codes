@@ -9,7 +9,8 @@ class Product(models.Model):
     )
 
     icon = models.ImageField(
-        verbose_name="Ícono del producto"
+        verbose_name="Ícono del producto",
+        upload_to="store"
     )
 
     name = models.CharField(
@@ -29,12 +30,12 @@ class Product(models.Model):
         blank=False
     )
 
-    price = models.DecimalField(
+    # This is expressed in cents
+    price = models.IntegerField(
         verbose_name="Precio del Producto",
-        max_digits=5,
-        decimal_places=2,
         help_text="Ingrese el precio del producto. Es recomendable usar solo\
-        dos decimales en caso de necesitar el uso de los mismos."
+        dos decimales en caso de necesitar el uso de los mismos.",
+        default=0
     )
 
     category = models.CharField(
@@ -72,7 +73,12 @@ class Product(models.Model):
         auto_now_add=True
     )
 
-    # Blog publishing status
+    updated_on = models.DateTimeField(
+        verbose_name="Actualizado el: ",
+        auto_now_add=True
+    )
+
+    # Product publishing status
     status = models.IntegerField(
         choices=STATUS,
         default=0,
@@ -85,4 +91,4 @@ class Product(models.Model):
         verbose_name_plural = "Productos"
 
     def __str__(self):
-        return self.title
+        return self.name
