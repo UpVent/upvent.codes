@@ -8,6 +8,16 @@ from django.conf import settings
 from .forms import ContactForm
 from .models import Contact
 
+import traceback
+
+# Import exceptions from smtp lib
+from smtplib import (
+    SMTPAuthenticationError,
+    SMTPResponseException,
+    SMTPServerDisconnected,
+    SMTPSenderRefused
+    )
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -44,9 +54,42 @@ def contact(request):
                 form = ContactForm
                 return render(request, 'contact/contact.html', {'form': form})
 
-            except Exception as e:
+            except SMTPAuthenticationError as ex:
+                # Error de autenticación por SMTP
+                tb = traceback.format_exc()
+                print(tb)
+                print(ex)
                 messages.error(request, 'Algo salió mal,\
-                tu mensaje no fué enviado.')
+                usuario y contraseña del correo incorrectos\
+                contacta con el adminstrador del sistema y\
+                muéstrale el siguiente error. Error: ' + str(ex))
+                return render(request, 'contact/contact.html', {'form': form})
+
+            except SMTPServerDisconnected as ex:
+                # Error de desconexión del servidor SMTP
+                tb = traceback.format_exc()
+                print(tb)
+                print(ex)
+                messages.error(request, 'La conexión al servidor de correos se\
+                interrumpió. Su mensaje no fue enviado. Error: ' + str(ex))
+                return render(request, 'contact/contact.html', {'form': form})
+
+            except SMTPResponseException as ex:
+                # Error de respuestas generales del servidor SMTP
+                tb = traceback.format_exc()
+                print(tb)
+                print(ex)
+                messages.error(request, 'Algo salió mal,\
+                tu mensaje no fué enviado. Error: ' + str(ex))
+                return render(request, 'contact/contact.html', {'form': form})
+
+            except SMTPSenderRefused as ex:
+                # Error de respuestas generales del servidor SMTP
+                tb = traceback.format_exc()
+                print(tb)
+                print(ex)
+                messages.error(request, 'Algo salió mal,\
+                tu mensaje no fué enviado. Error: ' + str(ex))
                 return render(request, 'contact/contact.html', {'form': form})
 
         else:
