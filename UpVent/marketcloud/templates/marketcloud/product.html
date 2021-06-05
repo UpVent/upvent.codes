@@ -7,24 +7,92 @@
 
 {% block metatags %}
     <!-- Primary Meta Tags -->
-    <title>UpVent - MarketCloud</title>
-    <meta name="title" content="UpVent - MarketCloud">
+    <title>{{product.name}} | UpVent - MarketCloud</title>
+    <meta name="title" content=" {{product.name}} | UpVent - MarketCloud">
     <meta name="description" content="Conoce los últimos productos, soluciones y servicios que UpVent puede ofrecerle a tu negocio.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://upvent.codes/marketcloud/">
-    <meta property="og:title" content="UpVent - MarketCloud">
+    <meta property="og:title" content="{{product.name}} | UpVent - MarketCloud">
     <meta property="og:description" content="Conoce los últimos productos, soluciones y servicios que UpVent puede ofrecerle a tu negocio.">
     <meta property="og:image" content="https://upvent.codes/static/marketcloud/img/core-marketcloud.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://upvent.codes/marketcloud/">
-    <meta property="twitter:title" content="UpVent - MarketCloud">
+    <meta property="twitter:title" content="{{product.name}} | UpVent - MarketCloud">
     <meta property="twitter:description" content="Conoce los últimos productos, soluciones y servicios que UpVent puede ofrecerle a tu negocio.">
     <meta property="twitter:image" content="https://upvent.codes/static/marketcloud/img/core-marketcloud.png">
 {% endblock %}
 
 {% block body %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 mb-2">
+                <section class="mb-2">
+                    <img src="{{product.icon.url}}" height="66" width="66" class="img-thumbnail m-3" alt="" />
+                    <span class="h2 text-primary">{{product.name}}</span>
+
+                    <div class="row align-items-center mb-4">
+                        <div class="col-lg-6 text-center text-lg-start mb-3 m-lg-0">
+                            <p class="badge bg-primary rounded-pill">{{product.category}}</p>
+                        </div>
+
+                        <div class="col-lg-6 text-center text-lg-end">
+                            <span class="badge bg-secondary rounded-pill px-3 me-1">
+                                {{product.apptype}}
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-secondary fw-bold">Descripción</h2>
+                    <p class="text-muted">
+                        {{product.short_description}}
+                    </p>
+                </section>
+
+                <hr />
+
+                <section class="border-bottom">
+                    <p>
+                        {{product.description|safe}}
+                    </p>
+                </section>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <section class="sticky-top" style="top: 80px;">
+                    <section class="text-center border-bottom pb-4 mb-4">
+                        <div class="d-grid gap-2">
+                            <a class="btn btn-lg btn-primary" href="{{product.stripe_link}}" target="_blank">Comprar <i class="bi bi-credit-card ms-2"></i></a>
+                        </div>
+                        <div class="d-flex mt-2 mb-2">
+                            <img class="w-50 mx-auto d-block" src="{% static 'marketcloud/img/stripe.svg' %}" alt="medalla de stripe"/>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h5 class="mb-4">Instrucciones de compra</h5>
+                        <p class="text-muted">
+                            Una vez hecho su pago, recibirá dos correos electrónicos en su bandeja de entrada. De no recibirlos, por favor revise su carpeta de <i>spam</i>.
+                        </p>
+                        <p class="text-muted">
+                            Uno de estos correos será de confirmación incluyendo un recibo de compra.
+                            El segundo correo será su usuario + acceso al sistema de soporte gratuito para clientes de UpVent
+                        </p>
+                        <h5 class="mt-4 mb-4">Detalles de soporte</h5>
+                        <p>Sistema de soporte gratuito para clientes: <a href="https://tickets.upvent.codes">https://tickets.upvent.codes</a></p>
+                        <h5 class="mt-4 mb-4">Enlaces de ayuda</h5>
+                        <ul>
+                            <li><a href="{% url 'privacy-policy' %}">Política de privacidad</a></li>
+                            <li><a>Términos y condiciones de compra + Política de Reembolsos</a></li>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
 {% endblock %}
