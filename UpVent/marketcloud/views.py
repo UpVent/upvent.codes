@@ -15,10 +15,10 @@ def MarketCloud(request):
 
 def Item(request, slug):
 
-    products = Product.objects.get(slug=slug)
+    product = Product.objects.get(slug=slug)
 
     context = {
-        'products': products
+        'product': product
     }
 
     return render(request, 'marketcloud/product.html', context)
