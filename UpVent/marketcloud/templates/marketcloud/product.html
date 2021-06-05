@@ -32,7 +32,7 @@
             <div class="col-md-8 mb-2">
                 <section class="mb-2">
                     <img src="{{product.icon.url}}" height="66" width="66" class="img-thumbnail m-3" alt="" />
-                    <span class="h2 text-primary">{{product.name}}</span>
+                    <span class="h1 text-primary">{{product.name}}</span>
 
                     <div class="row align-items-center mb-4">
                         <div class="col-lg-6 text-center text-lg-start mb-3 m-lg-0">
@@ -67,7 +67,11 @@
                 <section class="sticky-top" style="top: 80px;">
                     <section class="text-center border-bottom pb-4 mb-4">
                         <div class="d-grid gap-2">
-                            <a class="btn btn-lg btn-primary" href="{{product.stripe_link}}" target="_blank">Comprar <i class="bi bi-credit-card ms-2"></i></a>
+                            {% if product.stripe_link is not none %}
+                                <a class="btn btn-lg btn-primary" href="{{product.stripe_link}}" target="_blank">Comprar <i class="bi bi-credit-card ms-2"></i></a>
+                            {% else %}
+                                <a class="btn btn-lg btn-danger" onclick="alert('no mames que agotado dicen');">No disponible <i class="bi bi-bag-x ms-2"></i></a>
+                            {% endif %}
                         </div>
                         <div class="d-flex mt-2 mb-2">
                             <img class="w-50 mx-auto d-block" src="{% static 'marketcloud/img/stripe.svg' %}" alt="medalla de stripe"/>
