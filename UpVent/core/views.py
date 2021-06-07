@@ -114,8 +114,8 @@ def team(request):
         :template:`core/team.html`
     """
 
-    members = TeamMember.objects.filter(is_collab = False)
-    collabs = TeamMember.objects.filter(is_collab = True)
+    members = TeamMember.objects.filter(is_collab=False)
+    collabs = TeamMember.objects.filter(is_collab=True)
 
     context = {
         'members': members,
