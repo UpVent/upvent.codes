@@ -353,7 +353,7 @@ class PrivacyPolicy(models.Model):
     # Override 'save' method to allow only ONE instance for privacy policy
     def save(self, *args, **kwargs):
         if not self.pk and PrivacyPolicy.objects.exists():
-            raise ValidationError('You cannot have more than one privacy policy')
+            raise ValidationError('You cannot have multiple privacy policies')
         return super(PrivacyPolicy, self).save(*args, **kwargs)
 
 # Terms Of Service Model
