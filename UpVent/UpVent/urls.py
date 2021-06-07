@@ -13,7 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# Import settings if not imported
+from django.conf import settings
 from django.contrib import admin
+from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 
@@ -22,9 +25,6 @@ from core.views import robots_txt
 
 # Import sitemaps
 from core.sitemaps import StaticViewSitemap, BlogSitemap
-
-# Import settings if not imported
-from django.conf import settings
 
 sitemaps = {
     'static': StaticViewSitemap,
@@ -55,5 +55,4 @@ admin.site.site_title = "UpVent"
 
 # Special URL's for development
 if settings.DEBUG:
-    from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
