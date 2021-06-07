@@ -11,7 +11,8 @@ from .models import (Testimonial,
                      License,
                      HOF,
                      TeamMember,
-                     PrivacyPolicy)
+                     PrivacyPolicy,
+                     TOS)
 
 # Create your views here.
 def index(request):
@@ -141,6 +142,26 @@ def privacy_policy(request):
 
     policies = PrivacyPolicy.objects.all().first()
     return render(request, 'core/privacy-policy.html', {'policies': policies})
+
+
+def terms_service(request):
+
+    """
+    Display the "terms-of-service" page for this site.
+
+    **Context**
+
+    ``policies``
+        Return the only instance of the :model:`marketcloud.TOS`
+        saved in the database. This model allows ONLY ONE entry policy.
+
+    **Template**
+        :template:`marketcloud/tos.html`
+
+    """
+
+    policies = TOS.objects.all().first()
+    return render(request, 'core/tos.html', {'policies': policies})
 
 # Search field related
 def search(request):
