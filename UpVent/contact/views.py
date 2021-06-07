@@ -1,28 +1,36 @@
+# For stderr logging
+import traceback
+import sys
+
 from django.shortcuts import render
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import send_mail
 from django.contrib import messages
 from django.http import HttpResponse
 
 from django.conf import settings
 
-from .forms import ContactForm
-from .models import Contact
-
-# For stderr logging
-import traceback
-import sys
+from contact.forms import ContactForm
+from contact.models import Contact
 
 # Import exceptions from smtp lib
 from smtplib import (
     SMTPAuthenticationError,
     SMTPResponseException,
     SMTPServerDisconnected,
-    SMTPSenderRefused
     )
 
-
-
 def contact(request):
+
+    """
+    This contact function takes a requests that just renders the contact form
+    under upvent.codes/contact/. However it also renders a response if a
+    POST method is sent. This POST method comes from the contact form rendered
+    in the same page, it consists of a simple form and a captcha verification
+    if the contact form is valid then a mail message will be created and
+    a response to the form sender will be sent via email handling the correct
+    exceptions along the way.
+    """
+
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -60,8 +68,8 @@ def contact(request):
 
             except SMTPAuthenticationError as ex:
                 # Error de autenticación por SMTP
-                tb = traceback.format_exc()
-                print(tb, file=sys.stderr)
+                t_b = traceback.format_exc()
+                print(t_b, file=sys.stderr)
                 print(ex, file=sys.stderr)
                 messages.error(request, 'Algo salió mal,\
                 usuario y contraseña del correo incorrectos\
@@ -71,8 +79,8 @@ def contact(request):
 
             except SMTPServerDisconnected as ex:
                 # Error de desconexión del servidor SMTP
-                tb = traceback.format_exc()
-                print(tb, file=sys.stderr)
+                t_b = traceback.format_exc()
+                print(t_b, file=sys.stderr)
                 print(ex, file=sys.stderr)
                 messages.error(request, 'La conexión al servidor de correos se\
                 interrumpió. Su mensaje no fue enviado. Error: ' + str(ex))
@@ -80,21 +88,13 @@ def contact(request):
 
             except SMTPResponseException as ex:
                 # Error de respuestas generales del servidor SMTP
-                tb = traceback.format_exc()
-                print(tb, file=sys.stderr)
+                t_b = traceback.format_exc()
+                print(t_b, file=sys.stderr)
                 print(ex, file=sys.stderr)
                 messages.error(request, 'Algo salió mal,\
                 tu mensaje no fué enviado. Error: ' + str(ex))
                 return render(request, 'contact/contact.html', {'form': form})
 
-            except SMTPSenderRefused as ex:
-                # Error de respuestas generales del servidor SMTP
-                tb = traceback.format_exc()
-                print(tb, file=sys.stderr)
-                print(ex, file=sys.stderr)
-                messages.error(request, 'Algo salió mal,\
-                tu mensaje no fué enviado. Error: ' + str(ex))
-                return render(request, 'contact/contact.html', {'form': form})
 
         else:
             form = ContactForm(request.POST)
