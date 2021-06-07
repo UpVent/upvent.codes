@@ -1,7 +1,14 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Testimonial, Project, FSProject, License, HOF, TeamMember, PrivacyPolicy
+from .models import (Testimonial,
+                     Project,
+                     FSProject,
+                     License,
+                     HOF,
+                     TeamMember,
+                     PrivacyPolicy,
+                     TOS)
 
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = ('name', 'workplace', 'site')
@@ -35,6 +42,9 @@ class TeamMemberAdmin(admin.ModelAdmin):
 class PolicyAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_on')
 
+class TOSAdmin(admin.ModelAdmin):
+    list_display = ('title', 'created_on')
+
 admin.site.register(Testimonial, TestimonialAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(FSProject, FSProjectAdmin)
@@ -42,3 +52,4 @@ admin.site.register(License, LicenseAdmin)
 admin.site.register(HOF, HOFAdmin)
 admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(PrivacyPolicy, PolicyAdmin)
+admin.site.register(TOS, TOSAdmin)
