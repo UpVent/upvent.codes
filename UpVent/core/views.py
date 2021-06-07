@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.contrib import messages
 from django.http import HttpResponse
 from django.views.decorators.http import require_GET
 
