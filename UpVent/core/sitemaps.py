@@ -23,6 +23,7 @@ class StaticViewSitemap(Sitemap):
             'licenses',
             'team',
             'privacy-policy',
+            'terms-of-service',
         ]
 
     def location(self, item):
