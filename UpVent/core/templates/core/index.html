@@ -137,12 +137,12 @@
         <div id="testimonials" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for testimonial in testimonials %}
                 <div class="col">
-                    <div class="card shadow-sm text-center border-0 border-top border-5 border-primary">
-                        <img class="img-fluid rounded-3 p-2" alt="Imágen de una persona" src="{{testimonial.image.url}}" loading="lazy"/>
-                        <div class="card-body">
-                            <h5 class="fw-bold">{{testimonial.name}}</h5>
+                    <div class="card shadow-sm text-center border-0 border-top border-3 border-primary">
+                        <img class="img-fluid card-img-top p-2" alt="Imágen de una persona" src="{{testimonial.image.url}}" loading="lazy"/>
+                        <div class="card-body mt-3">
+                            <h5 class="fw-normal">{{testimonial.name}}</h5>
                             <hr />
-                            <small class="card-text">{{testimonial.testimonial | safe}}</small>
+                            <p class="card-text text-muted small"><small>{{testimonial.testimonial | safe}}</small><p>
                             <div class="d-flex justify-content-center align-items-center">
                                 <p><a class="btn btn-primary btn-sm bg-upvent text-uppercase text-decoration-none" href="{{testimonial.site}}">{{testimonial.workplace}}</a></p>
                             </div>
