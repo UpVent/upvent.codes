@@ -216,6 +216,7 @@ def robots_txt(request):
         forkers. Do this especially if you changed your admin site url.
     """
     lines = [
+        "Sitemap: https://upvent.codes/sitemap.xml",
         "User-Agent: *",
         "Crawl-delay: 120",
         "Disallow: /admin/",
