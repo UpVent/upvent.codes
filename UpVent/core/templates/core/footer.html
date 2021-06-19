@@ -9,7 +9,7 @@
             <a class="btn btn-primary btn-floating m-1 btn-github" href="https://github.com/UpVent" rel="external" role="button"><i class="fab bi-github"></i></a>
         </section>
 
-        <section>
+        <section class="mt-5">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <div class="container">
@@ -23,23 +23,23 @@
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Enlaces Rápidos</h5>
                     <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="{% url 'index' %}" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> Inicio <i class="bi bi-house"></i></a>
+                        <li class="m-2">
+                            <a href="{% url 'index' %}" class="text-white text-decoration-none">Inicio <i class="bi bi-house"></i></a>
                         </li>
-                        <li>
-                            <a href="{% url 'blog:home' %}" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> Blog <i class="bi bi-pen"></i></a>
+                        <li class="m-2">
+                            <a href="{% url 'blog:home' %}" class="text-white text-decoration-none">Blog <i class="bi bi-pen"></i></a>
                         </li>
-                        <li>
-                            <a href="{% url 'about' %}" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> Nosotros <i class="bi bi-people"></i></a>
+                        <li class="m-2">
+                            <a href="{% url 'about' %}" class="text-white text-decoration-none">Nosotros <i class="bi bi-people"></i></a>
                         </li>
-                        <li>
-                            <a href="{% url 'services' %}" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> Servicios <i class="bi bi-laptop"></i></a>
+                        <li class="m-2">
+                            <a href="{% url 'services' %}" class="text-white text-decoration-none">Servicios <i class="bi bi-laptop"></i></a>
                         </li>
-                        <li>
-                            <a href="{% url 'contact:home' %}" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> Contacto <i class="bi bi-phone"></i></a>
+                        <li class="m-2">
+                            <a href="{% url 'contact:home' %}" class="text-white text-decoration-none">Contacto <i class="bi bi-phone"></i></a>
                         </li>
-                        <li>
-                            <a href="{% url 'marketcloud:home' %}" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> MarketCloud <i class="bi bi-bag"></i></a>
+                        <li class="m-2">
+                            <a href="{% url 'marketcloud:home' %}" class="text-white text-decoration-none">MarketCloud <i class="bi bi-bag"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -47,21 +47,21 @@
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Enlaces Importantes</h5>
                     <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="https://github.com/UpVent" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> Repositorio de Código Libre en GitHub <i class="bi bi-github"></i></a>
+                        <li class="m-2">
+                            <a href="https://github.com/UpVent" class="text-white text-decoration-none">Repositorio de Código Libre en GitHub <i class="bi bi-github"></i></a>
                         </li>
 
-                        <li>
-                            <a href="{% url 'team' %}" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> Equipo <i class="bi bi-diagram-3"></i></a>
+                        <li class="m-2">
+                            <a href="{% url 'team' %}" class="text-white text-decoration-none">Equipo <i class="bi bi-diagram-3"></i></a>
                         </li>
-                        <li>
-                            <a href="{% url 'licenses' %}" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> Licencias <i class="bi bi-journal-text"></i></a>
+                        <li class="m-2">
+                            <a href="{% url 'licenses' %}" class="text-white text-decoration-none">Licencias <i class="bi bi-journal-text"></i></a>
                         </li>
-                        <li>
-                            <a href="https://tickets.upvent.codes" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> Sistema de Soporte <i class="bi bi-info-circle"></i></a>
+                        <li class="m-2">
+                            <a href="https://tickets.upvent.codes" class="text-white text-decoration-none">Sistema de Soporte <i class="bi bi-info-circle"></i></a>
                         </li>
-                        <li>
-                            <a href="#!" class="text-white text-decoration-none"><i class="bi bi-arrow-right"></i> ...Espera más contenido pronto</a>
+                        <li class="m-2">
+                            <a href="#!" class="text-white text-decoration-none">...Espera más contenido pronto</a>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +69,7 @@
         </section>
     </div>
 
-    <div class="container text-center-p-4">
+    <div class="container mt-5 mb-5 text-center-p-4">
         <p class="text-white fs-6">
             El <a href="https://github.com/UpVent/upvent.codes" class="text-white">código fuente</a> de esta página se encuentra bajo la <a class="text-white" href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">Licencia Pública General de GNU versión 2</a>. Excepto donde se indique lo <a class="text-white" href="https://creativecommons.org/policies#license">contrario</a>, el trabajo escrito, blogs, opiniones y parte del contenido visual se encuentra bajo la <a class="text-white" href="https://creativecommons.org/licenses/by-nd/3.0/deed.es">Licencia Creative Commons Atribución-SinDerivadas 3.0 No portada (CC BY-ND 3.0)</a>
         </p>
@@ -77,6 +77,9 @@
 
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © {% now "Y" %} Copyright:
-        <a class="text-white" href="https://upvent.codes/">UpVent Technologies</a> - <a class="text-white" href="{% url 'privacy-policy' %}"> Política de privacidad</a>
+        <a class="text-white" href="https://upvent.codes/">UpVent Technologies</a> -
+        <a class="text-white" href="{% url 'privacy-policy' %}"> Política de privacidad</a> -
+        <a class="text-white" href="{% url 'terms-of-service' %}">Términos y Condiciones del servicio</a> -
+        <a class="text-white" href="https://github.com/UpVent/upvent.codes/issues/new">Reportar un problema con este sitio</a>
     </div>
 </footer>
