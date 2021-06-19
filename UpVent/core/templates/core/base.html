@@ -89,8 +89,10 @@
         {% endblock %}
 
         {% include 'core/footer.html' %}
-
+        <!-- Bootstrap 5 script -->
         <script async defer type="text/javascript" src="{% static 'core/js/bootstrap.bundle.min.js' %}"></script>
+        <!-- schema.org basic script -->
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"UpVent Technologies","url":"https://upvent.codes","address":"Guanajuato, Guanajuato","sameAs":["https://facebook.com/UpVentMX","https://twitter.com/UpVentMX","https://www.linkedin.com/company/upvent-technologies/"]}</script>
         <!-- custom scripts -->
         {% block js %}{% endblock %}
     </body>
