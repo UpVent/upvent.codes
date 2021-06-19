@@ -229,3 +229,10 @@ def robots_txt(request):
         "Disallow: /tag/"
     ]
     return HttpResponse("\n".join(lines), content_type="text/plain")
+
+def page_not_found(request, exception):
+    """
+        This is a customized 404 error page when the server doesn't find
+        any requested page.
+    """
+    return render(request, 'core/404.html', status=404)
