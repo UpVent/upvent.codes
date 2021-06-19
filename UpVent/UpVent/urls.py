@@ -26,6 +26,8 @@ from core.views import robots_txt
 # Import sitemaps
 from core.sitemaps import StaticViewSitemap, BlogSitemap
 
+handler404 = 'core.views.page_not_found'
+
 sitemaps = {
     'static': StaticViewSitemap,
     'posts': BlogSitemap,
