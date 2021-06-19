@@ -12,7 +12,7 @@
                 <h1 class="text-center display-4 mb-3">Nube Inteligente.<br />
                     Para Negocios Inteligentes.
                 </h1>
-                <h4 class="text-center fs-6 mb-3">Desarrollamos soluciones web inteligentes para los negocios Mexicanos.</h4>
+                <p class="h4 text-center fs-6 mb-3">Desarrollamos soluciones web inteligentes para los negocios Mexicanos.</p>
                 <a class="btn btn-light text-upvent" href="#about" role="button">
                     Leer más
                 </a>
@@ -25,7 +25,7 @@
         <b><i class="bi bi-exclamation-triangle"></i> Importante:</b>
             Tu navegador podría estar confundiendo "rastreadores" en este sitio. UpVent no rastrea a sus usuarios con JavaScript malicioso,
             tu navegador podría estar confundiendo las optimizaciones de pagespeed como un rastreador. No temas, estas optimizaciones no nos envían
-        tus datos. Puedes aprender más de estas optimizaciones <a href="https://www.modpagespeed.com/doc/faq#control_beacons">aquí</a> o leyendo nuestra <a href="{% url 'privacy-policy' %}">política de privacidad</a>.
+        tus datos. Puedes aprender más de estas optimizaciones <a href="https://www.modpagespeed.com/doc/faq#control_beacons">en la documentación de PageSpeed</a> o leyendo nuestra <a href="{% url 'privacy-policy' %}">política de privacidad</a>.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
@@ -140,7 +140,7 @@
                     <div class="card shadow-sm text-center border-0 border-top border-3 border-primary">
                         <img class="img-fluid card-img-top p-2" alt="Imágen de una persona" src="{{testimonial.image.url}}" loading="lazy"/>
                         <div class="card-body mt-3">
-                            <h5 class="fw-normal">{{testimonial.name}}</h5>
+                            <p class="h5 fw-normal">{{testimonial.name}}</p>
                             <hr />
                             <p class="card-text text-muted small"><small>{{testimonial.testimonial | safe}}</small><p>
                             <div class="d-flex justify-content-center align-items-center">
@@ -155,7 +155,7 @@
 
     <div class="container mt-5 mb-5">
         <div class="container text-center">
-            <h2 class="fw-bold">Todo lo que hacemos es de código libre</h2>
+            <p class="h2 fw-bold">Todo lo que hacemos es de código libre</p>
             <p class="text-center text-wrap lead">
                 Nuestro modelo de desarrollo consiste totalmente de componentes de código
                 libre y se basa en múltiples principios éticos y prácticos para su conveniencia como empresa.
@@ -174,7 +174,7 @@
     <div class="container mt-5 mb-5">
         <div class="row featurette">
             <div class="col-md-7">
-                <h2>¡Somos Low Cost! <span class="text-muted">¡Siempre!</span></h2>
+                <p class="h2">¡Somos Low Cost! <span class="text-muted">¡Siempre!</span></p>
                 <p class="lead">
                     UpVent ofrece múltiples servicios a las empresas, todos y cada uno de ellos son económicos, sencillos y siguen un riguroso proceso para cumplir con la calidad esperada para nuestros clientes.
                     <br />
@@ -193,7 +193,7 @@
 
         <div class="row">
             <div class="col-md-7 order-md-2">
-                <h2>¡A favor de la educación! <span class="text-muted">Aprenda con nosotros</span></h2>
+                <p class="h2">¡A favor de la educación! <span class="text-muted">Aprenda con nosotros</span></p>
                 <p class="lead">UpVent se fundó con la visión de compartir el conocimiento. Tenemos la promesa de educar de forma abierta y gratuita, llevando el conocimiento de nuestro equipo a todos los individuos que podamos.</p>
                 <a href="{% url 'blog:home' %}">Visite nuestro blog <i class="bi bi-arrow-right"></i></a>
             </div>
@@ -206,7 +206,7 @@
 
         <div class="row">
             <div class="col-md-7">
-                <h2>La estabilidad primero. <span class="text-muted">Puede confiar en UpVent</span></h2>
+                <p class="h2">La estabilidad primero. <span class="text-muted">Puede confiar en UpVent</span></p>
                 <p class="lead">UpVent mejorará constantemente sus tecnologías actuales, siempre procurando la estabilidad por encima de cualquier otra cualidad que podamos ofrecer, esto se hace con el objetivo de fortalecer su relación con los individuos que lo conforman.
                 </p>
                 <a href="{% url 'about' %}">Conozca nuestro ciclo de desarrollo <i class="bi bi-arrow-right"></i></a>
