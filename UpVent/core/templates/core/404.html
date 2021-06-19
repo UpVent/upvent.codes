@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block body %}
+    <div class="container">
+        <div class="container d-flex flex-column">
+            <div class="row align-items-center justify-content-center gx-0 min-vh-100">
+                <div class="col-8 col-md-6 col-lg-7 offset-md-1 order-md-2 mt-auto mt-md-0 pt-8 pb-4 py-md-11">
+                    <img src="{% static 'core/img/error.svg' %}" alt="Imágen mostrando a una persona mirando hacia abajo" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-5 col-lg-4 order-md-1 mb-auto mb-md-0 pb-8 py-md-11">
+                    <h1 class="display-3 fw-bold text-center">
+                        Uh Oh.
+                        <br />
+                        Parece que no pudimos encontrar eso
+                    </h1>
+                    <p class="mb-5 text-center text-muted">
+                        La página que estás buscando no existe o se movió a otra parte.
+                    </p>
+                    <div class="text-center">
+                        <a class="btn btn-primary" href="{% url 'index' %}">
+                            Llévame a un lugar seguro <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
