@@ -46,7 +46,7 @@ class BlogSitemap(Sitemap):
         return Posts
 
     def location(self, item):
-        return '/' + str(item.slug) + '/'
+        return '/blog/' + str(item.slug) + '/'
 
     def lastmod(self, obj):
         return obj.updated_on
@@ -68,7 +68,7 @@ class ProductSitemap(Sitemap):
         return Products
 
     def location(self, item):
-        return '/' + str(item.slug) + '/'
+        return '/marketcloud/' + str(item.slug) + '/'
 
     def lastmod(self, obj):
         return obj.updated_on
