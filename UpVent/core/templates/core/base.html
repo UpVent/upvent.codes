@@ -78,7 +78,9 @@
                         <li class="nav-item">
                             <a {% if request.path == '/marketcloud/' %} class="nav-link active fw-bold" {% else %} class="nav-link" {% endif %} href="{% url 'marketcloud:home' %}">MarketCloud <i class="bi bi-bag"></i></a>
                         </li>
-
+                        <li class="nav-item">
+                            <a {% if request.path == '/education/' %} class="nav-link active fw-bold" {% else %} class="nav-link" {% endif %} href="{% url 'education:home' %}">Educación <i class="bi bi-book"></i></a>
+                        </li>
                     </ul>
                     <form class="d-flex" action="{% url 'search' %}">
                         <input class="form-control me-2" type="search" name="search" placeholder="Buscar en la página..." aria-label="Buscar en la página...">
