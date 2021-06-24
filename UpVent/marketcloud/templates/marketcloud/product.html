@@ -67,9 +67,10 @@
             <div class="col-md-4 mb-4">
                 <section class="sticky-top" style="top: 80px;">
                     <section class="text-center border-bottom pb-4 mb-4">
+                        <p class="h3">${{product.price}} MXN</p>
                         <div class="d-grid gap-2">
                             {% if product.stripe_link is not none %}
-                                <a class="btn btn-lg btn-primary" href="{{product.stripe_link}}" target="_blank">Comprar <i class="bi bi-credit-card ms-2"></i></a>
+                            <a class="btn btn-lg btn-primary" href="{{product.stripe_link}}" target="_blank">Comprar <i class="bi bi-credit-card ms-2"></i></a>
                             {% else %}
                                 <a class="btn btn-lg btn-danger" onclick="alert('no mames que agotado dicen');">No disponible <i class="bi bi-bag-x ms-2"></i></a>
                             {% endif %}
