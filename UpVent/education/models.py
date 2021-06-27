@@ -14,6 +14,14 @@ class Resource(models.Model):
         blank=False
     )
 
+    slug = models.SlugField(
+        verbose_name="Slug",
+        max_length=200,
+        unique=True,
+        help_text="Campo autogenerado. Modifique de acuerdo a sus necesidades",
+        blank=False
+    )
+
     category = models.CharField(
         verbose_name="Categoría",
         max_length=100,
