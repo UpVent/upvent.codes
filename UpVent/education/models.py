@@ -20,7 +20,7 @@ class Resource(models.Model):
         verbose_name="Nombre",
         max_length=100,
         help_text="Ingrese el título del libro",
-        default=Libro,
+        default="",
         blank=False
     )
 
@@ -37,7 +37,7 @@ class Resource(models.Model):
         choices = CATEGORIES,
         max_length=7,
         help_text="Ingrese a que categoría pertenece el recurso",
-        default="",
+        default=Libro,
         blank=False
     )
 
