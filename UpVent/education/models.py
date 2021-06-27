@@ -6,11 +6,21 @@ class Resource(models.Model):
     Stores a single 'Book' model shown in the 'education' url of this site
     """
 
+    Libro = "Libro"
+    Video = "Vídeo"
+    Otro = "Otro"
+
+    CATEGORIES = (
+        (Libro, "Libro"),
+        (Video, "Vídeo"),
+        (Otro, "Otro"),
+    )
+
     title = models.CharField(
         verbose_name="Nombre",
         max_length=100,
         help_text="Ingrese el título del libro",
-        default="",
+        default=Libro,
         blank=False
     )
 
@@ -24,7 +34,8 @@ class Resource(models.Model):
 
     category = models.CharField(
         verbose_name="Categoría",
-        max_length=100,
+        choices = CATEGORIES,
+        max_length=7,
         help_text="Ingrese a que categoría pertenece el recurso",
         default="",
         blank=False
