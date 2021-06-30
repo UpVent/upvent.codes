@@ -1,7 +1,5 @@
 from http import HTTPStatus
 from django.test import TestCase
-import string
-import random
 
 # Test Core Pages
 class CorePagesTests(TestCase):
