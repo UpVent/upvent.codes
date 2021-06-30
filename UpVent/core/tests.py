@@ -1,5 +1,7 @@
 from http import HTTPStatus
 from django.test import TestCase
+import string
+import random
 
 # Test Core Pages
 class CorePagesTests(TestCase):
@@ -37,6 +39,11 @@ class CorePagesTests(TestCase):
         self.assertEqual(response301.status_code, HTTPStatus.MOVED_PERMANENTLY)
         self.assertEqual(response.status_code, HTTPStatus.OK)
 
+    def test_team(self):
+        response = self.client.get("/team/")
+        response301 = self.client.get("/team")
+        self.assertEqual(response301.status_code, HTTPStatus.MOVED_PERMANENTLY)
+        self.assertEqual(response.status_code, HTTPStatus.OK)
 
 # Robots.txt test
 class RobotsTxtTests(TestCase):
