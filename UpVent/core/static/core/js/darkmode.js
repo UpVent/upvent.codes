@@ -6,9 +6,13 @@ let isLight = true;
 
 function modeSwitch() {
   isLight = !isLight;
+
+  if (!isLight) {
+    alert("El modo oscuro es experimental y puede contener errores");
+  }
+
   isLight ? toggle.innerText = "🌞" : toggle.innerText = "🌚";
   var rootElement = document.body;
-
   /* ==== Dark Mode Actions ==== */
 
   /* Remove dark-text class */
