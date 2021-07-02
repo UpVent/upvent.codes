@@ -34,7 +34,7 @@
         <!-- Material Bootstrap stylesheet -->
         <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}" type="text/css" media="screen"/>
         <!-- Custom stylesheet for this page -->
-        <link rel="stylesheet" href="{% static 'core/css/base-min.css' %}" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="{% static 'core/css/base.css' %}" type="text/css" media="screen"/>
         <!-- Bootstrap icons-->
         <link rel="stylesheet" href="{% static 'core/css/bootstrap-icons.css' %}" type="text/css" media="screen"/>
         <!-- Google Fonts -->
@@ -78,6 +78,8 @@
         <!-- schema.org basic script -->
         <script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"UpVent Technologies","url":"https://upvent.codes","address":"Guanajuato, Guanajuato","sameAs":["https://facebook.com/UpVentMX","https://twitter.com/UpVentMX","https://www.linkedin.com/company/upvent-technologies/","https://www.instagram.com/UpVentMX/"]}</script>
         <!-- custom scripts -->
-        {% block js %}{% endblock %}
+        {% block js %}
+            <script type="text/javascript" src="{% static 'core/js/darkmode.js' %}"></script>
+        {% endblock %}
     </body>
 </html>

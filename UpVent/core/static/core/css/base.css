@@ -11,6 +11,10 @@ body {
   font-display: swap;
 }
 
+.card-dark {
+  background-color: #181A1B;
+}
+
 /* Custom Colors */
 
 .bg-gray {

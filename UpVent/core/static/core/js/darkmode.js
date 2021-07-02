@@ -8,10 +8,19 @@ function modeSwitch() {
   isLight = !isLight;
   isLight ? toggle.innerText = "🌞" : toggle.innerText = "🌚";
   var rootElement = document.body;
+
+  /* ==== Dark Mode Actions ==== */
+
+  /* Remove dark-text class */
+  rootElement.classList.remove("text-dark");
   /* Toggle dark body class in order to make body dark coloured */
   rootElement.classList.toggle("body-dark");
+  /* Untoggle opposite text classes */
+  rootElement.classList.toggle("text-light");
+
+  /* CARD class change */
+  document.querySelectorAll('.card').forEach(item => {
+    item.classList.add('card-dark');
+  });
 }
-
-
-
 // @license-end
