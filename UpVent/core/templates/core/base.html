@@ -66,13 +66,12 @@
 
             <div class="text-end me-auto ms-auto mx-auto">
                 <button id="toggledm" type="button" class="btn btn-dark" title="Modo Oscuro">🌞</button>
-                <button type="button" class="btn btn-light border" title="Modo daltonismo">👁</button>
+                <button type="button" class="btn btn-light border" title="Modo daltonismo" onclick="alert('Los colores para usuarios dalónicos aún no están listos')">👁</button>
                 <noscript class="small text-muted text-wrap text-break">El modo oscuro / colores para daltonismo solo están disponibles usando JavaScript</noscript>
             </div>
         </header>
         {% block body %}
         {% endblock %}
-
         {% include 'core/footer.html' %}
         <!-- Bootstrap 5 script -->
         <script async defer type="text/javascript" src="{% static 'core/js/bootstrap.bundle.min.js' %}"></script>
