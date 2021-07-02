@@ -9,12 +9,15 @@
     <div class="p-5 text-center bg-image jumbotron">
         <div class="d-flex justify-content-center align-items-center m-5 h-100">
             <div class="text-dark">
-                <h1 class="text-center display-4 mb-3 slide-in-right">Nube Inteligente.<br />
+                <h1 class="text-center display-4 mb-3 slide-in-right">Sitios Inteligentes.<br />
                     Para Negocios Inteligentes.
                 </h1>
-                <p class="h4 text-center fs-6 mb-3 slide-in-left">Desarrollamos soluciones web inteligentes para los negocios Mexicanos.</p>
-                <a class="btn btn-primary" href="#about" role="button">
-                    Leer más
+                <p class="h4 text-center fs-6 mb-3 slide-in-left">Desarrollamos software inteligente para los negocios Mexicanos.</p>
+                <a class="btn btn-primary" href="{% url 'services' %}" role="button">
+                    Ver todos los servicios <i class="bi bi-arrow-right"></i>
+                </a>
+                <a class="btn btn-secondary" href="#about" role="button">
+                    Conocer UpVent
                 </a>
             </div>
         </div>
@@ -23,13 +26,12 @@
 
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <b><i class="bi bi-exclamation-triangle"></i> Importante:</b>
-            Tu navegador podría estar confundiendo "rastreadores" en este sitio. UpVent no rastrea a sus usuarios con JavaScript malicioso,
-            tu navegador podría estar confundiendo las optimizaciones de pagespeed como un rastreador. No temas, estas optimizaciones no nos envían
-        tus datos. Puedes aprender más de estas optimizaciones <a href="https://www.modpagespeed.com/doc/faq#control_beacons">en la documentación de PageSpeed</a> o leyendo nuestra <a href="{% url 'privacy-policy' %}">política de privacidad</a>.
+        UpVent no rastrea a sus usuarios con JavaScript malicioso, tu navegador podría estar confundiendo nuestras optimizaciones como un rastreador.
+        Dichas optimizaciones no comprometen tus datos. Puedes aprender más de estas optimizaciones leyendo nuestra <a href="{% url 'privacy-policy' %}">política de privacidad</a>.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
-    <section class="pt-8 pt-md-10" id="about">
+    <section class="pt-8 pt-md-10 border-top" id="about">
         <div class="container mt-5 mb-5">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8 text-center">
