@@ -4,6 +4,13 @@ body {
   font-display: swap;
 }
 
+/* Dark Mode Classes */
+.body-dark {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1B1D1E;
+  font-display: swap;
+}
+
 /* Custom Colors */
 
 .bg-gray {
