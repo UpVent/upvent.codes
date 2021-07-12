@@ -1,6 +1,28 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
+{% block metatags %}
+    <!-- Primary Meta Tags -->
+    <title>UpVent - Equipo</title>
+    <meta name="title" content="UpVent - Equipo">
+    <meta name="description" content="Conoce al equipo que hace de UpVent una realidad para todos">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://upvent.codes/team/">
+    <meta property="og:title" content="UpVent - Equipo">
+    <meta property="og:description" content="Conoce al equipo que hace de UpVent una realidad para todos">
+    <meta property="og:image" content="https://upvent.codes/static/core/img/core-services.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@UpVentMX">
+    <meta property="twitter:creator" content="@UpVentMX">
+    <meta property="twitter:title" content="UpVent - Equipo">
+    <meta property="twitter:description" content="Conoce al equipo que hace de UpVent una realidad para todos">
+    <meta property="twitter:image" content="https://upvent.codes/static/core/img/core-services.jpg">
+{% endblock %}
+
 {% block body %}
     <div class="container mt-5 mb-5">
         <div class="row text-center justify-content-center">

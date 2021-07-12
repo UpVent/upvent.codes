@@ -1,5 +1,26 @@
 {% extends 'core/base.html' %}
 {% load static %}
+{% block metatags %}
+    <!-- Primary Meta Tags -->
+    <title>Error - 404. Página no encontrada.</title>
+    <meta name="title" content="Error - 404. Página no encontrada.">
+    <meta name="description" content="La página que está solicitando no está disponible, fue eliminada o fue movida a otro sitio.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://upvent.codes/404/">
+    <meta property="og:title" content="Error - 404. Página no encontrada.">
+    <meta property="og:description" content="La página que está solicitando no está disponible, fue eliminada o fue movida a otro sitio.">
+    <meta property="og:image" content="https://upvent.codes/static/core/img/upvent-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@UpVentMX">
+    <meta property="twitter:creator" content="@UpVentMX">
+    <meta property="twitter:title" content="Error - 404. Página no encontrada.">
+    <meta property="twitter:description" content="La página que está solicitando no está disponible, fue eliminada o fue movida a otro sitio.">
+    <meta property="twitter:image" content="https://upvent.codes/static/core/img/upvent-logo.png">
+{% endblock %}
 {% block body %}
     <div class="container">
         <div class="container d-flex flex-column">
