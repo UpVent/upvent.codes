@@ -61,11 +61,6 @@
                 <li><a {% if request.path == '/marketcloud/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'marketcloud:home' %}">MarketCloud <i class="bi bi-bag"></i></a></li>
                 <li><a {% if request.path == '/education/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'education:home' %}">Educación <i class="bi bi-book"></i></a></li>
             </ul>
-
-            <form action="{% url 'search' %}" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                <input class="form-control me-2" type="search" name="search" placeholder="Buscar en la página..." aria-label="Buscar en la página...">
-            </form>
-
             <div class="text-end me-auto ms-auto mx-auto">
                 <button id="toggledm" type="button" class="btn btn-dark" title="Modo Oscuro">🌞</button>
                 <button type="button" class="btn btn-light border" title="Modo daltonismo" onclick="alert('Los colores para usuarios dalónicos aún no están listos')">👁</button>

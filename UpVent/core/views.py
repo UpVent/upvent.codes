@@ -162,51 +162,6 @@ def terms_service(request):
     policies = TOS.objects.all().first()
     return render(request, 'core/tos.html', {'policies': policies})
 
-# Search field related
-def search(request):
-
-    """
-    Display the "results" page when users search on this site.
-
-    **Context**
-
-    ``all_posts``
-        Return all instances os the :model:`blog.Post` saved in the database.
-        This result may vary depending on the user query and it's results when
-        sending their desired search term.
-
-        If the query length is too long (>80 chars) or too small (<5 chars) the
-        query won't return any objects. If the query length is valid then
-        we will query all blog posts whose title may contain the same query
-        chars, we apply a second filter to show only those posts who have
-        been marked as "Published" to prevent spoiling our audience
-
-    ``query``
-        Returns the same query the user made, this is used for database queries
-        and decoration purposes on the results html template so users know
-        what in the world they searched for.
-
-    **Template**
-        :template:`core/results.html`
-
-    """
-
-    query = request.GET['search']
-
-    if len(query) > 80 or len(query) < 5:
-        all_posts = Post.objects.none()
-    else:
-        all_posts = Post.objects.filter(title__icontains=query)
-        all_posts = all_posts.filter(status=1)
-
-    context = {
-        'all_posts' : all_posts,
-        'query': query
-    }
-
-    return render(request, 'core/results.html', context)
-
-
 @require_GET
 def robots_txt(request):
     """
