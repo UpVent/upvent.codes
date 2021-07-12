@@ -38,7 +38,7 @@
 
     <hr />
 
-    <div class="container mt-5 bg-r">
+    <section class="container mt-5 bg-r">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-5">
                 <h2>Consulte nuestras plataformas</h2>
@@ -122,6 +122,13 @@
 
                         <div class="col">
                             {{ form.reason }}
+                            <datalist id="reasons">
+                                <option value="Solicitar una cotización"></option>
+                                <option value="Contribuir a la sección de educación"></option>
+                                <option value="Reportar un error"></option>
+                                <option value="Solicitar el paquete Enterprise"></option>
+                                <option value="Contacto para negocios"></option>
+                            </datalist>
                             <ul>
                                 {% for error in form.errors.reason%}
                                     <li class="text-danger">{{error}}</li>
@@ -160,6 +167,6 @@
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 </main>
 {% endblock %}

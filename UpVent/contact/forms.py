@@ -71,7 +71,8 @@ class ContactForm(forms.ModelForm):
                     'class': 'form-control',
                     'placeholder': 'Razón de contacto',
                     'required': True,
-                    'id': 'reason'
+                    'id': 'reason',
+                    'list': 'reasons'
                 }
             ),
 
