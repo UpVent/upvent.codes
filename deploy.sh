@@ -37,7 +37,11 @@ being $os or your distribution being $distro, cannot proceed."
 
 # ==== Check for Dependencies ====
 function check_deps() {
-    echo "TODO"
+    for name in python3 pipenv
+    do
+        [[ $(which $name 2>/dev/null) ]] || { echo -en "[\e[31mERROR\e[39m] $name was not found";deps=1; }
+    done
+    [[ $deps -ne 1 ]] && echo -e "[\e[92mOK\e[39m] All dependencies are installed." || { echo -en "\nInstall the missing dependencies and rerun this script\n";exit 1; }
 }
 
 # ==== Main function ====
