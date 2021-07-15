@@ -1,11 +1,20 @@
 #!/usr/bin/env bash
 
+# ==== Check user and environment ====
+function check_user() {
+    if [[ $EUID -ne 0 ]]; then
+        echo -e "[\e[92mOK\e[39m] Not running as root"
+    else
+        echo -e "[\e[33mWARNING\e[39m] You really shouldn't be running this as root..."
+    fi
+}
+
 # ==== Check compatibility ====
 function check_compat() {
 
     # Check for ostype
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        echo -e "[\e[92mOK\e[39m] Gnu/Linux OS detected"
+        echo -e "[\e[92mOK\e[39m] gnu/linux os detected"
         os="linux"
     else
         echo -e "[\e[31mERROR\e[39m] Sorry, non Gnu/Linux OS are not supported"
@@ -48,6 +57,10 @@ function check_deps() {
 function main() {
     clear
     echo -e "\e[34mhttps://upvent.codes\e[39m deployment script - UpVent Codes 2021"
+    echo "------------------------------------------------------------------"
+    echo "Checking running user and privileges"
+    echo "------------------------------------------------------------------"
+    check_user;
     echo "------------------------------------------------------------------"
     echo "Checking for compatibility [OS and Distribution]"
     echo "------------------------------------------------------------------"
