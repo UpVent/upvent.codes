@@ -187,7 +187,21 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <img class="slide-in-right img-fluid rounded-3 shadow" src="{% static 'core/img/coins.jpg' %}" alt="Imágen mostrando unas monedas y un bolígrafo" loading="lazy"/>
+                <picture>
+                    <img
+                        class="slide-in-right img-fluid rounded-3 shadow"
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        srcset="
+                               {% static 'core/img/coins1.jpg' %} 200w,
+                               {% static 'core/img/coins2.jpg' %} 544w,
+                               {% static 'core/img/coins3.jpg' %} 787w,
+                               {% static 'core/img/coins4.jpg' %} 1011w,
+                               {% static 'core/img/coins.jpg' %} 1280w"
+                        src="{% static 'core/img/coins.jpg' %}"
+                        alt="Foto mostrando unas monedas y un bolígrafo"
+                        loading="lazy">
+                </picture>
+
             </div>
         </div>
 
