@@ -214,7 +214,19 @@
                 <a href="{% url 'blog:home' %}">Visite nuestro blog <i class="bi bi-arrow-right"></i></a>
             </div>
             <div class="col-md-5 order-md-1">
-                <img class="img-fluid rounded-3 shadow" src="{% static 'core/img/education.jpg' %}" alt="Imágen mostrando una persona estudiando" loading="lazy"/>
+                <picture>
+                    <img
+                        class="img-fluid rounded-3 shadow"
+                        sizes="(max-width: 1400px) 100vw, 1400px"
+                        srcset="
+                               {% static 'core/img/education1.jpg' %} 200w,
+                               {% static 'core/img/education2.jpg' %} 796w,
+                               {% static 'core/img/education3.jpg' %} 1245w,
+                               {% static 'core/img/education.jpg' %} 1400w"
+                        src="{% static 'core/img/education.jpg' %}"
+                        alt="Imágen mostrando a una persona leyendo un libro, sentada debajo de un árbol"
+                        loading="lazy">
+                </picture>
             </div>
         </div>
 
