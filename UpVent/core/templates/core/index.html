@@ -240,7 +240,19 @@
                 <a href="{% url 'about' %}">Conozca nuestro ciclo de desarrollo <i class="bi bi-arrow-right"></i></a>
             </div>
             <div class="col-md-5">
-                <img class="img-fluid rounded-3 shadow" src="{% static 'core/img/brain.jpg' %}" alt="Imágen mostrando un cerebro y engranajes" loading="lazy"/>
+                <picture>
+                    <img
+                        class="img-fluid rounded-3 shadow"
+                        sizes="(max-width: 1200px) 100vw, 1200px"
+                        srcset="
+                               {% static 'core/img/brain1.jpg' %} 200w,
+                               {% static 'core/img/brain2.jpg' %} 636w,
+                               {% static 'core/img/brain3.jpg' %} 943w,
+                               {% static 'core/img/brain.jpg' %} 1200w"
+                        src="{% static 'core/img/brain.jpg' %}"
+                        alt="Imágen mostrando un cerebro y una bombilla de fondo"
+                        loading="lazy">
+                </picture>
             </div>
         </div>
     </div>
