@@ -105,7 +105,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-md-5 col-lg-6 order-md-2">
-                    <img src="{% static 'core/img/work-desk.svg' %}" alt="..." class="img-fluid" loading="lazy">
+                    <img src="{% static 'core/img/work-desk.svg' %}" height="252" width="446" alt="..." class="img-fluid" loading="lazy">
                 </div>
                 <div class="col-12 col-md-7 col-lg-6 order-md-1">
                     <h2>
@@ -134,7 +134,7 @@
                     <div class="text-center border-0">
                         <img class="mx-auto d-block border-0 rounded-circle testimonial-person" height="200" width="200" alt="Imágen de una persona" src="{{testimonial.image.url}}" loading="lazy"/>
                         <div class="container mt-1">
-                            <p class="h5 mt-2 fw-normal">{{testimonial.name}}</p>
+                            <p class="h5 mt-2 fw-bold">{{testimonial.name}}</p>
                             <hr />
                             <p class="card-text text-muted small"><small>{{testimonial.testimonial | safe}}</small><p>
                             <div class="d-flex justify-content-center align-items-center">
@@ -153,7 +153,7 @@
         </div>
     </section>
 
-    <div class="container mt-5 mb-5">
+    <section class="container mt-5 mb-5">
         <div class="container text-center">
             <p class="h2 fw-bold">Todo lo que hacemos es de código libre</p>
             <p class="text-center text-wrap lead">
@@ -164,14 +164,14 @@
             </p>
             <a href="{% url 'licenses' %}">Explore las tecnologías usadas en UpVent <i class="bi bi-arrow-right"></i></a>
         </div>
-    </div>
+    </section>
 
     <div class="container text-center mt5 mb-5">
         <h1>Beneficios</h1>
         <p>Conozca los beneficios que UpVent tiene para usted y su empresa</p>
     </div>
 
-    <div class="container mt-5 mb-5">
+    <section class="container mt-5 mb-5">
         <div class="row featurette">
             <div class="col-md-7">
                 <p class="h2">¡Somos Low Cost! <span class="text-muted">¡Siempre!</span></p>
@@ -253,9 +253,9 @@
                 </picture>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="px-4 py-5 my-5 text-center">
+    <section class="px-4 py-5 my-5 text-center">
         <img class="d-block mx-auto mb-4 rounded-circle shadow" src="{% static 'core/img/upvent-logo.png' %}" alt="Logo de UpVent circular" width="100" height="100" loading="lazy"/>
         <h1 class="display-5 fw-bold">Comenzar a trabajar con UpVent...</h1>
         <div class="col-lg-6 mx-auto">
@@ -265,5 +265,5 @@
                 <a href="{% url 'contact:home' %}" class="btn btn-outline-primary btn-lg px-4">Contactar con ventas <i class="bi bi-headset"></i></a>
             </div>
         </div>
-    </div>
+    </section>
 {% endblock %}
