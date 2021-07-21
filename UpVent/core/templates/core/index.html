@@ -120,7 +120,7 @@
         </div>
     </section>
 
-    <div class="container mt-5 mb-5">
+    <section class="container mt-5 mb-5">
         <div class="container mb-5">
             <h2 class="text-center">Testimonios</h2>
             <p class="text-muted text-center">
@@ -131,10 +131,10 @@
         <div id="testimonials" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for testimonial in testimonials %}
                 <div class="col">
-                    <div class="card shadow-sm text-center border-0 border-top border-3 border-primary">
-                        <img class="img-fluid card-img-top p-2" alt="Imágen de una persona" src="{{testimonial.image.url}}" loading="lazy"/>
-                        <div class="card-body mt-3">
-                            <p class="h5 fw-normal">{{testimonial.name}}</p>
+                    <div class="text-center border-0">
+                        <img class="mx-auto d-block border-0 rounded-circle testimonial-person" height="200" width="200" alt="Imágen de una persona" src="{{testimonial.image.url}}" loading="lazy"/>
+                        <div class="container mt-1">
+                            <p class="h5 mt-2 fw-normal">{{testimonial.name}}</p>
                             <hr />
                             <p class="card-text text-muted small"><small>{{testimonial.testimonial | safe}}</small><p>
                             <div class="d-flex justify-content-center align-items-center">
@@ -151,7 +151,7 @@
                 </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
 
     <div class="container mt-5 mb-5">
         <div class="container text-center">
