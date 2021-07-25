@@ -1,10 +1,8 @@
 {% extends 'core/base.html' %}
 {% load static %}
-
 {% block css %}
     <link rel="stylesheet" href="{% static 'marketcloud/css/shop.css' %}" type="text/css" media="screen" />
 {% endblock %}
-
 {% block metatags %}
     <!-- Primary Meta Tags -->
     <title>UpVent - MarketCloud. La tienda oficial de UpVent para desarrolladores y empresarios.</title>
@@ -26,9 +24,8 @@
     <meta property="twitter:description" content="Conoce los últimos productos, soluciones y servicios que UpVent puede ofrecerle a tu negocio.">
     <meta property="twitter:image" content="https://upvent.codes/static/core/img/core-marketplace.png">
 {% endblock %}
-
 {% block body %}
-    <div class="p-5 text-center bg-image jumbotron">
+    <section class="p-5 text-center bg-image jumbotron">
         <div class="d-flex justify-content-center align-items-center m-5 h-100">
             <div class="text-white">
                 <h1 class="text-center display-3 mb-3">
@@ -42,21 +39,19 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </section>
     <!-- Products  -->
-
-    <div class="container mt-5 mb-5">
+    <section class="container mt-5 mb-5">
         <p class="h4">Selecciones del editor</p>
         <hr />
-    </div>
+    </section>
 
-    <div class="container mt-5 mb-5">
+    <section class="container mt-5 mb-5">
         <div class="row row-cols-5 row-cols-xs-1 row-cols-sm-1 row-cols-md-5 gx-2 gy-3">
             {% for product in products %}
             <div class="col-auto">
-                <div class="card border-0 shadow-sm">
-                    <img src="{{product.icon.url}}" height="80" width="80" class="m-2" alt="...">
+                <article class="card border-0 shadow-sm">
+                    <img class="rounded-3 img-thumbnail m-1" src="{{product.icon.url}}" height="80" width="80" class="m-2" alt="{{product.name}}">
                     <div class="card-body mt-3">
                         <p class="h5 text-primary text-wrap text-break">{{product.name}}</p>
                         <p class="m-0 text-muted">{{product.category}}</p>
@@ -64,10 +59,9 @@
                         <p class="small text-muted text-wrap text-break"><small class="card-text">{{product.short_description|truncatewords:10}}</small></p>
                         <a href="{% url 'marketcloud:item' product.slug %}" class="btn btn-primary stretched-link fw-light">Comprar <i class="bi bi-cart"></i></a>
                     </div>
-                </div>
+                </article>
             </div>
             {% endfor %}
         </div>
-    </div>
-
+    </section>
 {% endblock %}

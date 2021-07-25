@@ -1,6 +1,5 @@
 {% extends 'core/base.html' %}
 {% load static %}
-
 {% block metatags %}
     <!-- Primary Meta Tags -->
     <title>UpVent - Contacto</title>
@@ -22,23 +21,20 @@
     <meta property="twitter:description" content="¿Necesita asesoramiento o enviarnos un mensaje? En la siguiente página podrá encontrar más información para comunicarse con nosotros.">
     <meta property="twitter:image" content="https://upvent.codes/static/core/img/core-services.jpg">
 {% endblock %}
-
 {% block body %}
 <main class="my-5">
     <div class="container">
         <div class="container">
             <div class="row text-left">
                 <div class="col-8">
-                    <h1>Contacto</h1>
+                    <h1>Contacto <i class="bi bi-envelope"></i></h1>
                     <p class="lead">Siempre queremos escuchar de usted. Háganos saber en que podemos mejorar o que podemos hacer por usted en cualquier momento, en cualquier lugar.</p>
                     <small class="small text-muted">* Los correos electrónicos pueden tardar hasta 12 horas en ser respondidos, bajo el horario: GMT-5</small>
                 </div>
             </div>
         </div>
     </div>
-
     <hr />
-
     <section class="container mt-5 bg-r">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-5">
@@ -67,7 +63,6 @@
                         <p>{{ message }}</p>
                     </div>
                 {% endfor %}
-
                 <form class="border-0 rounded-3 shadow-sm rounded-3 p-3 m-5" action="" method="POST" id="form">
                     {% csrf_token %}
                     <div class="row">
@@ -88,7 +83,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="row mt-4">
                         <div class="col">
                             {{ form.company_name }}
@@ -99,7 +93,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="row mt-4">
                         <div class="col">
                             {{ form.email }}
@@ -110,7 +103,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="row mt-4">
                         <div class="col">
                             {{ form.phone }}
@@ -120,7 +112,6 @@
                                 {% endfor %}
                             </ul>
                         </div>
-
                         <div class="col">
                             {{ form.reason }}
                             <datalist id="reasons">
@@ -137,7 +128,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="row mt-4">
                         <div class="col">
                             {{ form.message }}
@@ -148,7 +138,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="row mt-4">
                         <div class="col">
                             {{ form.captcha }}
@@ -159,7 +148,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="row mt-4">
                         <div class="col">
                             <button type="submit" class="btn btn-lg bg-upvent text-white">Enviar <i class="bi bi-envelope-fill"></i></button>
