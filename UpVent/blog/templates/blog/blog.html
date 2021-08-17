@@ -1,5 +1,10 @@
 {% extends 'core/base.html' %}
 {% load static %}
+
+{% block css %}
+    <link type="text/css" rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
 {% block metatags %}
     <!-- Primary Meta Tags -->
     <title>UpVent - El Blog Oficial de UpVent Technologies.</title>
@@ -34,6 +39,20 @@
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Apoyar <i class="bi bi-bookmark-heart"></i></button>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Compartir <i class="bi bi-share-fill"></i></button>
+        </div>
+
+        <div class="raw my-4">
+            <div class="col-12 justify-content-center">
+                <form id="search-form" action="{% url 'blog:blog-search' %}">
+                    {% csrf_token %}
+                    <div class="input-group" id="search-group">
+                        <i class="bi bi-search input-group-text"></i>
+                        <input type="text" class="form-control" id="search-input" placeholder="Busca por titulo">
+                    </div>
+                </form>
+                <div id="search-results">
+                </div>
+            </div>
         </div>
 
         <!-- "Apoyar" Modal -->
@@ -93,10 +112,9 @@
                                     <p class="h5 card-title fw-bold">{{ post.title }}</p>
                                     <span class="badge rounded-pill bg-primary">Categoría: {{post.category}}</span>
                                     <hr />
-                                    <p class="card-text text-muted fw-light">
+                                    <p class="card-text text-muted fw-light pt-2 pb-3">
                                         {{post.description|truncatewords:30}}
                                     </p>
-                                    <hr />
                                     <a href="{% url 'blog:post' post.slug %}" class="btn btn-primary stretched-link mt-2">Leer más... <i class="bi bi-book"></i></a>
                                 </div>
                             </div>
@@ -131,4 +149,8 @@
             </nav>
         </div>
     </main>
+{% endblock %}
+
+{% block js %}
+    <script async defer type="text/javascript" src="{% static 'blog/js/blog.js' %}"></script>
 {% endblock %}

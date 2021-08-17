@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
-
+from django.http import JsonResponse
 
 from .models import Post
 
@@ -53,3 +53,15 @@ def BlogEntry(request, slug):
     }
 
     return render(request, 'blog/article.html', context)
+
+def BlogSearch(request):
+    results = {'data': []}
+    posts = Post.objects.filter(title__icontains=request.POST.get('query'))[:5]
+    for post in posts:
+        results['data'].append({
+            'image': post.image.url,
+            'title': post.title,
+            'description': post.description[:15],
+            'url': post.get_absolute_url(),
+        })
+    return JsonResponse(results)

@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 from ckeditor_uploader.fields import RichTextUploadingField
 
@@ -173,6 +174,11 @@ class Post(models.Model):
         ordering = ['-created_on']
         verbose_name = "Post"
         verbose_name_plural = "Posts"
+
+    def get_absolute_url(self):
+        return reverse("blog:post", args={
+            self.slug
+        })
 
     def __str__(self):
         return self.title

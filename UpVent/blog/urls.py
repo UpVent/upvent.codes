@@ -1,10 +1,10 @@
-from . import views
 from django.urls import path
-from .views import Blog, BlogEntry
+from .views import Blog, BlogEntry, BlogSearch
 
 app_name = 'blog'
 
 urlpatterns = [
     path('', Blog, name='home'),
-    path('<slug:slug>/', BlogEntry, name='post')
+    path('entry/<slug>/', BlogEntry, name='post'),
+    path('search/', BlogSearch, name='blog-search'),
 ]
