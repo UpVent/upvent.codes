@@ -77,7 +77,6 @@
                 <li><a {% if request.path == '/education/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'education:home' %}">Educación <i class="bi bi-book"></i></a></li>
             </ul>
             <div class="text-end me-auto ms-auto mx-auto">
-                <button id="toggledm" type="button" class="btn btn-dark" title="Modo Oscuro">🌞</button>
                 <button type="button" class="btn btn-light border" title="Modo daltonismo" onclick="alert('Los colores para usuarios dalónicos aún no están listos')">👁</button>
                 <noscript class="small text-muted text-wrap text-break">El modo oscuro / colores para daltonismo solo están disponibles usando JavaScript</noscript>
             </div>
@@ -91,7 +90,8 @@
         <script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"UpVent Technologies","url":"https://upvent.codes","address":"Guanajuato, Guanajuato","sameAs":["https://facebook.com/UpVentMX","https://twitter.com/UpVentMX","https://www.linkedin.com/company/upvent-technologies/","https://www.instagram.com/UpVentMX/"]}</script>
         <!-- custom scripts -->
         {% block js %}
-            <script type="text/javascript" src="{% static 'core/js/darkmode.js' %}"></script>
         {% endblock %}
+        <script type="text/javascript" src="{% static 'core/js/darkmode.js' %}"></script>
+        <script type="text/javascript" src="{% static 'core/js/darkmode-config.js' %}"></script>
     </body>
 </html>
