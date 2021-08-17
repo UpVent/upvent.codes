@@ -74,7 +74,6 @@
                 <li><a {% if request.path == '/services/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'services' %}">Servicios <i class="bi bi-laptop"></i></a></li>
                 <li><a {% if request.path == '/contact/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'contact:home' %}">Contacto <i class="bi bi-phone"></i></a></li>
                 <li><a {% if request.path == '/marketcloud/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'marketcloud:home' %}">MarketCloud <i class="bi bi-bag"></i></a></li>
-                <li><a {% if request.path == '/education/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'education:home' %}">Educación <i class="bi bi-book"></i></a></li>
             </ul>
             <div class="text-end me-auto ms-auto mx-auto">
                 <button type="button" class="btn btn-light border" title="Modo daltonismo" onclick="alert('Los colores para usuarios dalónicos aún no están listos')">👁</button>

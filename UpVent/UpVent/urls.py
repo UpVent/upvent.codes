@@ -49,8 +49,6 @@ urlpatterns = [
          name='contact'),
     path('marketcloud/', include('marketcloud.urls', namespace="marketcloud"),
          name='marketcloud'),
-    path('education/', include('education.urls', namespace="education"),
-         name='education'),
 ]
 
 admin.site.site_header = "UpVent Admin"
