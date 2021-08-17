@@ -3,7 +3,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         {% block css %}{% endblock %}
 
@@ -64,9 +64,8 @@
     <body>
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 shadow">
             <a href="{% url 'index' %}" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none navbar-brand">
-                <img class="bi mx-auto"  width="116" height="47" src="{% static 'core/img/logo-grey.png' %}" alt="UpVent Logo">
+                <img class="bi mx-auto"  width="117" height="48" src="{% static 'core/img/logo-grey.png' %}" alt="UpVent Logo">
             </a>
-
             <ul class="nav nav-pills col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a {% if request.path == '/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'index' %}">Inicio <i class="bi bi-house"></i></a></li>
                 <li><a {% if request.path|slice:':6' == '/blog/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'blog:home' %}">Blog <i class="bi bi-pen"></i></a></li>
@@ -77,9 +76,8 @@
                 <li><a {% if request.path == '/education/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'education:home' %}">Educación <i class="bi bi-book"></i></a></li>
             </ul>
             <div class="text-end me-auto ms-auto mx-auto">
-                <button id="toggledm" type="button" class="btn btn-dark" title="Modo Oscuro">🌞</button>
-                <button type="button" class="btn btn-light border" title="Modo daltonismo" onclick="alert('Los colores para usuarios dalónicos aún no están listos')">👁</button>
-                <noscript class="small text-muted text-wrap text-break">El modo oscuro / colores para daltonismo solo están disponibles usando JavaScript</noscript>
+                <button type="button" class="btn btn-light border-0" title="Modo daltonismo" onclick="alert('Los colores para usuarios dalónicos aún no están listos')">👁</button>
+                <noscript class="small text-muted text-wrap text-break">El modo oscuro / colores para daltonismo solo están disponibles habilitando JavaScript</noscript>
             </div>
         </header>
         {% block body %}
@@ -93,5 +91,7 @@
         <script type="text/javascript" src="{% static 'core/js/darkmode.js' %}"></script>
         {% block js %}
         {% endblock %}
+        <script type="text/javascript" src="{% static 'core/js/darkmode.js' %}"></script>
+        <script type="text/javascript" src="{% static 'core/js/darkmode-config.js' %}"></script>
     </body>
 </html>

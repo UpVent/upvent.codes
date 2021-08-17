@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'blog',
     'contact',
     'marketcloud',
-    'education'
 ]
 
 MIDDLEWARE = [

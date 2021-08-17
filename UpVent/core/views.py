@@ -13,7 +13,6 @@ from .models import (Testimonial,
                      PrivacyPolicy,
                      TOS)
 
-# Create your views here.
 def index(request):
     """
     Display the main page for this site.
@@ -30,7 +29,12 @@ def index(request):
     """
 
     testimonials = Testimonial.objects.all()
-    return render(request, 'core/index.html', {'testimonials': testimonials})
+
+    context = {
+        'testimonials': testimonials
+    }
+
+    return render(request, 'core/index.html', context)
 
 def about(request):
 
@@ -48,7 +52,12 @@ def about(request):
     """
 
     projects = Project.objects.all()
-    return render(request, 'core/about.html', {'projects': projects})
+
+    context = {
+        'projects': projects
+    }
+
+    return render(request, 'core/about.html', context)
 
 def services(request):
 
@@ -66,7 +75,12 @@ def services(request):
     """
 
     services = FSProject.objects.all()
-    return render(request, 'core/services.html', {'services': services})
+
+    context = {
+        'services': services
+    }
+
+    return render(request, 'core/services.html', context)
 
 def licenses(request):
 
@@ -140,7 +154,12 @@ def privacy_policy(request):
     """
 
     policies = PrivacyPolicy.objects.all().first()
-    return render(request, 'core/privacy-policy.html', {'policies': policies})
+
+    context = {
+        'policies': policies
+    }
+
+    return render(request, 'core/privacy-policy.html', context)
 
 
 def terms_service(request):
@@ -160,7 +179,12 @@ def terms_service(request):
     """
 
     policies = TOS.objects.all().first()
-    return render(request, 'core/tos.html', {'policies': policies})
+
+    context = {
+        'policies': policies
+    }
+
+    return render(request, 'core/tos.html', context)
 
 @require_GET
 def robots_txt(request):
