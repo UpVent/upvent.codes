@@ -38,5 +38,5 @@ jobs:
 
       - name: Run test suite
         run: |
-          pipenv run UpVent/manage.py migrate
+          pipenv run UpVent/manage.py migrate --run-syncdb
           pipenv run test
