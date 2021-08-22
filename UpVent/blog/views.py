@@ -56,7 +56,7 @@ def BlogEntry(request, slug):
 
 def BlogSearch(request):
     results = {'data': []}
-    posts = Post.objects.filter(title__icontains=request.POST.get('query'))[:5]
+    posts = Post.objects.filter(title__icontains=request.POST.get('query', default="a"))[:5]
     for post in posts:
         results['data'].append({
             'image': post.image.url,
