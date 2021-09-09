@@ -25,11 +25,9 @@
 {% endblock %}
 
 {% block body %}
-
     <div id="intro" class="p-5 text-center bg-light">
         <h1 class="mb-0 h4">{{post.title}}</h1>
     </div>
-
     <main class="mt-4 mb-5">
         <div class="container">
             <div class="row">
@@ -71,7 +69,7 @@
                     </article>
                     <hr />
                     <section>
-                        <div class="container">
+                        <div id="comentarios" class="container">
                             <div id="s9comments"></div>
                         </div>
                     </section>
@@ -103,7 +101,6 @@
             </div>
         </div>
     </main>
-
     {% block js %}
         <script async defer src="https://social9.com/comments/js/s9comments.js"></script>
     {% endblock %}
