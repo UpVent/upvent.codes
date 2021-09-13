@@ -38,6 +38,30 @@ function check_preact() {
 
 }
 
+function check_htm() {
+    local FILE=UpVent/core/static/core/js/htm.min.js
+
+    if [ -f "$FILE" ]; then
+        echo -e "[\e[32mOK\e[39m] $FILE exists."
+        read -pr "Do you want to update htm? [Y/n]" ans
+
+        case "$ans" in
+            [yY][sS])
+                curl -L https://unpkg.com/htm -o htm.min.js && mv htm.min.js $FILE
+            ;;
+            *)
+                echo -e "Update cancelled..."
+                exit 0
+            ;;
+        esac
+    else
+        echo -e "[\e[31mERROR\e[39m] $FILE does not exist."
+        echo -e "[\e[34mINFO\e[39m] Installing the latest htm version..."
+        curl -L https://unpkg.com/htm -o htm.min.js && mv htm.min.js $FILE
+    fi
+
+}
+
 function help() {
     echo "UpVent website CLI tool"
     echo "-----------------------------------"
@@ -46,5 +70,6 @@ function help() {
     echo "-----------------------------------"
     echo "Options:"
     echo "- preact: Install / Update preact"
-    echo "- help: Show this screen"
+    echo "- htm:    Install / Update htm"
+    echo "- help:   Show this screen"
 }
