@@ -12,76 +12,39 @@
     # You should have received a copy of the GNU General Public License
     # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-# ==== Check user and environment ====
-function check_user() {
-    if [[ $EUID -ne 0 ]]; then
-        echo -e "[\e[92mOK\e[39m] Not running as root"
+# ==== Utilities ====
+
+function check_preact() {
+    local FILE=UpVent/core/static/core/js/preact.min.js
+
+    if [ -f "$FILE" ]; then
+        echo -e "[\e[32mOK\e[39m] $FILE exists."
+        read -pr "Do you want to update preact? [Y/n]" ans
+
+        case "$ans" in
+            [yY][sS])
+                curl -L https://unpkg.com/preact -o preact.min.js && mv preact.min.js $FILE
+            ;;
+            *)
+                echo -e "Update cancelled..."
+                exit 0
+            ;;
+        esac
     else
-        echo -e "[\e[33mWARNING\e[39m] You really shouldn't be running this as root..."
-    fi
-}
-
-# ==== Check compatibility ====
-function check_compat() {
-
-    # Check for ostype
-    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        echo -e "[\e[92mOK\e[39m] gnu/linux os detected"
-        os="linux"
-    else
-        echo -e "[\e[31mERROR\e[39m] Sorry, non Gnu/Linux OS are not supported"
-        os="$OSTYPE"
-    fi
-
-    # Check for Distribution
-    distro=$(lsb_release -is)
-
-    if [[ $distro == "Debian" ]]; then
-        echo -e "[\e[92mOK\e[39m] Debian based distribution detected"
-        distro="debased"
-    elif [[ $distro == "Ubuntu" ]]; then
-        echo -e "[\e[92mOK\e[39m] Debian based distribution detected"
-        distro="debased"
-    else
-        echo -e "[\e[31mERROR\e[39m] Non debian distros are not supported!"
-        distro="$(lsb_release -is)"
+        echo -e "[\e[31mERROR\e[39m] $FILE does not exist."
+        echo -e "[\e[34mINFO\e[39m] Installing the latest preact version..."
+        curl -L https://unpkg.com/preact -o preact.min.js && mv preact.min.js $FILE
     fi
 
-    if [[ $os == "linux" && $distro == "debased"  ]]; then
-        echo -e "[\e[92mOK\e[39m] No platform errors were found."
-    else
-        echo -e "[\e[31mERROR\e[39m] There was a problem with either your OS
-being $os or your distribution being $distro, cannot proceed."
-        exit 1;
-    fi
 }
 
-# ==== Check for Dependencies ====
-function check_deps() {
-    for name in python3 pipenv
-    do
-        [[ $(which $name 2>/dev/null) ]] || { echo -en "[\e[31mERROR\e[39m] $name was not found";deps=1; }
-    done
-    [[ $deps -ne 1 ]] && echo -e "[\e[92mOK\e[39m] All dependencies are installed." || { echo -en "\nInstall the missing dependencies and rerun this script\n";exit 1; }
+function help() {
+    echo "UpVent website CLI tool"
+    echo "-----------------------------------"
+    echo "Usage:"
+    echo "upvnt <option>"
+    echo "-----------------------------------"
+    echo "Options:"
+    echo "- preact: Install / Update preact"
+    echo "- help: Show this screen"
 }
-
-# ==== Main function ====
-function main() {
-    clear
-    echo -e "\e[34mhttps://upvent.codes\e[39m deployment script - UpVent Codes 2021"
-    echo "------------------------------------------------------------------"
-    echo "Checking running user and privileges"
-    echo "------------------------------------------------------------------"
-    check_user;
-    echo "------------------------------------------------------------------"
-    echo "Checking for compatibility [OS and Distribution]"
-    echo "------------------------------------------------------------------"
-    check_compat;
-    echo "------------------------------------------------------------------"
-    echo "Checking if all dependencies are installed"
-    echo "------------------------------------------------------------------"
-    check_deps;
-}
-
-# Run script
-main;
