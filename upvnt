@@ -23,7 +23,7 @@ function check_preact() {
 
         case "$ans" in
             [yY][sS])
-                curl -L https://unpkg.com/preact -o preact.min.js && mv preact.min.js $FILE
+                curl -L https://unpkg.com/preact?module -o preact.min.js && mv preact.min.js $FILE
             ;;
             *)
                 echo -e "Update cancelled..."
@@ -33,7 +33,7 @@ function check_preact() {
     else
         echo -e "[\e[31mERROR\e[39m] $FILE does not exist."
         echo -e "[\e[34mINFO\e[39m] Installing the latest preact version..."
-        curl -L https://unpkg.com/preact -o preact.min.js && mv preact.min.js $FILE
+        curl -L https://unpkg.com/preact?module -o preact.min.js && mv preact.min.js $FILE
     fi
 
 }
@@ -47,7 +47,7 @@ function check_htm() {
 
         case "$ans" in
             [yY][sS])
-                curl -L https://unpkg.com/htm -o htm.min.js && mv htm.min.js $FILE
+                curl -L https://unpkg.com/htm?module -o htm.min.js && mv htm.min.js $FILE
             ;;
             *)
                 echo -e "Update cancelled..."
@@ -57,7 +57,7 @@ function check_htm() {
     else
         echo -e "[\e[31mERROR\e[39m] $FILE does not exist."
         echo -e "[\e[34mINFO\e[39m] Installing the latest htm version..."
-        curl -L https://unpkg.com/htm -o htm.min.js && mv htm.min.js $FILE
+        curl -L https://unpkg.com/htm?module -o htm.min.js && mv htm.min.js $FILE
     fi
 
 }
@@ -73,3 +73,6 @@ function help() {
     echo "- htm:    Install / Update htm"
     echo "- help:   Show this screen"
 }
+
+check_preact
+check_htm
