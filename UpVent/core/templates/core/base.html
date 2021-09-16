@@ -89,8 +89,8 @@
         <!-- custom scripts -->
         {% block js %}
         {% endblock %}
-        <script async defer type="module" src="{% static 'core/js/preact.min.js' %}"></script>
-        <script async defer type="module" src="{% static 'core/js/htm.min.js' %}"></script>
+        <script type="module" src="{% static 'core/js/preact.min.js' %}"></script>
+        <script type="module" src="{% static 'core/js/htm.min.js' %}"></script>
         <script type="module" src="{% static 'core/js/app.js' %}"></script>
         <script type="text/javascript" src="{% static 'core/js/darkmode.js' %}"></script>
         <script type="text/javascript" src="{% static 'core/js/darkmode-config.js' %}"></script>
