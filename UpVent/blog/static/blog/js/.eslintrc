@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true
+  },
+  "globals": {},
+  "ecmaFeatures": {},
+  "parser": null,
+  "rules": {
+    "indent": [
+      "error",
+      4
+    ],
+    "valid-jsdoc": [
+      1,
+      {
+        "requireReturn": true,
+        "requireParamDescription": true,
+        "requireReturnDescription": true
+      }
+    ]
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": false
+    }
+  }
+}
