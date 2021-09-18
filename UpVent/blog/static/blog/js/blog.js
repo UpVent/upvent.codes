@@ -1,7 +1,8 @@
-searchForm = document.getElementById('search-form');
-csrfToken = searchForm.querySelector('input[name=csrfmiddlewaretoken]').value;
+let searchForm = document.getElementById('search-form');
+let csrfToken = searchForm.querySelector('input[name=csrfmiddlewaretoken]').value;
 
-searchResults = document.getElementById('search-results');
+let searchResults = document.getElementById('search-results');
+
 if (window.screen.width > 800 ) {
     searchResults.style.width = searchForm.clientWidth*.6 + 'px';
     searchResults.style.marginLeft = searchForm.clientWidth*.2 + 'px';
@@ -22,19 +23,19 @@ document.getElementById('search-input').addEventListener("input", (e) => {
             body: data,
             credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.data.length != 0) {
-                searchResults.innerHTML = '<ul></ul>'
-                results = '';
-                data.data.forEach(result => {
-                    results += `<li><img src="${result.image}"><span><b>${result.title}</b> ${result.description}</span><a href="${result.url}">Ir</a></li>`;
-                });
-                searchResults.firstElementChild.innerHTML = results;
-            } else {
-                searchResults.innerHTML = '<p>Sin resultados</p>'
-            }
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.data.length !== 0) {
+                    searchResults.innerHTML = '<ul></ul>'
+                    let results = '';
+                    data.data.forEach(result => {
+                        results += `<li><img class="img-fluid" src="${result.image}"><span><b>${result.title}</b> ${result.description}</span><a href="${result.url}">Ir</a></li>`;
+                    });
+                    searchResults.firstElementChild.innerHTML = results;
+                } else {
+                    searchResults.innerHTML = '<p>Sin resultados</p>'
+                }
+            });
 
     } else {
         searchResults.style.display = 'none';
