@@ -62,6 +62,13 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="blue">
     </head>
     <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+            your experience.
+            </p>
+        <![endif]-->
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 shadow">
             <a href="{% url 'index' %}" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none navbar-brand">
                 <img class="mx-auto"  width="117" height="48" src="{% static 'core/img/logo-grey.png' %}" alt="UpVent Logo">
