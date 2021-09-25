@@ -13,53 +13,24 @@
     # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # ==== Utilities ====
-
-function check_preact() {
-    local FILE=UpVent/core/static/core/js/preact.min.js
-
-    if [ -f "$FILE" ]; then
-        echo -e "[\e[32mOK\e[39m] $FILE exists."
-        read -pr "Do you want to update preact? [Y/n]" ans
-
-        case "$ans" in
-            [yY][sS])
-                curl -L https://unpkg.com/preact?module -o preact.min.js && mv preact.min.js $FILE
-            ;;
-            *)
-                echo -e "Update cancelled..."
-                exit 0
-            ;;
-        esac
-    else
-        echo -e "[\e[31mERROR\e[39m] $FILE does not exist."
-        echo -e "[\e[34mINFO\e[39m] Installing the latest preact version..."
-        curl -L https://unpkg.com/preact?module -o preact.min.js && mv preact.min.js $FILE
+function check_root() {
+    if [ "$EUID" -ne 0 ]; then
+        echo "Root privileges are needed to run operations..."
+        exit
     fi
-
 }
 
-function check_htm() {
-    local FILE=UpVent/core/static/core/js/htm.min.js
+function check_prerequisites() {
+    packages=("curl" "gnupg2" "ca-certificates" "lsb-release")
 
-    if [ -f "$FILE" ]; then
-        echo -e "[\e[32mOK\e[39m] $FILE exists."
-        read -pr "Do you want to update htm? [Y/n]" ans
+    for pkg in ${packages[@]}; do
 
-        case "$ans" in
-            [yY][sS])
-                curl -L https://unpkg.com/htm?module -o htm.min.js && mv htm.min.js $FILE
-            ;;
-            *)
-                echo -e "Update cancelled..."
-                exit 0
-            ;;
-        esac
-    else
-        echo -e "[\e[31mERROR\e[39m] $FILE does not exist."
-        echo -e "[\e[34mINFO\e[39m] Installing the latest htm version..."
-        curl -L https://unpkg.com/htm?module -o htm.min.js && mv htm.min.js $FILE
-    fi
+        is_pkg_installed=$(dpkg-query -W --showformat='${Status}\n' ${pkg} | grep "install ok installed")
 
+        if [ "${is_pkg_installed}" == "install ok installed" ]; then
+            echo ${pkg} is installed.
+        fi
+    done
 }
 
 function help() {
@@ -68,11 +39,6 @@ function help() {
     echo "Usage:"
     echo "upvnt <option>"
     echo "-----------------------------------"
-    echo "Options:"
-    echo "- preact: Install / Update preact"
-    echo "- htm:    Install / Update htm"
-    echo "- help:   Show this screen"
 }
 
-check_preact
-check_htm
+# Main functionalities
