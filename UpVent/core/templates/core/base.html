@@ -71,9 +71,9 @@
         <![endif]-->
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 shadow">
             <a href="{% url 'index' %}" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none navbar-brand">
-                <img class="mx-auto"  width="117" height="48" src="{% static 'core/img/logo-grey.png' %}" alt="UpVent Logo">
+                <img class="mx-auto"  width="148" height="48" src="{% static 'core/img/logo-grey.png' %}" alt="UpVent Logo">
             </a>
-            <ul class="nav nav-pills col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <ul class="nav nav-pills col-12 mx-auto col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a {% if request.path == '/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'index' %}">Inicio <i class="bi bi-house"></i></a></li>
                 <li><a {% if request.path|slice:':6' == '/blog/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'blog:home' %}">Blog <i class="bi bi-pen"></i></a></li>
                 <li><a {% if request.path == '/about/' %} class="nav-link active px-2 fw-bold" {% else %} class="nav-link px-2 link-dark" {% endif %} href="{% url 'about' %}">Nosotros <i class="bi bi-people"></i></a></li>

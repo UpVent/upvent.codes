@@ -26,7 +26,7 @@ def index(request):
 
     :template:`core/index.html`
 
-    """
+   """
 
     testimonials = Testimonial.objects.all()
 
