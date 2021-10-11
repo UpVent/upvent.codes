@@ -40,11 +40,11 @@
         },
         "django-admin-interface": {
             "hashes": [
-                "sha256:4940d38c3540d311d65ac622fcb9d22e68df3b2e5fbf90c87d77f7512c0fa4aa",
-                "sha256:613d4b96a87c94e307b85b6e02ff5839f28dbfc5a8068b07fd5534dd4fee7bd8"
+                "sha256:ab45745bee4c346e7ae8bbb4760163b2c4924b042ae3c5edeb528ebb5a3b5f38",
+                "sha256:d7e14df40427ddc4bc53bfb4a522e65fa62fd3072331934f11a0d1399b368d6d"
             ],
             "index": "pypi",
-            "version": "==0.17.1"
+            "version": "==0.17.2"
         },
         "django-ckeditor": {
             "hashes": [
@@ -56,10 +56,10 @@
         },
         "django-colorfield": {
             "hashes": [
-                "sha256:218932da7275ded152d0119131efde72e33b52abf88be4c14f8ffea799a112c4",
-                "sha256:7f1b5ef2417928b7f25708ff31db2d119d255d27cbea496dae62bbde35325aec"
+                "sha256:4e9bde88dd04ab5845f15f3e1083ec46935c5aef67bbec78f76d9361facb8494",
+                "sha256:cb538e817fe16e12e0bba0dba76393aea94cf446fbad52e53ed48fa48c436a77"
             ],
-            "version": "==0.4.3"
+            "version": "==0.4.4"
         },
         "django-flat-responsive": {
             "hashes": [
@@ -163,10 +163,10 @@
         },
         "pytz": {
             "hashes": [
-                "sha256:83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da",
-                "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"
+                "sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c",
+                "sha256:acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326"
             ],
-            "version": "==2021.1"
+            "version": "==2021.3"
         },
         "six": {
             "hashes": [
@@ -188,11 +188,11 @@
     "develop": {
         "astroid": {
             "hashes": [
-                "sha256:dcc06f6165f415220013801642bd6c9808a02967070919c4b746c6864c205471",
-                "sha256:fe81f80c0b35264acb5653302ffbd935d394f1775c5e4487df745bf9c2442708"
+                "sha256:304e99c129794f2cfda584a12b71fde85205da950e2f330f4be09150525ae949",
+                "sha256:9eaeaf92b3e21b70bec1a262e7eb118d2e96294892a5de595c92a12adc80dfc2"
             ],
             "markers": "python_version ~= '3.6'",
-            "version": "==2.8.0"
+            "version": "==2.8.2"
         },
         "bandit": {
             "hashes": [
